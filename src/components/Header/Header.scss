@@ -1,0 +1,128 @@
+@import '../../styles/variables';
+$nav-height: 25px;
+
+.header {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: $quaternary-color;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+	display: flex;
+	justify-content: center;
+	&__logo {
+		display: none;
+	}
+}
+
+.nav-items {
+	position: relative;
+	display: flex;
+	gap: 10px;
+	height: $nav-height;
+
+	&__list {
+		height: 100%;
+		list-style: none;
+		width: 70px;
+		z-index: 1;
+		display: flex;
+		cursor: default;
+
+		&:nth-child(1).nav-items--active ~ .indicator {
+			transform: translateX(80px * 0);
+		}
+		&:nth-child(2).nav-items--active ~ .indicator {
+			transform: translateX(80px * 1);
+		}
+		&:nth-child(3).nav-items--active ~ .indicator {
+			transform: translateX(80px * 2);
+		}
+		&:nth-child(4).nav-items--active ~ .indicator {
+			transform: translateX(80px * 3);
+		}
+	}
+
+	&--active {
+		.nav-items__icon {
+			transform: translateY(-33px);
+		}
+		.nav-items__text {
+			opacity: 1;
+		}
+	}
+
+	&__icon {
+		position: relative;
+		text-align: center;
+		transition: 0.5s;
+		color: white;
+
+		svg {
+			width: 30px;
+			height: 30px;
+		}
+	}
+
+	&__text {
+		position: absolute;
+		color: white;
+		font-weight: bold;
+		font-size: 1em;
+		letter-spacing: 0.05em;
+		transition: 0.5s;
+		opacity: 0;
+		&:hover {
+			color: $secondary-color;
+		}
+	}
+
+	&__item {
+		text-decoration: none;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		width: 100%;
+		text-align: center;
+		font-weight: 500;
+	}
+}
+
+.indicator {
+	position: absolute;
+	top: -48px;
+	left: 48px;
+	width: 40px;
+	height: 40px;
+	background: $secondary-color;
+	border-radius: 50%;
+	border: 7px solid $primary-color;
+	transition: ease 0.2s;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 23px;
+		left: -21px;
+		width: 20px;
+		height: 20px;
+		background-color: transparent;
+		border-top-right-radius: 30px;
+		box-shadow: 0 -10px 0 0 $primary-color;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 23px;
+		right: -21px;
+		width: 20px;
+		height: 20px;
+		background-color: transparent;
+		border-top-left-radius: 30px;
+		box-shadow: 0 -10px 0 0 $primary-color;
+	}
+}
+
+@import './media';
