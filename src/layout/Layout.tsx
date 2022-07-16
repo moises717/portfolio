@@ -1,8 +1,10 @@
-import { ReactElement } from "react";
+import { ReactElement, useState } from "react";
 
 import { Content } from "../components/Content";
 import { Footer } from "../components/Footer/Footer";
 import { Header } from "../components/Header";
+import ThemeButton from "../components/ThemeButtom/ThemeButton";
+
 
 import './Layout.scss';
 
@@ -11,10 +13,15 @@ interface Layout {
 }
 
 const Layout = ({ children }: Layout) => {
+    const [theme, setTheme] = useState<boolean>(false);
+
     return (
-        <div className="layout">
+        <div className={`layout ${theme && 'light'}`}>
+
             {children}
-        </div>
+
+            <ThemeButton isLightningOn={theme} onClick={() => setTheme(t => !t)} />
+        </div >
     )
 }
 

@@ -1,0 +1,29 @@
+@import '../../styles/variables';
+
+.btn-theme {
+	position: fixed;
+	bottom: 90px;
+	background-color: $quaternary-color;
+	right: 20px;
+	border-radius: 50px;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.layout.light & {
+		background-color: $secondary-color;
+	}
+
+	svg {
+		user-select: none;
+		width: 30px;
+		height: 30px;
+		cursor: pointer;
+	}
+
+	.layout.light & {
+		color: $white-color;
+	}
+}

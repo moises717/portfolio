@@ -1,2 +1,18 @@
+@import '../styles/variables';
+
 .layout {
+	height: 100vh;
+	color: $white-color;
+	transition: $trans-1;
+	display: grid;
+	grid-template-areas:
+		'header header header header'
+		'content content content content'
+		'footer footer footer footer';
+	grid-template-rows: auto auto auto;
+
+	&.light {
+		background-color: $primary-color-light;
+		color: $white-color-light;
+	}
 }

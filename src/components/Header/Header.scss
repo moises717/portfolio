@@ -6,11 +6,19 @@ $nav-height: 25px;
 	bottom: 0;
 	width: 100%;
 	background-color: $quaternary-color;
-	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+	box-shadow: rgba(46, 46, 46, 0.1) 0px 4px 12px;
 	display: flex;
 	justify-content: center;
+	transition: $trans-1;
+	grid-area: header;
+	z-index: 1;
 	&__logo {
 		display: none;
+	}
+
+	.layout.light & {
+		background-color: $secondary-color;
+		color: $white-color-light;
 	}
 }
 
@@ -54,8 +62,9 @@ $nav-height: 25px;
 	&__icon {
 		position: relative;
 		text-align: center;
-		transition: 0.5s;
+		transition: $trans-1;
 		color: white;
+		margin-top: 3px;
 
 		svg {
 			width: 30px;
@@ -67,12 +76,19 @@ $nav-height: 25px;
 		position: absolute;
 		color: white;
 		font-weight: bold;
-		font-size: 1em;
+		font-size: 0.9em;
 		letter-spacing: 0.05em;
-		transition: 0.5s;
 		opacity: 0;
+
 		&:hover {
 			color: $secondary-color;
+		}
+
+		.layout.light & {
+			color: $white-color;
+			&:hover {
+				color: $white-color;
+			}
 		}
 	}
 
@@ -98,7 +114,12 @@ $nav-height: 25px;
 	background: $secondary-color;
 	border-radius: 50%;
 	border: 7px solid $primary-color;
-	transition: ease 0.2s;
+	transition: $trans-1;
+
+	.layout.light & {
+		background-color: $secondary-color-light;
+		border: 7px solid $primary-color-light;
+	}
 
 	&::before {
 		content: '';
@@ -109,7 +130,13 @@ $nav-height: 25px;
 		height: 20px;
 		background-color: transparent;
 		border-top-right-radius: 30px;
-		box-shadow: 0 -10px 0 0 $primary-color;
+		box-shadow: 0 -11px 0 0 $primary-color;
+		transition: $trans-1;
+
+		.layout.light & {
+			color: $white-color-light;
+			box-shadow: 0 -10px 0 0 $primary-color-light;
+		}
 	}
 
 	&::after {
@@ -122,6 +149,11 @@ $nav-height: 25px;
 		background-color: transparent;
 		border-top-left-radius: 30px;
 		box-shadow: 0 -10px 0 0 $primary-color;
+		transition: $trans-1;
+		.layout.light & {
+			color: $white-color-light;
+			box-shadow: 0 -10px 0 0 $primary-color-light;
+		}
 	}
 }
 

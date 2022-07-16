@@ -1,0 +1,19 @@
+.home {
+	width: 90%;
+	margin: auto;
+
+	&__presentation {
+		text-align: center;
+		font-size: 1rem;
+	}
+
+	&__image {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img {
+			width: auto;
+			height: 200px;
+		}
+	}
+}

@@ -1,0 +1,11 @@
+@import '../../styles/variables';
+
+.footer {
+	grid-area: footer;
+	background-color: $primary-color;
+	transition: $trans-1;
+
+	.layout.light & {
+		background-color: $primary-color-light;
+	}
+}

@@ -2,14 +2,16 @@ import { Contact, Folder, Home, Lightning } from '../../icons';
 import { NavItem } from './NavItem/NavItem';
 
 import './Header.scss';
+import { NavLink } from 'react-router-dom';
 
 export const Header = () => {
 
     return (
         <div className="header">
-            <div className="header__logo">
-                Moises barillas
-            </div>
+            <NavLink to="/" className="header__logo">
+                <span className='header__name'>Moisés</span>
+                <span className='header__surname'>Barillas</span>
+            </NavLink>
             <ul className='nav-items'>
                 <NavItem icon={<Home />} to="/" title='Inicio' />
                 <NavItem icon={<Lightning />} to="skills" title='Habilidades' />
@@ -17,6 +19,7 @@ export const Header = () => {
                 <NavItem icon={<Contact />} to="contact" title='Contactar' />
                 <div className='indicator'></div>
             </ul>
+
         </div >
     )
 }

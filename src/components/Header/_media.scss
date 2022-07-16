@@ -1,18 +1,46 @@
 @media (min-width: 768px) {
 	.header {
 		position: static;
-		width: 100%;
-		justify-content: flex-end;
+		top: 0;
+		height: $nav-height + 40px;
+		justify-content: space-around;
+		transition: $trans-1;
 
 		&__logo {
-			width: 60%;
-			display: block;
+			display: flex;
+			align-items: center;
+			gap: 15px;
+			margin-left: 10px;
+			cursor: pointer;
+			text-decoration: none;
+		}
+		&__name {
+			font-size: $size-large;
+			color: $secondary-color;
+			font-family: $font-1;
+			letter-spacing: 2px;
+
+			.layout.light & {
+				color: $white-color;
+			}
+		}
+		&__surname {
+			font-size: $size-large;
+			color: $white-color;
+			font-family: $font-1;
+			background-color: $secondary-color;
+			border-radius: 2px;
+			padding: 2px 5px 2px 5px;
+
+			.layout.light & {
+				background-color: $tertiary-color-dark;
+				border-radius: 5px;
+			}
 		}
 	}
 
 	.nav-items {
-		width: 100%;
-		margin-right: 15px;
+		margin-left: -50px;
 		&__item {
 			align-items: center;
 			flex-direction: row;
@@ -20,7 +48,7 @@
 		}
 
 		&__list {
-			width: 130px;
+			width: 120px;
 			cursor: pointer;
 
 			&:nth-child(4) {
@@ -32,10 +60,16 @@
 					border: 1px solid $secondary-color;
 					transition: ease 0.5s;
 				}
+
+				.layout.light & {
+					&:hover {
+						border: 1px solid $tertiary-color-dark;
+					}
+				}
 			}
 
 			&:hover .nav-items__icon {
-				color: $tertiary-color;
+				color: $tertiary-color-dark;
 				transition: ease 0.5s;
 			}
 		}
@@ -46,6 +80,7 @@
 		}
 
 		&__icon {
+			transition: none;
 			svg {
 				width: 25px;
 				height: 25px;
@@ -56,6 +91,10 @@
 			.nav-items__icon {
 				transform: translateY(0px);
 				color: $tertiary-color;
+
+				.layout.light & {
+					color: $tertiary-color-dark;
+				}
 			}
 			.nav-items__text {
 				opacity: 1;
