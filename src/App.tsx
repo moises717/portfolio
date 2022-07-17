@@ -1,18 +1,12 @@
 import { BrowserRouter } from 'react-router-dom';
-import Layout from './layout'
-
-const { Header, Footer, Content } = Layout;
+import { Router } from './router/Router';
 
 function App() {
 
   return (
     <div>
       <BrowserRouter>
-        <Layout>
-          <Header />
-          <Content />
-          <Footer />
-        </Layout>
+        <Router />
       </BrowserRouter>
     </div>
   )
