@@ -1,18 +1,30 @@
 @import '../styles/variables';
 
 .layout {
-	height: 100vh;
 	color: $white-color;
 	transition: $trans-1;
 	display: grid;
+	height: 100vh;
+
 	grid-template-areas:
+		'footer footer footer footer'
 		'header header header header'
-		'content content content content'
-		'footer footer footer footer';
+		'content content content content';
 	grid-template-rows: auto auto auto;
+	grid-column: auto;
 
 	&.light {
 		background-color: $primary-color-light;
 		color: $white-color-light;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.layout {
+		grid-template-areas:
+			'header header header header'
+			'content content content content'
+			'footer footer footer footer';
+		grid-template-rows: auto auto auto;
 	}
 }

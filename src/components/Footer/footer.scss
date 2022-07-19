@@ -4,8 +4,29 @@
 	grid-area: footer;
 	background-color: $primary-color;
 	transition: $trans-1;
+	height: 45px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom: solid 1px rgb(63, 63, 63);
+
+	svg {
+		margin-left: 10px;
+	}
 
 	.layout.light & {
 		background-color: $primary-color-light;
+		border-bottom: solid 1px rgb(221, 217, 217);
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.footer {
+		border-top: solid 1px rgb(63, 63, 63);
+		border-bottom: none;
+
+		.layout.light & {
+			border-top: solid 1px rgb(221, 217, 217);
+		}
 	}
 }

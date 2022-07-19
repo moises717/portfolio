@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import { NavLink, LinkProps, useMatch, useResolvedPath, useNavigate } from "react-router-dom";
+import { LinkProps, useMatch, useResolvedPath, useNavigate } from "react-router-dom";
 
 interface Props extends LinkProps {
     icon: ReactElement[] | ReactElement;
