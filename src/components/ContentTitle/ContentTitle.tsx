@@ -1,13 +1,15 @@
+import { ReactElement } from 'react';
 import './contentTitle.scss';
 
 interface Props {
-    title: string
+    title: string,
+    textIcon?: ReactElement,
 }
 
-export const ContentTitle = ({ title }: Props) => {
+export const ContentTitle = ({ title, textIcon }: Props) => {
     return (
         <div className="content-title">
-            <h2>{title}</h2>
+            <h2>{title}</h2> {textIcon}
         </div>
     )
 }
