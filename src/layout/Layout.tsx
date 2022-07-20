@@ -1,13 +1,11 @@
-import { ReactElement, useState } from "react";
+import { useState } from "react";
 
-import { Content } from "../components/Content";
-import { Footer } from "../components/Footer/Footer";
-import { Header } from "../components/Header";
-import ThemeButton from "../components/ThemeButtom/ThemeButton";
-
+import { Content } from "@components/Content";
+import { Footer } from "@components/Footer/Footer";
+import { Header } from "@components/Header";
+import ThemeButton from "@components/ThemeButtom/ThemeButton";
 
 import './Layout.scss';
-
 
 const Layout = () => {
     const [theme, setTheme] = useState<boolean>(false);

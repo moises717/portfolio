@@ -6,5 +6,15 @@ export default defineConfig({
 	plugins: [react()],
 	resolve: {
 		extensions: ['.ts', '.tsx', '.js', '.jsx', 'scss', 'css'],
+		alias: {
+			'@components': '/src/components',
+			'@utils': '/src/utils',
+			'@pages': '/src/pages',
+			'@assets': '/src/assets',
+			'@styles': '/src/styles',
+			'@router': '/src/router',
+			'@icons': '/src/icons',
+			'@layouts': '/src/layout',
+		},
 	},
 });

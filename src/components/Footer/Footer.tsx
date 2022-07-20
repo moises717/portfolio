@@ -1,4 +1,4 @@
-import { Code } from '../../icons'
+import { Code } from '@icons'
 import './footer.scss'
 
 export const Footer = () => {
