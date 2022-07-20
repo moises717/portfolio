@@ -32,7 +32,7 @@ export const Home = () => {
                     </p>
                     <ContentTitle title='Mi historia' textIcon={<User />} />
                     <p>
-                        Hace 3 años me hice la pregunta, <b>¿Como se hace una pagina web?</b> y uno de los resultados fue <b>javascript</b>, Este es un lenguaje al que le he dedicado tiempo, desde como funciona en el navegador hasta como se ejecuta en el servidor. Fue una pregunta sencilla pero que desencadeno mi curiosidad y me insto a aprender nuevas tecnologías.
+                        Hace 3 años me hice la pregunta, <b>¿Como se hace una pagina web?</b> y uno de los resultados fue <b>javascript</b>, este es un lenguaje al que le he dedicado tiempo, desde como funciona en el navegador hasta como se ejecuta en el servidor. Fue una pregunta sencilla pero que desencadeno mi curiosidad y me insto a aprender nuevas tecnologías.
                     </p>
                 </div>
             </div>
