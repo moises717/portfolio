@@ -1,28 +1,13 @@
 @import '../../styles/variables';
 
 .home {
-	overflow-y: scroll;
-
-	&::-webkit-scrollbar {
-		width: 2px;
-	}
-	&::-webkit-scrollbar-track {
-		box-shadow: inset 0 0 0px $secondary-color;
-	}
-	&::-webkit-scrollbar-thumb {
-		background-color: $secondary-color;
-		outline: 1px solid $secondary-color;
-	}
-
-	&__content {
-		max-width: 350px;
-		width: 93%;
-		margin: 0 auto;
-	}
-
 	&__presentation {
 		text-align: center;
-		font-size: 0.9rem;
+		font-size: 0.8em;
+
+		span {
+			color: $secondary-color;
+		}
 	}
 
 	&__image {
@@ -63,19 +48,24 @@
 	}
 
 	&__about-me {
-		margin-bottom: 150px;
 		p {
 			font-size: 18px;
 			line-height: 28px;
+
+			strong {
+				font-size: 20px;
+				font-family: $font-1;
+				letter-spacing: 5px;
+				color: $secondary-color;
+			}
 		}
 	}
 }
 
 @media screen and (min-width: 768px) {
 	.home {
-		&__content {
-			min-width: 800px;
-			margin: 0 auto;
+		&__presentation {
+			font-size: 1.2em;
 		}
 	}
 }

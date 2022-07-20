@@ -1,5 +1,5 @@
 @import '../../styles/variables';
-$nav-height: 25px;
+$nav-height: 50px;
 
 .header {
 	position: fixed;
@@ -10,8 +10,9 @@ $nav-height: 25px;
 	display: flex;
 	justify-content: center;
 	transition: $trans-1;
-	grid-area: header;
 	z-index: 1;
+	height: $nav-height;
+
 	&__logo {
 		display: none;
 	}
@@ -26,7 +27,6 @@ $nav-height: 25px;
 	position: relative;
 	display: flex;
 	gap: 10px;
-	height: $nav-height;
 
 	&__list {
 		height: 100%;
@@ -52,7 +52,7 @@ $nav-height: 25px;
 
 	&--active {
 		.nav-items__icon {
-			transform: translateY(-33px);
+			transform: translateY(-28px);
 		}
 		.nav-items__text {
 			opacity: 1;

@@ -1,10 +1,11 @@
 @import './styles/_variables.scss';
 
 body {
+	padding: 0;
 	margin: 0;
 	font-family: $font-text-1;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	background-color: $primary-color;
-	overflow: hidden;
+	min-height: 100vh;
 }

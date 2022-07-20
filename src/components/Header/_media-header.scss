@@ -2,7 +2,7 @@
 	.header {
 		position: static;
 		top: 0;
-		height: $nav-height + 40px;
+		height: $nav-height + 10px;
 		justify-content: space-around;
 		transition: $trans-1;
 
@@ -69,8 +69,7 @@
 			}
 
 			&:hover .nav-items__icon {
-				color: $tertiary-color-dark;
-				transition: ease 0.5s;
+				color: $tertiary-color;
 			}
 		}
 
