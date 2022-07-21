@@ -1,10 +1,11 @@
 import { ContentTitle } from '@components/ContentTitle/ContentTitle';
 import { GitHub, Linkedin, Book, User } from '@icons/index';
-import { getAge } from '@utils/Age';
+import { getYears } from '@utils/Age';
 
 import './Home.scss'
 
-const age = getAge();
+const age = getYears('1998-9-20');
+const learningDate = getYears('2019-1-1');
 
 export const Home = () => {
     return (
@@ -32,7 +33,7 @@ export const Home = () => {
                     </p>
                     <ContentTitle title='Mi historia' textIcon={<User />} />
                     <p>
-                        Hace 3 años hice una búsqueda en internet, <b>¿Como se hace una pagina web?</b> y uno de los resultados fue <b>html y css</b>, entre estos estaba un lenguaje que me llamo mucho la atención, <strong>javascript</strong> este es un lenguaje al que le he dedicado tiempo, desde como funciona en el navegador. hasta como se ejecuta en el servidor. Fue una pregunta sencilla pero que desencadeno mi curiosidad y me insto a aprender nuevas tecnologías.
+                        Hace aproximadamente {learningDate} años hice una búsqueda en internet, <b>¿Como se hace una pagina web?</b> y uno de los resultados fue <b>html, css y javascript</b>. <strong>javascript</strong> es un lenguaje de programación al que le he dedicado tiempo, desde como funciona en el navegador, hasta como se ejecuta en el servidor. Fue una pregunta sencilla pero que desencadeno mi curiosidad y me insto a aprender nuevas tecnologías.
                     </p>
                 </div>
             </div>

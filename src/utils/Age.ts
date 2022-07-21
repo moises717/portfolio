@@ -1,7 +1,7 @@
-export const getAge = (): number => {
-	const myBirthday = new Date('1998-09-20');
+export const getYears = (year: string): number => {
+	const startYear = new Date(year);
 	const today = new Date();
-	const age = today.getFullYear() - myBirthday.getFullYear();
+	const age = today.getFullYear() - startYear.getFullYear();
 
 	return age;
 };
