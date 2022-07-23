@@ -3,11 +3,6 @@ import { Javascript, Node, React, Css, Electron, Typescript, Mongodb, Sass, Html
 
 export const skillList: RoundedCardProps[] = [
 	{
-		title: 'Javascript',
-		icon: <Javascript />,
-		classColor: 'js',
-	},
-	{
 		title: 'Html',
 		icon: <Html />,
 		classColor: 'html',
@@ -18,20 +13,24 @@ export const skillList: RoundedCardProps[] = [
 		classColor: 'css',
 	},
 	{
-		title: 'Node',
-		icon: <Node />,
-		classColor: 'node',
+		title: 'Javascript',
+		icon: <Javascript />,
+		classColor: 'js',
 	},
 	{
 		title: 'Typescript',
 		icon: <Typescript />,
 		classColor: 'typescript',
 	},
-
 	{
 		title: 'Sass',
 		icon: <Sass />,
 		classColor: 'sass',
+	},
+	{
+		title: 'Node',
+		icon: <Node />,
+		classColor: 'node',
 	},
 	{
 		title: 'React',
