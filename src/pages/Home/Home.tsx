@@ -8,7 +8,7 @@ const age = getAge();
 
 export const Home = () => {
     return (
-        <div className="home fade-in" id='home'>
+        <div className="home fade-in">
             <div className="home__content">
                 <div className='home__presentation'>
                     <h1> Hola! Soy Moisés Barillas, <span>
