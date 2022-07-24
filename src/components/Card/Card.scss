@@ -1,0 +1,59 @@
+@import '@styles/_variables.scss';
+
+.card {
+	background-color: $primary-color;
+	border-radius: 0.25rem;
+	box-shadow: 2px 3px 40px -15px rgba(0, 0, 0, 0.76);
+	cursor: pointer;
+	padding: 1rem;
+	transition: $trans-1;
+
+	.layout.light & {
+		background-color: white;
+		box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	}
+
+	&__header {
+		h3 {
+			font-size: 1em;
+			font-family: $font-1;
+			color: $secondary-color;
+		}
+	}
+
+	&__body {
+		p {
+			font-size: 1em;
+		}
+	}
+
+	&__image {
+		overflow: hidden;
+		img {
+			aspect-ratio: 16/9;
+			display: block;
+			max-height: 300px;
+			object-fit: cover;
+			object-position: center;
+			transition: 200ms transform ease-in-out;
+			width: 100%;
+			border-radius: 0.25rem;
+		}
+	}
+
+	&__tecnologies {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		svg {
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	&:hover {
+		img {
+			transform: scale(1.025);
+		}
+	}
+}
