@@ -3,18 +3,25 @@
 .card {
 	background-color: $primary-color;
 	border-radius: 0.25rem;
-	box-shadow: 2px 3px 40px -15px rgba(0, 0, 0, 0.76);
+	box-shadow: 2px 3px 35px -18px rgba(0, 0, 0, 0.76);
 	cursor: pointer;
 	padding: 1rem;
 	transition: $trans-1;
+	text-decoration: none;
 
 	.layout.light & {
 		background-color: white;
 		box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+		border: none;
+
+		p {
+			color: $white-color-light;
+		}
 	}
 
 	&__header {
 		h3 {
+			letter-spacing: 1px;
 			font-size: 1em;
 			font-family: $font-1;
 			color: $secondary-color;
@@ -24,6 +31,7 @@
 	&__body {
 		p {
 			font-size: 1em;
+			color: $white-color;
 		}
 	}
 

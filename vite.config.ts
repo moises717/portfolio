@@ -15,6 +15,9 @@ export default defineConfig({
 			'@router': '/src/router',
 			'@icons': '/src/icons',
 			'@layouts': '/src/layout',
+			'@constants': '/src/constants',
+			'@services': '/src/services',
+			'@interfaces': '/src/interfaces',
 		},
 	},
 });

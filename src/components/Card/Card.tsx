@@ -1,15 +1,17 @@
 import { ReactElement } from 'react'
+
 import './Card.scss'
 
 interface Props {
     title: string
     children?: ReactElement | ReactElement[],
-    image?: string
+    image?: string,
+    url: string
 }
 
-const Card = ({ title, image, children }: Props) => {
+const Card = ({ title, image, url, children }: Props) => {
     return (
-        <div className="card">
+        <a href={url} target="_blank" className='card'>
             <div className="card__image">
                 <img src={image} alt="project-1" />
             </div>
@@ -19,7 +21,8 @@ const Card = ({ title, image, children }: Props) => {
             <div className="card__body">
                 {children}
             </div>
-        </div>
+        </a>
+
     )
 }
 
