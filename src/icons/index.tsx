@@ -7,7 +7,6 @@ export function Home(props: SVGProps<SVGSVGElement>) {
             height={21}
             viewBox="0 0 21 21"
             width={21}
-            xmlns="http://www.w3.org/2000/svg"
             {...props}
         >
             <g
@@ -33,7 +32,6 @@ export function Lightning(props: SVGProps<SVGSVGElement>) {
             height={21}
             viewBox="0 0 21 21"
             width={21}
-            xmlns="http://www.w3.org/2000/svg"
             {...props}
         >
             <path
@@ -53,7 +51,6 @@ export function LightningOn(props: SVGProps<SVGSVGElement>) {
             height={21}
             viewBox="0 0 21 21"
             width={21}
-            xmlns="http://www.w3.org/2000/svg"
             {...props}
         >
             <g
@@ -78,7 +75,6 @@ export function LightningOff(props: SVGProps<SVGSVGElement>) {
             height={21}
             viewBox="0 0 21 21"
             width={21}
-            xmlns="http://www.w3.org/2000/svg"
             {...props}
         >
             <g
@@ -103,7 +99,6 @@ export function Folder(props: SVGProps<SVGSVGElement>) {
             height={21}
             viewBox="0 0 21 21"
             width={21}
-            xmlns="http://www.w3.org/2000/svg"
             {...props}
         >
             <g
@@ -128,7 +123,6 @@ export function Contact(props: SVGProps<SVGSVGElement>) {
             height={21}
             viewBox="0 0 21 21"
             width={21}
-            xmlns="http://www.w3.org/2000/svg"
             {...props}
         >
             <g
@@ -150,7 +144,6 @@ export function Contact(props: SVGProps<SVGSVGElement>) {
 export function GitHub(props: SVGProps<SVGSVGElement>) {
     return (
         <svg
-            xmlns="http://www.w3.org/2000/svg"
             x="0px"
             y="0px"
             width={128}
@@ -167,7 +160,6 @@ export function GitHub(props: SVGProps<SVGSVGElement>) {
 export function Linkedin(props: SVGProps<SVGSVGElement>) {
     return (
         <svg
-            xmlns="http://www.w3.org/2000/svg"
             x="0px"
             y="0px"
             width={128}
@@ -183,7 +175,6 @@ export function Linkedin(props: SVGProps<SVGSVGElement>) {
 export function Code(props: SVGProps<SVGSVGElement>) {
     return (
         <svg
-            xmlns="http://www.w3.org/2000/svg"
             width={21}
             height={21}
             viewBox="0 0 21 21"
@@ -217,7 +208,6 @@ export function Book(props: SVGProps<SVGSVGElement>) {
             height={21}
             viewBox="0 0 21 21"
             width={21}
-            xmlns="http://www.w3.org/2000/svg"
             {...props}
         >
             <path
@@ -236,7 +226,6 @@ export function User(props: SVGProps<SVGSVGElement>) {
             height={21}
             viewBox="0 0 21 21"
             width={21}
-            xmlns="http://www.w3.org/2000/svg"
             {...props}
         >
             <path
@@ -343,10 +332,9 @@ export function Typescript(props: SVGProps<SVGSVGElement>) {
 export function Mongodb(props: SVGProps<SVGSVGElement>) {
     return (
         <svg
-            height={2500}
+            height={50}
             viewBox="8.738 -5.03622834 17.45992422 39.40619484"
-            width={2500}
-            xmlns="http://www.w3.org/2000/svg"
+            width={50}
             {...props}
         >
             <path
