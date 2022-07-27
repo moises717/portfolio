@@ -1,5 +1,5 @@
 import { RoundedCardProps } from '@components/RoundedCard/RoundedCard';
-import { Javascript, Node, React, Css, Electron, Typescript, Mongodb, Sass, Html, Sql } from '@icons/index';
+import { Javascript, Node, React, Css, Electron, Typescript, Mongodb, Sass, Html, Sql, GitHub } from '@icons/index';
 
 export const skillList: RoundedCardProps[] = [
 	{
@@ -56,6 +56,11 @@ export const skillList: RoundedCardProps[] = [
 		title: 'MySQL',
 		icon: <Sql />,
 		classColor: 'sql',
+	},
+	{
+		title: "Github",
+		icon: <GitHub />,
+		classColor: "github",
 	}
 
 ];
