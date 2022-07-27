@@ -4,11 +4,11 @@ import { Router } from './router/Router';
 function App() {
 
   return (
-    <div>
+    <main>
       <BrowserRouter>
         <Router />
       </BrowserRouter>
-    </div>
+    </main>
   )
 }
 

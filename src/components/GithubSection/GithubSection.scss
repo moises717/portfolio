@@ -1,6 +1,43 @@
+@import '@styles/_variables.scss';
+
 .projects__github {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	gap: 1rem;
-	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.github-card {
+	background-color: transparent;
+	border-radius: 5px;
+	text-decoration: none;
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+	}
+
+	&__name {
+		text-decoration: none;
+		font-size: 1.2rem;
+		font-weight: bold;
+		color: #61afef;
+	}
+	&__description {
+		font-size: 1.2rem;
+		color: #abb2b6;
+	}
+
+	&__footer {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 10px;
+		svg {
+			color: $secondary-color;
+			margin-top: 2px;
+			width: 20px;
+			height: 20px;
+		}
+	}
 }

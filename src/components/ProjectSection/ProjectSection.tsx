@@ -5,7 +5,7 @@ import './ProjectSection.scss'
 
 export const ProjectSection = () => {
     return (
-        <div className='my-projects'>
+        <section className='my-projects'>
             {
                 ProjectList.map(({ image, title, technologies, text, url }: ProjectListProps, index) => {
                     return (
@@ -26,6 +26,6 @@ export const ProjectSection = () => {
                     )
                 })
             }
-        </div>
+        </section>
     )
 }

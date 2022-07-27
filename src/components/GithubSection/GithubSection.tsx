@@ -1,45 +1,35 @@
-import { useEffect, useState } from 'react';
-
-import { getUserRepos } from '@services/github';
-import { GithubResponse } from '@interfaces/GithubResponse';
+import { useGithubRepos } from '@hooks/useGithubRepos';
+import { Code, GitHub } from '@icons/index';
+import { Loading } from '../Loading/Loading';
 
 import './GithubSection.scss';
 
 export const GithubSection = () => {
-    const [githubRepos, setGithubRepos] = useState<GithubResponse[]>();
-
-    useEffect(() => {
-        getUserRepos({ perPage: 10 }).then((repos: GithubResponse[]) => {
-            setGithubRepos(repos);
-        }).catch((err) => {
-            console.log(err);
-        })
-    }, [])
-
-    console.log(githubRepos);
+    const { githubRepos, loading } = useGithubRepos();
 
     return (
-        <div className='projects__github'>
+        <section className='projects__github'>
+            {loading ? <Loading /> : null}
             {
                 githubRepos && githubRepos.map((repo) => {
                     return (
-                        <div key={repo.id}>
-                            <a href={repo.html_url} target="_blank">
-                                <div className="projects__github__item">
-                                    <div className="projects__github__item__title">
-                                        {repo.name}
-                                    </div>
-                                    <div className="projects__github__item__description">
-                                        {repo.description}
-                                    </div>
+                        <div key={repo.id} className="github-card">
+                            <div className='github-card__content'>
+                                <a href={repo.html_url} target="_blank" className='github-card__name'>
+                                    {repo.name}
+                                </a>
+                                <div className='github-card__description'>
+                                    {repo.description}
                                 </div>
-                            </a>
+                                <div className='github-card__footer'>
+                                    <Code /> {repo.language && <span className='github-card__language'> {repo.language}</span>}
+                                </div>
+                            </div>
                         </div>
                     )
                 }
                 )
-
             }
-        </div>
+        </section>
     )
 }
