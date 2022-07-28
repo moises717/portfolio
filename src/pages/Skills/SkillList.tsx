@@ -1,65 +1,65 @@
 import { RoundedCardProps } from '@components/RoundedCard/RoundedCard';
-import { Javascript, Node, React, Css, Electron, Typescript, Mongodb, Sass, Html, Sql, GitHub } from '@icons/index';
+import { DevIcons } from '@icons/DevIcons';
 
 export const skillList: RoundedCardProps[] = [
 	{
 		title: 'Html',
-		icon: <Html />,
+		icon: DevIcons['html'],
 		classColor: 'html',
 	},
 	{
 		title: 'Css',
-		icon: <Css />,
+		icon: DevIcons['css'],
 		classColor: 'css',
 	},
 	{
 		title: 'Javascript',
-		icon: <Javascript />,
+		icon: DevIcons['javascript'],
 		classColor: 'js',
 	},
 	{
 		title: 'Typescript',
-		icon: <Typescript />,
+		icon: DevIcons['typescript'],
 		classColor: 'typescript',
 	},
 	{
 		title: 'Sass',
-		icon: <Sass />,
+		icon: DevIcons['sass'],
 		classColor: 'sass',
 	},
 	{
 		title: 'Node',
-		icon: <Node />,
+		icon: DevIcons['nodejs'],
 		classColor: 'node',
 	},
 	{
 		title: 'React',
-		icon: <React />,
+		icon: DevIcons['react'],
 		classColor: 'react',
 	},
 	{
 		title: 'React Native',
-		icon: <React />,
+		icon: DevIcons['react'],
 		classColor: 'react',
 	},
 	{
 		title: 'Electron',
-		icon: <Electron />,
+		icon: DevIcons['electron'],
 		classColor: 'electron',
 	},
 	{
 		title: 'Mongodb',
-		icon: <Mongodb />,
+		icon: DevIcons['mongodb'],
 		classColor: 'mongodb',
 	},
 	{
 		title: 'MySQL',
-		icon: <Sql />,
+		icon: DevIcons['sql'],
 		classColor: 'sql',
 	},
 	{
 		title: "Github",
-		icon: <GitHub />,
+		icon: DevIcons['github'],
 		classColor: "github",
 	}
 

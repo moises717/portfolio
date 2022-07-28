@@ -11,6 +11,7 @@
 	letter-spacing: 3px;
 	background-color: $primary-color;
 	transition: $trans-1;
+	margin-bottom: 10px;
 
 	.layout.light & {
 		background-color: $primary-color-light;

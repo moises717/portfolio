@@ -1,0 +1,45 @@
+@import '@styles/_variables.scss';
+
+.github-list {
+	border-radius: 5px;
+	text-decoration: none;
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 7px;
+	}
+
+	&__name {
+		text-decoration: none;
+		font-size: 1.2rem;
+		font-weight: bold;
+		color: #61afef;
+	}
+	&__description {
+		font-size: 1.2rem;
+		color: #abb2b6;
+		svg {
+			width: 15px;
+			height: 15px;
+		}
+	}
+
+	&__footer {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 10px;
+		svg {
+			color: $secondary-color;
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	.layout.light & {
+		&__name {
+			color: #2681cc;
+		}
+	}
+}
