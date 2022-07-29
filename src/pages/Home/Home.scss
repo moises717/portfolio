@@ -2,26 +2,41 @@
 
 .home {
 	&__presentation {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 20px;
 		text-align: center;
 		font-size: 0.8em;
+		padding: 10px;
 
 		span {
 			color: $secondary-color;
 		}
+
+		@media (min-width: 768px) {
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: space-between;
+			font-size: 1em;
+		}
 	}
 
 	&__image {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
+		width: 200px;
 		img {
-			width: auto;
+			box-shadow: 2px 3px 35px -18px rgba(0, 0, 0, 0.76);
+			border-radius: 5px;
+			width: 200px;
 			height: 200px;
+			background: rgb(25, 29, 43);
+			background: linear-gradient(0deg, rgba(25, 29, 43, 1) 27%, rgba(52, 72, 139, 1) 100%);
+			object-fit: cover;
 		}
 	}
 
 	&__social {
+		margin-top: 10px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -31,8 +46,8 @@
 		}
 
 		svg {
-			width: 40px;
-			height: 40px;
+			width: 50px;
+			height: 50px;
 		}
 	}
 	&__github {
