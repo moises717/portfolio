@@ -1,5 +1,4 @@
 import { ContentTitle } from '@components/ContentTitle/ContentTitle';
-import { useGithubProfile } from '@hooks/useGithubProfile';
 import { GitHub, Linkedin, Book, User } from '@icons/index';
 import { getAge } from '@utils/Age';
 
@@ -9,18 +8,17 @@ import './Home.scss'
 const age = getAge();
 
 export const Home = () => {
-    const { gitHubProfile } = useGithubProfile('moises717');
+
     return (
         <div className="home fade-in">
             <div className="home__content">
                 <div className='home__presentation'>
                     <div className='home__image'>
                         <img src={profile} alt="Moises barillas picture" />
-
                     </div>
                     <div>
-                        <h1> Hola! Soy {gitHubProfile?.name}, <span>
-                            {gitHubProfile?.bio}
+                        <h1> Hola! Soy Moisés Barillas, <span>
+                            Desarrollador web fullstack
                         </span>
                         </h1>
                         <div className='home__social'>
