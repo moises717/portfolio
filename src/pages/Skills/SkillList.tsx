@@ -58,8 +58,8 @@ export const skillList: RoundedCardProps[] = [
 		classColor: 'sql',
 	},
 	{
-		title: "Github",
-		icon: DevIcons['github'],
+		title: "Git",
+		icon: DevIcons['git'],
 		classColor: "github",
 	}
 
