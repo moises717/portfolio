@@ -18,10 +18,8 @@ export const Home = () => {
                     <div className='home__image'>
                         <img src={profile} alt="Moises barillas picture" />
                     </div>
-                    <div>
-                        <h1> Hola! Soy Moisés Barillas, <span>
-                            Desarrollador web fullstack
-                        </span>
+                    <div className='home__description'>
+                        <h1> Hola! Soy Moisés Barillas <span>desarrollador web fullstack</span>
                         </h1>
                         <div className='home__social'>
                             <a href="https://github.com/moises717" target="__blank">
