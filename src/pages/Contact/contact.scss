@@ -4,10 +4,12 @@
 	max-width: 900px;
 
 	&__social {
+		margin-top: 30px;
 		border-radius: 20px;
-		box-shadow: $tertiary-color 0px 0px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+		box-shadow: $tertiary-color 0px 0px 3px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 		display: flex;
 		flex-direction: column;
+		text-align: center;
 		padding-bottom: 100px;
 	}
 
@@ -18,7 +20,7 @@
 	}
 
 	p {
-		font-size: 1.4em;
+		font-size: 1.2em;
 		padding: 20px;
 	}
 }
@@ -34,7 +36,7 @@
 	background-color: #0e76a8;
 	transition: $trans-1;
 	&:hover {
-		background-color: $tertiary-color-dark;
+		background-color: $tertiary-color;
 	}
 
 	&__linkedin {
