@@ -3,7 +3,7 @@ import remarkGemoji from 'remark-gemoji'
 
 import { GitHub, Linkedin } from '@icons/index';
 import { useGithubReadme } from '@hooks/useGithubReadme';
-import { Loading } from '@components/Loading/Loading';
+import { HomeSkeleton } from '@components/HomeSkeleton/HomeSkeleton';
 
 import profile from '@assets/images/profile.png'
 import './Home.scss'
@@ -12,7 +12,7 @@ export const Home = () => {
     const { readmeText, loading } = useGithubReadme();
 
     return (
-        <div className="home fade-in">
+        <div className="home">
             <div className="home__content">
                 <div className='home__presentation'>
                     <div className='home__image'>
@@ -31,12 +31,14 @@ export const Home = () => {
                         </div>
                     </div>
                 </div>
-                {
-                    loading && <Loading />
-                }
-                <ReactMarkdown className='home__about-me' remarkPlugins={[remarkGemoji]} children={readmeText} />
-            </div>
+                <div className="home__about-me fade-in">
+                    {
+                        loading && <HomeSkeleton />
+                    }
+                    <ReactMarkdown remarkPlugins={[remarkGemoji]} children={readmeText} />
+                </div>
 
+            </div>
         </div>
     )
 }

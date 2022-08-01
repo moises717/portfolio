@@ -1,0 +1,29 @@
+@import '@styles/_variables.scss';
+@import '@styles/_mixins.scss';
+
+.skeleton-container {
+	&__title {
+		@include skeleton-animation-style;
+		width: 230px;
+		height: 1.2rem;
+		border-radius: 5px;
+		margin-top: 20px;
+	}
+	&__content {
+		@include skeleton-animation-style;
+		width: 100%;
+		height: 0.5rem;
+		border-radius: 2px;
+		margin-top: 20px;
+		&:nth-child(5) {
+			width: 85% !important;
+		}
+		&:nth-child(8) {
+			width: 50% !important;
+			margin-bottom: 33px !important;
+		}
+		&:nth-child(13) {
+			width: 30% !important;
+		}
+	}
+}
