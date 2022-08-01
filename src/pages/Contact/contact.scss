@@ -1,63 +1,46 @@
 @import '@styles/_variables.scss';
 
 .contact {
-	&__form {
+	max-width: 900px;
+
+	&__social {
+		border-radius: 20px;
+		box-shadow: $tertiary-color 0px 0px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 		display: flex;
 		flex-direction: column;
+		padding-bottom: 100px;
+	}
+
+	&__icons {
+		display: flex;
+		justify-content: center;
 		gap: 20px;
-		width: 100%;
+	}
 
-		&--name {
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			gap: 15px;
-		}
-		&--message {
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			gap: 20px;
-		}
+	p {
+		font-size: 1.4em;
+		padding: 20px;
+	}
+}
 
-		input {
-			height: 30px;
-			width: 100%;
-			outline: none;
-			border: solid 1px $tertiary-color;
-			border-radius: 5px;
-			background-color: transparent;
-			color: $tertiary-color;
-		}
+.icon-card {
+	width: 80px;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	border-radius: 10px;
+	background-color: #0e76a8;
+	transition: $trans-1;
+	&:hover {
+		background-color: $tertiary-color-dark;
+	}
 
-		textarea {
-			max-height: 100px;
-			min-height: 100px;
-			width: 100%;
-			outline: none;
-			border: solid 1px #ccc;
-			border-radius: 5px;
-			background-color: transparent;
-			border: solid 1px $tertiary-color;
-			color: $tertiary-color;
-		}
-
-		label {
-			font-size: 16px;
-			font-weight: bold;
-			color: $secondary-color;
-		}
-
-		button {
-			background-color: $secondary-color;
-			color: #fff;
-			border: none;
-			border-radius: 5px;
-			padding: 10px;
-			font-size: 16px;
-			font-weight: bold;
-			cursor: pointer;
-			width: 200px;
-		}
+	&__linkedin {
+		fill: white;
+	}
+	&__mail {
+		fill: white;
 	}
 }

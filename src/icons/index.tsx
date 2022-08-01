@@ -171,6 +171,19 @@ export function Linkedin(props: SVGProps<SVGSVGElement>) {
         </svg>
     )
 }
+export function Mail(props: SVGProps<SVGSVGElement>) {
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={128}
+            height={128}
+            viewBox="0 0 24 24"
+            {...props}
+        >
+            <path d="M22 5v14H2V5h20zm2-2H0v18h24V3zm-2 16l-6.526-6.618-3.445 3.483-3.418-3.525L2 19l5.051-8L2 5l10.029 7.446L22 5l-4.998 6.01L22 19z" />
+        </svg>
+    )
+}
 
 export function Code(props: SVGProps<SVGSVGElement>) {
     return (
