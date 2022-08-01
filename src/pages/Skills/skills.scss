@@ -2,6 +2,10 @@
 
 .skills {
 	margin-top: 50px;
+	@media (min-width: 768px) {
+		margin: 50px auto;
+		max-width: $desktop-width;
+	}
 
 	&__content {
 		display: flex;
