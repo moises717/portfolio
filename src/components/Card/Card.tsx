@@ -13,7 +13,7 @@ const Card = ({ title, image, url, children }: Props) => {
     return (
         <a href={url} target="_blank" className='card'>
             <div className="card__image">
-                <img src={image} alt="project-1" />
+                <img src={image} alt={title} />
             </div>
             <div className="card__header">
                 <h3>{title}</h3>
@@ -28,9 +28,11 @@ const Card = ({ title, image, url, children }: Props) => {
 
 export const Text = ({ children }: { children: string }) => {
     return (
-        <p>
-            {children}
-        </p>
+        <div className='card__text' title={children}>
+            <p>
+                {children}
+            </p>
+        </div>
     )
 }
 

@@ -8,24 +8,21 @@ export interface ProjectListProps {
 
 export const ProjectList: ProjectListProps[] = [
     {
-        title: 'Juego de ajedrez',
-        url: 'https://i.imgur.com/ih13x2G.jpeg',
-        text: "El ajedrez es un juego de tablero entre dos contrincantes en el que cada uno dispone al inicio de 16 piezas",
-        image: 'https://i.imgur.com/ih13x2G.jpeg',
+        title: 'Pagina web personal',
+        url: 'https://moisesbarillas.vercel.app/',
+        text: "Pagina web personal que muestra una breve descripción de mi trabajo, con una imagen de mi perfil y una lista de mis tecnologías que utilizo.",
+        image: 'https://i.imgur.com/epc5lfD.png',
         technologies: [
-            'css',
             'html',
-            'nodejs',
             'react',
             'sass',
             'typescript',
-            'javascript'
         ]
     },
     {
         title: 'Mars app',
         url: 'https://i.imgur.com/XqQZQZb.png',
-        text: "Marte es el cuarto planeta en orden de distancia al Sol y el segundo más pequeño del sistema solar, después de Mercurio",
+        text: "Ejemplo card de proyecto que muestra una imagen de un planeta y una descripción de su estado actual.",
         image: 'https://i.imgur.com/jJFyufS.jpeg',
         technologies: [
             'css',
