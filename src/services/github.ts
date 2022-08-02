@@ -1,12 +1,19 @@
-import {API_URL, GITHUB_RAW_URL_FILE} from '@constants/index';
+import {API_URL} from '@constants/index';
 import {GithubResponse} from '@interfaces/GithubResponse';
 import {GithubProfileInfo} from '@interfaces/GithubProfileInfo';
 import {customFetch} from '@utils/customFetch';
+import {b64DecodeUnicode} from '@utils/base64Decode';
 
 interface getUserRepos {
 	username?: string;
 	page?: number;
 	perPage?: number;
+}
+
+export interface GithubFiles {
+	username: string;
+	repo: string;
+	file: string;
 }
 
 export const getUserRepos = async ({
@@ -27,9 +34,9 @@ export const getUserInfo = async (username: string): Promise<GithubProfileInfo> 
 	return response;
 };
 
-export const getGithubReadme = async (): Promise<String> => {
-	const response = await fetch(GITHUB_RAW_URL_FILE);
-	const result = await response.blob();
-	const readme = await result.text();
-	return readme;
+export const getGithubFiles = async ({username, repo, file}: GithubFiles): Promise<String> => {
+	const response = await fetch(API_URL + `/repos/${username}/${repo}/contents/${file}`);
+	const {content} = await response.json();
+
+	return b64DecodeUnicode(content);
 };

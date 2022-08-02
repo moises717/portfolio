@@ -2,14 +2,14 @@ import ReactMarkdown from 'react-markdown'
 import remarkGemoji from 'remark-gemoji'
 
 import { GitHub, Linkedin } from '@icons/index';
-import { useGithubReadme } from '@hooks/useGithubReadme';
+import { useGithubFiles } from '@hooks/useGithubFiles';
 import { HomeSkeleton } from '@components/HomeSkeleton/HomeSkeleton';
 
 import profile from '@assets/images/profile.png'
 import './Home.scss'
 
 export const Home = () => {
-    const { readmeText, loading } = useGithubReadme();
+    const { fileGithubInfo, loading } = useGithubFiles({ file: 'README.md', repo: 'moises717', username: 'moises717' });
 
     return (
         <div className="home">
@@ -35,7 +35,7 @@ export const Home = () => {
                     {
                         loading && <HomeSkeleton />
                     }
-                    <ReactMarkdown remarkPlugins={[remarkGemoji]} children={readmeText} />
+                    <ReactMarkdown remarkPlugins={[remarkGemoji]} children={fileGithubInfo} />
                 </div>
 
             </div>
