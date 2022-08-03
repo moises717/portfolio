@@ -35,8 +35,7 @@ export const getUserInfo = async (username: string): Promise<GithubProfileInfo> 
 };
 
 export const getGithubFiles = async ({username, repo, file}: GithubFiles): Promise<String> => {
-	const response = await fetch(API_URL + `/repos/${username}/${repo}/contents/${file}`);
-	const {content} = await response.json();
+	const {content} = await customFetch(API_URL + `/repos/${username}/${repo}/contents/${file}`);
 
 	return b64DecodeUnicode(content);
 };
