@@ -38,7 +38,7 @@ export const Text = ({ children }: { children: string }) => {
 
 export const Technologies = ({ children }: { children: ReactElement | ReactElement[] }) => {
     return (
-        <div className='card__tecnologies'>
+        <div className='card__technologies'>
             {children}
         </div>
     )
