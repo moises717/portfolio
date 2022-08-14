@@ -1,6 +1,6 @@
 @media (min-width: 768px) {
 	.header {
-		position: static;
+		position: sticky;
 		top: 0;
 		height: $nav-height + 10px;
 		justify-content: space-around;
