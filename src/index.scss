@@ -38,3 +38,10 @@ body {
 		opacity: 1;
 	}
 }
+
+.nextjs {
+	fill: white;
+	.layout.light & {
+		fill: black;
+	}
+}

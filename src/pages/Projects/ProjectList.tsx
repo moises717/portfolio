@@ -20,14 +20,13 @@ export const ProjectList: ProjectListProps[] = [
         ]
     },
     {
-        title: 'Mars app',
-        url: 'https://i.imgur.com/XqQZQZb.png',
-        text: "Ejemplo card de proyecto que muestra una imagen de un planeta y una descripción de su estado actual.",
-        image: 'https://i.imgur.com/jJFyufS.jpeg',
+        title: 'Todo link',
+        url: 'https://todo-link.up.railway.app/',
+        text: "Aplicación de tareas que permite agregar, eliminar y editar tareas, esta app crea un enlace único a cada lista de tareas el cual puedes compartir.",
+        image: 'https://i.imgur.com/ESEwlp3.png',
         technologies: [
-            'css',
-            'html',
-            'javascript',
+            'nextjs',
+            'mongodb',
         ]
     },
 
