@@ -1,8 +1,13 @@
-export const customFetch = async <T>(url: string, options?: RequestInit): Promise<T> => {
+interface CustomFetch {
+	customToken?: string;
+	url: string;
+}
+
+export const customFetch = async <T>({url, customToken}: CustomFetch, options?: RequestInit): Promise<T> => {
 	const response = await fetch(url, {
 		...options,
 		headers: {
-			Authorization: `token ${import.meta.env.VITE_APP_GITHUB_TOKEN}`,
+			Authorization: !customToken ? `token ${import.meta.env.VITE_APP_GITHUB_TOKEN}` : customToken,
 		},
 	});
 

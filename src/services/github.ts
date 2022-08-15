@@ -21,21 +21,23 @@ export const getUserRepos = async ({
 	perPage,
 	username = 'moises717',
 }: getUserRepos): Promise<GithubResponse[]> => {
-	const response = await customFetch<GithubResponse[]>(
-		`${API_URL}/users/${username}/repos?page=${page}&per_page=${perPage}&sort=author-date&direction=desc`
-	);
+	const response = await customFetch<GithubResponse[]>({
+		url: `${API_URL}/users/${username}/repos?page=${page}&per_page=${perPage}&sort=author-date&direction=desc`,
+	});
 
 	return response;
 };
 
 export const getUserInfo = async (username: string): Promise<GithubProfileInfo> => {
-	const response = await customFetch<GithubProfileInfo>(`${API_URL}/users/${username}`);
+	const response = await customFetch<GithubProfileInfo>({url: `${API_URL}/users/${username}`});
 
 	return response;
 };
 
 export const getGithubFiles = async ({username, repo, file}: GithubFiles): Promise<String> => {
-	const {content} = await customFetch(API_URL + `/repos/${username}/${repo}/contents/${file}`);
+	const {content} = await customFetch({
+		url: API_URL + `/repos/${username}/${repo}/contents/${file}`,
+	});
 
 	return b64DecodeUnicode(content);
 };

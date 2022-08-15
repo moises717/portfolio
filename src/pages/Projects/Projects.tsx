@@ -1,5 +1,6 @@
 import { ProjectSection } from '@components/ProjectSection/ProjectSection';
 import { GithubSection } from '@components/GithubSection/GithubSection';
+import { VercelSection } from '@components/VercelSection/VercelSection';
 
 import './projects.scss';
 
@@ -9,6 +10,7 @@ export const Projects = () => {
             <div className="projects__content">
                 <ProjectSection />
                 <GithubSection />
+                <VercelSection />
             </div>
         </div>
     )
