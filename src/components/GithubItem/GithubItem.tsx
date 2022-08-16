@@ -8,7 +8,7 @@ export const GithubItem = ({ name, description, html_url, language }: GithubResp
     const programingLanguage = language ? language.toLowerCase() : null;
 
     return (
-        <div className="github-list">
+        <ul className="github-list">
             <div className='github-list__content'>
                 <a href={html_url} target="_blank" className='github-list__name'>
                     {name}
@@ -21,6 +21,9 @@ export const GithubItem = ({ name, description, html_url, language }: GithubResp
                     {language && <span className='github-list__language'> {language}</span>}
                 </div>
             </div>
-        </div>
+            <div className='github-complete-list'>
+                <a href="https://github.com/moises717" target="_blank">Ver todos</a>
+            </div>
+        </ul>
     )
 }

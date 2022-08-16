@@ -3,7 +3,7 @@ import remarkGemoji from 'remark-gemoji'
 
 import { GitHub, Linkedin } from '@icons/index';
 import { useGithubFiles } from '@hooks/useGithubFiles';
-import { HomeSkeleton } from '@components/HomeSkeleton/HomeSkeleton';
+import { HomeSkeleton } from '@components/Skeleton/HomeSkeleton/HomeSkeleton';
 
 import profile from '@assets/images/profile.png'
 import './Home.scss'
