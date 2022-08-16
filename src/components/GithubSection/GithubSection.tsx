@@ -22,6 +22,9 @@ export const GithubSection = () => {
                     }
                     )
                 }
+                <div className='github-complete-list'>
+                    <a href="https://github.com/moises717" target="_blank">Ver todos</a>
+                </div>
             </>
         </ProjectSection>
     )
