@@ -8,10 +8,8 @@ import { DeploymentItem } from "../DeploymentItem/DeploymentItem";
 export const VercelSection = () => {
     const [projects, setProjects] = useState<Project[]>();
     useEffect(() => {
-        getVercelDeployment().then((res) => {
-            console.log(res);
-
-            setProjects(res.projects);
+        getVercelDeployment().then(({ projects }) => {
+            setProjects(projects);
         })
     }, [])
 
