@@ -2,7 +2,7 @@
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
-  "description": "Pagina web personal que muestra una breve descripción de mi trabajo, con una imagen de mi perfil y una lista de mis tecnologías que utilizo.",
+  "description": "Portafolio que muestra mis proyectos e informacion de forma automatica, obtiene datos de repositorio de github y las aplicaciones desplegadas en vercel automaticamente.",
   "keywords": [
     "react",
     "react-markdown",
