@@ -16,9 +16,11 @@
 		}
 
 		.description {
-			width: 100%;
 			p {
 				color: #8a8c8d;
+			}
+			@media (min-width: 600px) {
+				width: 88%;
 			}
 		}
 

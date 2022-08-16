@@ -25,6 +25,10 @@
 			width: 15px;
 			height: 15px;
 		}
+
+		@media (min-width: 600px) {
+			width: 88%;
+		}
 	}
 
 	&__footer {
