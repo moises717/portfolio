@@ -1,6 +1,6 @@
-import { ProjectSection } from '@components/ProjectSection/ProjectSection';
 import { GithubSection } from '@components/GithubSection/GithubSection';
 import { VercelSection } from '@components/VercelSection/VercelSection';
+import { ProjectSection } from '@components/ProjectSection/ProjectSection';
 
 import './projects.scss';
 
@@ -9,8 +9,8 @@ export const Projects = () => {
         <div className="projects fade-in">
             <div className="projects__content">
                 <ProjectSection />
-                <GithubSection />
                 <VercelSection />
+                <GithubSection />
             </div>
         </div>
     )

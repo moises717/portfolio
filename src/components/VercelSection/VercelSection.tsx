@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+
 import { getVercelDeployment } from "@services/vercel"
 import { ContentTitle } from "../ContentTitle/ContentTitle"
 import { Project } from "@interfaces/VercelDeployment";
@@ -9,14 +10,14 @@ export const VercelSection = () => {
     useEffect(() => {
         getVercelDeployment().then((res) => {
             console.log(res);
-            setProjects(res.projects);
 
+            setProjects(res.projects);
         })
     }, [])
 
     return (
         <section>
-            <ContentTitle title="Despliegues 🚀" />
+            <ContentTitle title={`Despliegues (${projects?.length || 0}) 🚀`} />
             {
                 projects?.map((project: Project) => <DeploymentItem key={project.id} projectItem={project} />)
             }
