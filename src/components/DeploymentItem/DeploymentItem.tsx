@@ -4,6 +4,7 @@ import { DevIcons } from "@icons/DevIcons";
 import './DeploymentItem.scss';
 import { useGithubFiles } from "../../hooks/useGithubFiles";
 import { Loading } from "../Loading/Loading";
+import { capitalize } from "../../utils/CapitalizeText";
 
 interface DeploymentItemProps {
     projectItem: Project;
@@ -17,11 +18,12 @@ export const DeploymentItem = ({ projectItem }: DeploymentItemProps) => {
     return (
         <ul className="deployment">
             <li key={projectItem.id}>
-                <a className="deployment__title" href={`https://${projectItem.alias[0].domain}`} target="_blank">{projectItem.name.split(' ')[0].split('')[0].toUpperCase() + projectItem.name.slice(1).replaceAll('-', ' ')}</a>
+                <a className="deployment__title" href={`https://${projectItem.alias[0].domain}`} target="_blank">{capitalize(projectItem.name)}</a>
                 <span className='github-list__description'>
                     {!loading ? repoInfo.description || projectItem.framework + ' aplicación' : <Loading />}
                 </span>
-                <span className="technologies">{DevIcons[projectItem.framework] ?? ''} {projectItem.framework}</span>
+                <span className="technologies">{DevIcons[projectItem.framework] ?? ''} {projectItem.framework} {repoInfo.keywords?.map((i: any) => DevIcons[i] || ` ${i}`)}</span>
+
             </li>
         </ul>
     )

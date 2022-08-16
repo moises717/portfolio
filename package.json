@@ -4,7 +4,9 @@
   "version": "0.0.0",
   "description": "Pagina web personal que muestra una breve descripción de mi trabajo, con una imagen de mi perfil y una lista de mis tecnologías que utilizo.",
   "keywords": [
-    "react"
+    "react",
+    "react-markdown",
+    "react-router"
   ],
   "scripts": {
     "dev": "vite",
