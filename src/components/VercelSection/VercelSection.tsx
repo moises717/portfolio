@@ -9,11 +9,11 @@ export const VercelSection = () => {
     const { isLoading, projects } = useVercelDeployments();
     return (
         <ProjectSection title={`Despliegues (${projects?.length || 0}) 🚀`} isLoading={isLoading} loadingComponent={<List lines={4} quantity={4} numberOfItems={4} showItems title />}>
-            <>
+            <ul className="deployment">
                 {
                     projects?.map((project: Project) => <DeploymentItem key={project.id} projectItem={project} />)
                 }
-            </>
+            </ul>
         </ProjectSection>
     )
 }

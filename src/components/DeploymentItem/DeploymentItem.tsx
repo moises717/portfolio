@@ -15,18 +15,16 @@ export const DeploymentItem = ({ projectItem }: DeploymentItemProps) => {
     const repoInfo = fileGithubInfo ? JSON.parse(fileGithubInfo) : {};
 
     return (
-        <ul className="deployment">
-            <li key={projectItem.id}>
-                <a className="deployment__title" href={`https://${projectItem.alias[0].domain}`} target="_blank">
-                    {capitalize(projectItem.name)}
-                </a>
-                <div className='description'>
-                    {!loading ? <p>{repoInfo.description || projectItem.framework + ' aplicación'}</p> : <List lines={4} quantity={1} />}
-                </div>
-                <span className="technologies">
-                    {DevIcons[projectItem.framework] ?? ''} {projectItem.framework} {repoInfo.keywords?.map((i: any, index: any) => <span key={index}>{DevIcons[i] || ` ${i}`}</span>)}
-                </span>
-            </li>
-        </ul>
+        <li key={projectItem.id}>
+            <a className="deployment__title" href={`https://${projectItem.alias[0].domain}`} target="_blank">
+                {capitalize(projectItem.name)}
+            </a>
+            <span className='description'>
+                {!loading ? <p>{repoInfo.description || projectItem.framework + ' aplicación'}</p> : <List lines={4} quantity={1} />}
+            </span>
+            <span className="technologies">
+                {DevIcons[projectItem.framework] ?? ''} {projectItem.framework} {repoInfo.keywords?.map((i: any, index: any) => <span key={index}>{DevIcons[i] || ` ${i}`}</span>)}
+            </span>
+        </li>
     )
 }
