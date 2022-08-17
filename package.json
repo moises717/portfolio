@@ -2,7 +2,7 @@
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
-  "description": "Portafolio que muestra mis proyectos e informacion de forma automatica, obtiene datos de repositorio de github y las aplicaciones desplegadas en vercel automaticamente.",
+  "description": "Portafolio que muestra información personal y repositorios de github, ademas obtiene los últimos proyectos publicados en vercel, todo esto utilizado sus RESP API.",
   "keywords": [
     "react",
     "react-markdown",
