@@ -37,11 +37,11 @@
 	}
 
 	&__image {
-		width: 230px;
+		min-width: 230px;
 		img {
 			box-shadow: 2px 3px 35px -18px rgba(0, 0, 0, 0.76);
 			border-radius: 5px;
-			width: 230px;
+			min-width: 230px;
 			height: 230px;
 			background: rgb(25, 29, 43);
 			background: linear-gradient(0deg, rgba(25, 29, 43, 1) 27%, rgba(52, 72, 139, 1) 100%);
