@@ -114,5 +114,23 @@
 	&__item {
 		width: 40px;
 		height: 40px;
+		position: relative;
+
+		&:hover:after {
+			content: attr(data-tooltip);
+			position: absolute;
+			left: 0;
+			z-index: 999;
+			background-color: $secondary-color;
+			border-radius: 5px;
+			padding: 0 10px;
+			bottom: -10px;
+			transform: translateY(100%);
+			text-align: center;
+
+			.layout.light & {
+				color: white;
+			}
+		}
 	}
 }

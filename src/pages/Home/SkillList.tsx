@@ -1,7 +1,7 @@
-import { RoundedCardProps } from '@components/RoundedCard/RoundedCard';
 import { DevIcons } from '@icons/DevIcons';
+import { Skills } from '@interfaces/Skills';
 
-export const skillList: RoundedCardProps[] = [
+export const skillList: Skills[] = [
 	{
 		title: 'Html',
 		icon: DevIcons['html'],
@@ -58,9 +58,8 @@ export const skillList: RoundedCardProps[] = [
 		classColor: 'sql',
 	},
 	{
-		title: "Git",
+		title: 'Git',
 		icon: DevIcons['git'],
-		classColor: "github",
-	}
-
+		classColor: 'github',
+	},
 ];

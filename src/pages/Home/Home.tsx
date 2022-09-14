@@ -1,20 +1,20 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGemoji from 'remark-gemoji';
 
+import { skillList } from './SkillList';
 import { GitHub, Linkedin } from '@icons/index';
 import { useGithubFiles } from '@hooks/useGithubFiles';
 import { HomeSkeleton } from '@components/Skeleton/HomeSkeleton/HomeSkeleton';
+import { Skills } from '@interfaces/Skills';
 
 import profile from '@assets/images/profile.png';
 import './Home.scss';
-import { skillList } from './SkillList';
-import { RoundedCardProps } from '../../components/RoundedCard/RoundedCard';
 
 export const Home = () => {
 	const { fileGithubInfo, loading } = useGithubFiles({ file: 'README.md', repo: 'moises717', username: 'moises717' });
 
 	return (
-		<div className='home'>
+		<div className='home' id='/'>
 			<div className='home__content'>
 				<div className='home__presentation'>
 					<div className='home__image'>
@@ -35,9 +35,9 @@ export const Home = () => {
 							</h1>
 						</div>
 						<div className='technologies'>
-							{skillList.map((skill: RoundedCardProps, index: number) => {
+							{skillList.map((skill: Skills) => {
 								return (
-									<div title={skill.title} key={skill.title} className='technologies__item'>
+									<div title={skill.title} key={skill.title} className='technologies__item' data-tooltip={skill.title}>
 										{skill.icon}
 									</div>
 								);

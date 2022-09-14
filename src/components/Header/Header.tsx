@@ -1,5 +1,4 @@
-import { NavLink } from 'react-router-dom';
-import { Contact, Folder, Home, Lightning } from '../../icons';
+import { Contact, Folder, Home } from '@icons/index';
 import { NavItem } from './NavItem/NavItem';
 
 import './Header.scss';
@@ -7,10 +6,10 @@ import './Header.scss';
 export const Header = () => {
 	return (
 		<div className='header'>
-			<NavLink to='/' className='header__logo'>
+			<a href='#/' className='header__logo'>
 				<span className='header__name'>Moisés</span>
 				<span className='header__surname'>Barillas</span>
-			</NavLink>
+			</a>
 			<ul className='nav-items'>
 				<NavItem icon={<Home />} to='/' title='Inicio' />
 				<NavItem icon={<Folder />} to='projects' title='Proyectos' />

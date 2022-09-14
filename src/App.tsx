@@ -1,15 +1,5 @@
-import { BrowserRouter } from 'react-router-dom';
-import { Router } from './router/Router';
+import Layout from './layout';
 
-function App() {
+const App = () => <Layout />;
 
-  return (
-    <main>
-      <BrowserRouter>
-        <Router />
-      </BrowserRouter>
-    </main>
-  )
-}
-
-export default App
+export default App;
