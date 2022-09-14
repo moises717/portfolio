@@ -15,40 +15,38 @@ export const Home = () => {
 
 	return (
 		<div className='home' id='/'>
-			<div className='home__content'>
-				<div className='home__presentation'>
-					<div className='home__image'>
-						<img src={profile} alt='Moises barillas picture' />
-						<div className='home__social'>
-							<a href='https://github.com/moises717' target='__blank'>
-								<GitHub className='home__github' />
-							</a>
-							<a href='https://www.linkedin.com/in/moises-barillas/' target='__blank'>
-								<Linkedin className='home__linkedin' />
-							</a>
-						</div>
-					</div>
-					<div className='home__description'>
-						<div>
-							<h1>
-								Hola! Soy Moisés Barillas <span>desarrollador web fullstack</span>
-							</h1>
-						</div>
-						<div className='technologies'>
-							{skillList.map((skill: Skills) => {
-								return (
-									<div title={skill.title} key={skill.title} className='technologies__item' data-tooltip={skill.title}>
-										{skill.icon}
-									</div>
-								);
-							})}
-						</div>
+			<div className='home__presentation'>
+				<div className='home__image'>
+					<img src={profile} alt='Moises barillas picture' />
+					<div className='home__social'>
+						<a href='https://github.com/moises717' target='__blank'>
+							<GitHub className='home__github' />
+						</a>
+						<a href='https://www.linkedin.com/in/moises-barillas/' target='__blank'>
+							<Linkedin className='home__linkedin' />
+						</a>
 					</div>
 				</div>
-				<div className='home__about-me fade-in'>
-					{loading && <HomeSkeleton />}
-					<ReactMarkdown remarkPlugins={[remarkGemoji]} children={fileGithubInfo} />
+				<div className='home__description'>
+					<div>
+						<h1>
+							Hola! Soy Moisés Barillas <span>desarrollador web fullstack</span>
+						</h1>
+					</div>
+					<div className='technologies'>
+						{skillList.map((skill: Skills) => {
+							return (
+								<div title={skill.title} key={skill.title} className='technologies__item' data-tooltip={skill.title}>
+									{skill.icon}
+								</div>
+							);
+						})}
+					</div>
 				</div>
+			</div>
+			<div className='home__about-me fade-in'>
+				{loading && <HomeSkeleton />}
+				<ReactMarkdown remarkPlugins={[remarkGemoji]} children={fileGithubInfo} />
 			</div>
 		</div>
 	);

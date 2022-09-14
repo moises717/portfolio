@@ -5,11 +5,11 @@ import { DeploymentItem } from '../DeploymentItem/DeploymentItem';
 import { ProjectSection } from '../ProjectSection/ProjectSection';
 import { List } from '../Skeleton/List/List';
 
-export const VercelSection = () => {
+const VercelSection = () => {
 	const { isLoading, projects } = useVercelDeployments();
 	return (
 		<ProjectSection
-			title={`Despliegues (${projects?.length || 0}) 🚀`}
+			title={`Últimos proyectos (${projects?.length || 0}) 🚀`}
 			isLoading={isLoading}
 			loadingComponent={<List lines={4} quantity={4} numberOfItems={4} showItems title />}
 			id='projects'
@@ -22,3 +22,5 @@ export const VercelSection = () => {
 		</ProjectSection>
 	);
 };
+
+export default VercelSection;

@@ -15,10 +15,8 @@ export const ProjectSection = ({ children, title, isLoading, loadingComponent, i
 	return (
 		<section className='project-section' id={id}>
 			<ContentTitle title={title ?? ''} />
-			<div className='project-section__content'>
-				{children}
-				{isLoading && loadingComponent}
-			</div>
+			{children}
+			{isLoading && loadingComponent}
 		</section>
 	);
 };
