@@ -1,8 +1,7 @@
 import { RouteObject } from 'react-router-dom';
 
 import Layout from '@layouts/Layout';
-import { Home } from "@pages/Home/Home";
-import { Skill } from '@pages/Skills/Skill'
+import { Home } from '@pages/Home/Home';
 import { Projects } from '@pages/Projects/Projects';
 import { Contact } from '@pages/Contact/Contact';
 
@@ -17,18 +16,13 @@ export const RouterConfig: RouteObject[] = [
 				index: true,
 			},
 			{
-				path: '/skills',
-				element: <Skill />,
-			},
-			{
 				path: '/projects',
 				element: <Projects />,
-
 			},
 			{
 				path: '/contact',
 				element: <Contact />,
-			}
+			},
 		],
 	},
 ];
