@@ -12,7 +12,6 @@ const VercelSection = () => {
 			title={`Últimos proyectos (${projects?.length || 0}) 🚀`}
 			isLoading={isLoading}
 			loadingComponent={<List lines={4} quantity={4} numberOfItems={4} showItems title />}
-			id='projects'
 		>
 			<div className='deployment'>
 				{projects?.map((project: Project) => (

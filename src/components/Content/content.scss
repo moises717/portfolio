@@ -1,4 +1,9 @@
+@import '@styles/variables';
+
 .content {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
 	margin: auto;
 	max-width: 90%;
 	padding-bottom: 90px;

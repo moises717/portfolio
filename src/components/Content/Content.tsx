@@ -23,11 +23,10 @@ export const Content = () => {
 						<>
 							<VercelSection />
 							<GithubSection />
+							<Contact />
 						</>
 					)}
 				</div>
-
-				<Contact />
 			</Suspense>
 		</div>
 	);

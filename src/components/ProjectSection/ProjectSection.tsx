@@ -8,12 +8,11 @@ interface ProjectSectionProps {
 	title?: string;
 	isLoading?: boolean;
 	loadingComponent?: ReactElement;
-	id?: string;
 }
 
-export const ProjectSection = ({ children, title, isLoading, loadingComponent, id }: ProjectSectionProps) => {
+export const ProjectSection = ({ children, title, isLoading, loadingComponent }: ProjectSectionProps) => {
 	return (
-		<section className='project-section' id={id}>
+		<section className='project-section'>
 			<ContentTitle title={title ?? ''} />
 			{children}
 			{isLoading && loadingComponent}
