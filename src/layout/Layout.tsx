@@ -10,7 +10,7 @@ const Layout = () => {
 	const [theme, setTheme] = useState<boolean>(false);
 
 	return (
-		<main className={`layout ${theme ? 'light' : 'dark'}`}>
+		<main className={`layout ${theme ? 'light' : 'dark'}`} id='/'>
 			<Header />
 			<Content />
 			<ThemeButton isLightningOn={theme} onClick={() => setTheme(t => !t)} />

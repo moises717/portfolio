@@ -14,7 +14,7 @@ export const Home = () => {
 	const { fileGithubInfo, loading } = useGithubFiles({ file: 'README.md', repo: 'moises717', username: 'moises717' });
 
 	return (
-		<div className='home' id='/'>
+		<div className='home'>
 			<div className='home__presentation'>
 				<div className='home__image'>
 					<img src={profile} alt='Moises barillas picture' />
