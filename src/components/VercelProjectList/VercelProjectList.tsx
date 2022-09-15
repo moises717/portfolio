@@ -5,7 +5,7 @@ import { DeploymentItem } from '../DeploymentItem/DeploymentItem';
 import { ProjectSection } from '../ProjectSection/ProjectSection';
 import { List } from '../Skeleton/List/List';
 
-const VercelSection = () => {
+const VercelProjectList = () => {
 	const { isLoading, projects } = useVercelDeployments();
 	return (
 		<ProjectSection
@@ -22,4 +22,4 @@ const VercelSection = () => {
 	);
 };
 
-export default VercelSection;
+export default VercelProjectList;

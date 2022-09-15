@@ -7,7 +7,7 @@ import { useGithubProfile } from '@hooks/useGithubProfile';
 import { ProjectSection } from '../ProjectSection/ProjectSection';
 import { List } from '../Skeleton/List/List';
 
-export const GithubSection = () => {
+const GithubProjectList = () => {
 	const { githubRepos, loading } = useGithubRepos();
 	const { gitHubProfile } = useGithubProfile('moises717');
 
@@ -31,3 +31,5 @@ export const GithubSection = () => {
 		</ProjectSection>
 	);
 };
+
+export default GithubProjectList;

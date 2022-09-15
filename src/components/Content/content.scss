@@ -1,12 +1,10 @@
 @import '@styles/variables';
 
 .content {
-	align-items: center;
-	display: flex;
-	flex-direction: column;
 	margin: auto;
 	max-width: 90%;
-	padding-bottom: 90px;
+	min-height: 100vh;
+	padding-bottom: 20px;
 
 	@media (min-width: 920px) {
 		max-width: 70%;
