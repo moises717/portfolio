@@ -14,7 +14,6 @@ export const Header = () => {
 				<NavItem icon={<Home />} to='/' title='Inicio' />
 				<NavItem icon={<Folder />} to='projects' title='Proyectos' />
 				<NavItem icon={<Contact />} to='contact' title='Contactar' />
-				<div className='indicator'></div>
 			</ul>
 		</div>
 	);

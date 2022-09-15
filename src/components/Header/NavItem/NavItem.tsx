@@ -7,7 +7,7 @@ interface Props {
 }
 
 export function NavItem({ icon, title, to }: Props) {
-	// nav-items--active
+	//nav-items--active
 	return (
 		<li className={`nav-items__list`}>
 			<a href={`#${to}`} className='nav-items__item'>
