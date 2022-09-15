@@ -3,6 +3,7 @@
 body {
 	padding: 0;
 	margin: 0;
+	height: 100%;
 	font-family: $font-text-1;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -49,5 +50,5 @@ html {
 }
 
 .project-page {
-	min-height: 100vh;
+	min-height: 1024px;
 }

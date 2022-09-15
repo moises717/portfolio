@@ -10,10 +10,12 @@ import './content.scss';
 export const Content = () => {
 	return (
 		<div className='content'>
-			<Home />
-			<VercelProjects />
-			<GithubProjects />
-			<Contact />
+			<div>
+				<Home />
+				<VercelProjects />
+				<GithubProjects />
+				<Contact />
+			</div>
 		</div>
 	);
 };
