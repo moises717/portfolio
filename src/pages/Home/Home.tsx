@@ -17,7 +17,7 @@ export const Home = () => {
 		<div className='home'>
 			<div className='home__presentation'>
 				<div className='home__image'>
-					<img src={profile} alt='Moises barillas picture' />
+					<img src={profile} alt='Moises barillas picture' width={230} height={230} />
 					<div className='home__social'>
 						<a href='https://github.com/moises717' target='__blank'>
 							<GitHub className='home__github' />
