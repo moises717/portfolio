@@ -19,6 +19,7 @@
 			color: $secondary-color;
 			font-family: $font-1;
 			letter-spacing: 1px;
+			font-weight: bold;
 
 			.layout.light & {
 				color: $white-color;
@@ -31,6 +32,7 @@
 			background-color: $secondary-color;
 			border-radius: 2px;
 			padding: 2px 5px 2px 5px;
+			font-weight: bold;
 
 			.layout.light & {
 				background-color: $tertiary-color-dark;
