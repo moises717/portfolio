@@ -26,6 +26,7 @@ $nav-height: 55px;
 .nav-items {
 	position: relative;
 	display: flex;
+	padding: 0;
 	gap: 10px;
 
 	&__list {
