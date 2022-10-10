@@ -57,16 +57,34 @@
 				border: 1px solid white;
 				border-radius: 10px;
 				padding: 5px 8px 5px 5px;
+				position: relative;
 				margin-top: -5px;
-				&:hover {
-					border: 1px solid $secondary-color;
-					transition: ease 0.5s;
-				}
 
 				.layout.light & {
 					&:hover {
 						border: 1px solid $tertiary-color-dark;
 					}
+				}
+
+				&::before,
+				&::after {
+					content: '';
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					right: 0;
+					left: 0;
+					border-radius: 10px;
+				}
+
+				&::before {
+					background: $quaternary-color;
+					z-index: 10;
+				}
+				&::after {
+					background: white;
+					z-index: 1;
+					animation: pulse 1s infinite;
 				}
 			}
 
@@ -109,5 +127,16 @@
 
 	.indicator {
 		display: none;
+	}
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		opacity: 0.75;
+	}
+	100% {
+		transform: scale(1.2);
+		opacity: 0;
 	}
 }
