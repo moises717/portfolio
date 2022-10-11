@@ -54,7 +54,7 @@
 			cursor: pointer;
 
 			&:nth-child(3) {
-				border: 1px solid white;
+				border: 1px solid lightblue;
 				border-radius: 10px;
 				padding: 5px 8px 5px 5px;
 				position: relative;
@@ -62,7 +62,7 @@
 
 				.layout.light & {
 					&:hover {
-						border: 1px solid $tertiary-color-dark;
+						border: 1px solid $primary-color;
 					}
 				}
 
@@ -80,6 +80,10 @@
 				&::before {
 					background: $quaternary-color;
 					z-index: 10;
+
+					.layout.light & {
+						background-color: $secondary-color;
+					}
 				}
 				&::after {
 					background: white;
@@ -90,6 +94,10 @@
 
 			&:hover .nav-items__icon {
 				color: $tertiary-color;
+
+				.layout.light & {
+					color: white;
+				}
 			}
 		}
 
