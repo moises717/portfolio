@@ -18,6 +18,13 @@ const GithubProjectList = () => {
 			loadingComponent={<List lines={5} quantity={3} title showItems numberOfItems={1} />}
 		>
 			<>
+				<div className='github-stats'>
+					<img
+						src='https://github-readme-stats.vercel.app/api/top-langs?username=moises717&show_icons=true&locale=es&layout=compact'
+						alt='moises717'
+					/>
+					<img src='https://github-readme-streak-stats.herokuapp.com/?user=moises717&' alt='moises717' />
+				</div>
 				{githubRepos &&
 					githubRepos.map((repo: GithubResponse) => {
 						return <GithubItem key={repo.id} {...repo} />;
