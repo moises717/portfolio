@@ -30,7 +30,7 @@ export const Home = () => {
 				<div className='home__description'>
 					<div>
 						<h1>
-							Hola! Soy Moisés Barillas <span>desarrollador web fullstack</span>
+							Hola! Soy Moisés Barillas, <span>desarrollador web</span>
 						</h1>
 					</div>
 					<div className='technologies'>
