@@ -1,8 +1,12 @@
 ---
+import Content from "../components/Content.astro";
 import Navigation from "../components/Navigation.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout>
-	<Navigation />
+	<Navigation slot="nav" />
+	<Content>
+		Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo non, ex architecto numquam fugiat reprehenderit adipisci, aperiam consectetur perferendis expedita facere molestias qui itaque nam debitis enim, quod ipsa at.
+	</Content>
 </MainLayout>

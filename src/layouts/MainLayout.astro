@@ -1,5 +1,4 @@
-
-<html lang="en">
+<html lang="es" class="dark">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/ico" href="/favicon.ico" />
@@ -9,6 +8,9 @@
 		<title>Moises Barillas | Desarrollador web HTML, CSS, JavaScript</title>
 	</head>
 	<body>
-		<slot />
+		<slot name="nav" />
+		<div class="max-w-[1400px] h-full">
+			<slot />
+		</div>
 	</body>
 </html>
