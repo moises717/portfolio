@@ -6,13 +6,17 @@ module.exports = {
 			colors: {
 				primary: {
 					DEFAULT: '#191d2b',
+					50: '#6e5ef8',
 					100: '#1e1568',
+					200: '#171433',
 				},
 				secondary: {
 					DEFAULT: '#27ae60',
-					100: '#6e5ef8',
 				},
 				tertiary: {
+					DEFAULT: '#f56692',
+				},
+				pink: {
 					DEFAULT: '#f56692',
 				},
 			},
