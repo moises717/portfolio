@@ -1,15 +1,19 @@
-<html lang="es" class="dark">
+---
+import Navigation from '../components/Navigation.astro';
+---
+
+<html lang='es' class='dark'>
 	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/ico" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="Moises Barillas es un desarrollador web especializado en HTML, CSS y JavaScript." />
+		<meta charset='utf-8' />
+		<link rel='icon' type='image/ico' href='/favicon.ico' />
+		<meta name='viewport' content='width=device-width' />
+		<meta name='generator' content={Astro.generator} />
+		<meta name='description' content='Moises Barillas es un desarrollador web especializado en HTML, CSS y JavaScript.' />
 		<title>Moises Barillas | Desarrollador web HTML, CSS, JavaScript</title>
 	</head>
-	<body class="bg-primary">
-		<slot name="nav" />
-		<div class="max-w-[1400px] h-full">
+	<body class='bg-primary'>
+		<Navigation />
+		<div class='max-w-[1400px] h-full'>
 			<slot />
 		</div>
 	</body>
