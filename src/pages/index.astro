@@ -1,16 +1,12 @@
 ---
-
+import Layout from '../layout/layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+	<div class='flex items-center flex-col'>
+		<div class='w-[1200px] p-2 h-[48px] rounded-xl bg-white border-solid shadow-sm mt-8'></div>
+		<div class='w-full h-full'>
+			<h1 class='text-7xl text-indigo-500 font-bold'>Moises Barillas</h1>
+		</div>
+	</div>
+</Layout>
