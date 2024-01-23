@@ -1,4 +1,5 @@
 ---
+import '@fontsource-variable/onest';
 ---
 
 <html lang='es'>
@@ -7,15 +8,24 @@
 		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
 		<meta name='viewport' content='width=device-width' />
 		<meta name='generator' content={Astro.generator} />
-		<title>Moises Barillas - Desarrolldor web - Javascript, Node, Html, Css React</title></head
-	>
+		<title>Moises Barillas - Desarrolldor web - Javascript, Node, Html, Css React</title>
+
+		<link rel='preload' href='/fonts/AbrilFatface-Regular.ttf' as='font' type='font/ttf' crossorigin />
+	</head>
 
 	<body class='h-full'>
-		<main class='px-4 flex items-center flex-col bg-gray-50'>
+		<main class='px-4 flex items-center flex-col bg-gray-100'>
 			<div class='w-full max-w-[1200px] h-screen relative'>
 				<slot />
-				<div class='circlePosition w-[100px] bg-blue-600 h-[100px] rounded-full absolute left-0 bottom-0 z-0 blur-2xl'></div>
+				<div class='circlePosition w-[100px] bg-blue-600 h-[100px] rounded-full absolute right-56 top-56 z-0 blur-3xl'></div>
+				<div class='circlePosition w-[100px] bg-blue-600 h-[100px] rounded-full absolute left-0 bottom-16 z-0 blur-3xl'></div>
 			</div>
 		</main>
+
+		<style>
+			html {
+				font-family: 'Onest Variable', sans-serif;
+			}
+		</style>
 	</body>
 </html>
