@@ -1,19 +1,18 @@
 ---
-import Layout from '../layout/layout.astro';
+import Layout from '@/layout/layout.astro';
+import { FloatingNav } from '@/components/floating-navbar';
 ---
 
 <Layout>
 	<div class='flex items-center flex-col gap-3'>
-		<div class='w-full max-w-[1200px] p-2 h-[48px] rounded-xl bg-white border-solid shadow-sm mt-8'>
-			<ul>
-				<li>Inicio</li>
-			</ul>
-		</div>
-		<div class='w-full h-fit bg-white roundjed-sm p-8'>
+		<FloatingNav client:idle />
+		<div class='w-full h-fit bg-white rounded-sm p-8'>
 			<h1 class='text-5xl text-indigo-500 font-bold'>Moises Barillas</h1>
 			<p>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. At earum placeat esse provident fugiat! Rem eos repellendus cupiditate nihil ipsum?
-				Et praesentium molestiae odit aperiam. Odio facere repellat non porro?
+				Et praesentium molestiae odit aperiam. Odio facere repellat non porro? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
+				nostrum inventore atque quidem fuga ducimus commodi ratione illo suscipit ipsa quibusdam sint, accusantium iure? Consequuntur, necessitatibus?
+				Sequi nesciunt numquam expedita. lorem500
 			</p>
 		</div>
 	</div>
