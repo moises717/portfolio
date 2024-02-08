@@ -12,17 +12,21 @@ import '@fontsource-variable/onest';
 	</head>
 
 	<body class='h-full'>
-		<main class='flex items-center flex-col'>
-			<div class='w-full max-w-xl h-screen relative'>
+		<main class='flex items-center flex-col py-4 px-4'>
+			<div class='w-full lg:max-w-4xl md:max-w-2xl h-screen relative'>
 				<slot />
-				<div class='circlePosition w-[100px] bg-blue-600 h-[100px] rounded-full absolute right-56 top-56 z-0 blur-3xl'></div>
-				<div class='circlePosition w-[100px] bg-blue-600 h-[100px] rounded-full absolute left-0 bottom-16 z-0 blur-3xl'></div>
+				<div class='circlePosition w-[150px] bg-blue-600 h-[150px] rounded-full absolute left-0 top-0 z-0 blur-[160px] md:top-36 md:right-56'></div>
+				<div class='circlePosition w-[100px] bg-blue-600 h-[100px] rounded-full absolute right-0 bottom-16 z-0 blur-[100px]'></div>
 			</div>
 		</main>
 
 		<style>
 			html {
-				font-family: 'Onest Variable', sans-serif;
+				font-family: 'Onest Variable', system-ui, sans-serif;
+				scroll-behavior: smooth;
+			}
+			h2 {
+				text-wrap: balance;
 			}
 		</style>
 	</body>

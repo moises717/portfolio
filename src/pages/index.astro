@@ -1,19 +1,14 @@
 ---
 import Layout from '@/layout/layout.astro';
 import { FloatingNav } from '@/components/floating-navbar';
+import Hero from '../components/Hero.astro';
 ---
 
 <Layout>
 	<div class='flex items-center flex-col gap-3'>
 		<FloatingNav client:idle />
-		<div class='w-full h-fit bg-white rounded-sm p-8'>
-			<h1 class='text-5xl text-indigo-500 font-bold'>Moises Barillas</h1>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. At earum placeat esse provident fugiat! Rem eos repellendus cupiditate nihil ipsum?
-				Et praesentium molestiae odit aperiam. Odio facere repellat non porro? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
-				nostrum inventore atque quidem fuga ducimus commodi ratione illo suscipit ipsa quibusdam sint, accusantium iure? Consequuntur, necessitatibus?
-				Sequi nesciunt numquam expedita. lorem500
-			</p>
+		<div class='section py-8 md:py-36 w-full mx-auto container lg:max-w-4xl md:max-w-2xl'>
+			<Hero />
 		</div>
 	</div>
 </Layout>

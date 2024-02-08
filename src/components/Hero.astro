@@ -1,0 +1,44 @@
+---
+import me from '@/assets/me.jpg';
+import { IconGithub, IconLinkedin } from './icons';
+---
+
+<div class='max-w-xl'>
+	<div class='flex gap-4 mb-4'>
+		<img src={me.src} alt='Moises Barillas' class='rounded-full shadow-lg size-16' />
+		<div class='flex items-center'>
+			<span class='relative inline-flex overflow-hidden rounded-full p-[1px]'>
+				<span
+					class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#51E4B8_0%,#21554E_50%,#51E4B8_100%)]'
+				></span>
+				<div
+					class='inline-flex items-center justify-center w-full px-3 py-1 text-sm text-green-800 bg-green-100 rounded-full cursor-pointer dark:bg-gray-800 dark:text-white/80 backdrop-blur-3xl whitespace-nowrap'
+				>
+					<span class='text-xs font-bold'>Disponible para trabajar</span>
+				</div>
+			</span>
+		</div>
+	</div>
+
+	<h1 class='text-4xl font-bold tracking-tight text-indigo-500 sm:text-5xl dark:text-white'>Soy Moises Barillas</h1>
+
+	<p class='mt-6 text-xl text-gray-800'>
+		Estudiante de ultimo año de Ingeniería en Sistemas, apasionado por la tecnología y el desarrollo de software. Me encanta aprender cosas nuevas y
+		compartir conocimientos.
+	</p>
+
+	<div class='flex self-start gap-2'>
+		<a
+			href='/github'
+			class='p-[4px] h-[32px] w-[32px] rounded-sm inline-flex items-center justify-center border-[#eee] border text-[#777] hover:bg-[#eee] hover:border-[#ddd]'
+		>
+			<IconGithub />
+		</a>
+		<a
+			href='/github'
+			class='p-[4px] h-[32px] w-[32px] rounded-sm inline-flex items-center justify-center border-[#eee] border text-[#777] hover:bg-[#eee] hover:border-[#ddd]'
+		>
+			<IconLinkedin />
+		</a>
+	</div>
+</div>
