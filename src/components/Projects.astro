@@ -1,15 +1,150 @@
+---
+interface Skill {
+	backend: {
+		name: string;
+		icon: string;
+		iconName: string;
+	}[];
+	frontend: {
+		name: string;
+		icon: string;
+		iconName: string;
+	}[];
+	learning: {
+		name: string;
+		icon: string;
+		iconName: string;
+	}[];
+	databases: {
+		name: string;
+		icon: string;
+		iconName: string;
+	}[];
+}
+const skills: Skill = {
+	backend: [
+		{
+			name: 'Node.js',
+			icon: 'nodejs',
+			iconName: 'nodejs-original.svg',
+		},
+		{
+			name: 'Express',
+			icon: 'express',
+			iconName: 'express-original.svg',
+		},
+	],
+	frontend: [
+		{
+			name: 'HTML5',
+			icon: 'html5',
+			iconName: 'html5-original.svg',
+		},
+		{
+			name: 'CSS3',
+			icon: 'css3',
+			iconName: 'css3-original.svg',
+		},
+		{
+			name: 'JavaScript',
+			icon: 'javascript',
+			iconName: 'javascript-original.svg',
+		},
+		{
+			name: 'TypeScript',
+			icon: 'typescript',
+			iconName: 'typescript-original.svg',
+		},
+		{
+			name: 'React',
+			icon: 'react',
+			iconName: 'react-original.svg',
+		},
+		{
+			name: 'Next.js',
+			icon: 'nextjs',
+			iconName: 'nextjs-original.svg',
+		},
+	],
+	databases: [
+		{
+			name: 'MongoDB',
+			icon: 'mongodb',
+			iconName: 'mongodb-original.svg',
+		},
+		{
+			name: 'PostgreSQL',
+			icon: 'postgresql',
+			iconName: 'postgresql-original.svg',
+		},
+		{
+			name: 'MySQL',
+			icon: 'mysql',
+			iconName: 'mysql-original.svg',
+		},
+		{
+			name: 'SQLite',
+			icon: 'sqlite',
+			iconName: 'sqlite-original.svg',
+		},
+	],
+	learning: [
+		{
+			name: 'rust',
+			icon: 'rust',
+			iconName: 'rust-original.svg',
+		},
+	],
+};
+---
+
 <div class='mt-9'>
 	<h2 class='text-2xl font-bold text-gray-800'>Habilildades</h2>
 
-	<div class='flex gap-2'>
-		<div class='flex items-center justify-center p-3 h-12 bg-gray-100 rounded-md mt-3 shadow-sm gap-3'>
-			<img class='w-6 h-6' src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg' />
-			<span> React</span>
+	<div>
+		<h3 class='text-md font-semibold text-gray-700 mt-3'>Frontend</h3>
+		<div class='flex gap-2 flex-wrap'>
+			{
+				skills.frontend.map(skill => (
+					<div class='flex items-center justify-center p-3 h-12 bg-gray-100 rounded-md mt-3 shadow-sm gap-3'>
+						<img class='w-6 h-6' src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${skill.icon}/${skill.iconName}`} />
+						<span> {skill.name}</span>
+					</div>
+				))
+			}
 		</div>
-
-		<div class='flex items-center justify-center p-3 h-12 bg-gray-100 rounded-md mt-3 shadow-sm'>
-			<img class='w-6 h-6' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg' />
-			<span> Vue</span>
+		<h3 class='text-md font-semibold text-gray-700 mt-3'>Backend</h3>
+		<div class='flex gap-2 flex-wrap'>
+			{
+				skills.backend.map(skill => (
+					<div class='flex items-center justify-center p-3 h-12 bg-gray-100 rounded-md mt-3 shadow-sm gap-3'>
+						<img class='w-6 h-6' src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${skill.icon}/${skill.iconName}`} />
+						<span> {skill.name}</span>
+					</div>
+				))
+			}
+		</div>
+		<h3 class='text-md font-semibold text-gray-700 mt-3'>Bases de datos</h3>
+		<div class='flex gap-2 flex-wrap'>
+			{
+				skills.databases.map(skill => (
+					<div class='flex items-center justify-center p-3 h-12 bg-gray-100  rounded-md mt-3 shadow-sm gap-3'>
+						<img class='w-6 h-6' src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${skill.icon}/${skill.iconName}`} />
+						<span> {skill.name}</span>
+					</div>
+				))
+			}
+		</div>
+		<h3 class='text-md font-semibold text-gray-700 mt-3'>Learning</h3>
+		<div class='flex gap-2 flex-wrap'>
+			{
+				skills.learning.map(skill => (
+					<div class='flex items-center justify-center p-3 h-12 bg-gray-300 animate-pulse rounded-md mt-3 shadow-sm gap-3'>
+						<img class='w-6 h-6' src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${skill.icon}/${skill.iconName}`} />
+						<span class='text-gray-400'> {skill.name}</span>
+					</div>
+				))
+			}
 		</div>
 	</div>
 </div>
