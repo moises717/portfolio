@@ -82,6 +82,10 @@ export const skills: Skill = {
 			name: 'realm',
 			icon: 'realm-original.svg',
 		},
+		{
+			name: 'SQLServer',
+			icon: 'microsoftsqlserver-original.svg',
+		},
 	],
 	learning: [
 		{
