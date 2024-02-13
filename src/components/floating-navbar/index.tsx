@@ -5,13 +5,12 @@ import { IconHome, IconUser } from '../icons';
 
 export const FloatingNav = ({ className }: { className?: string }) => {
 	const { scrollYProgress } = useScroll();
-
-	const [visible, setVisible] = useState(false);
+	const [visible, setVisible] = useState(true);
 
 	useMotionValueEvent(scrollYProgress, 'change', current => {
 		let direction = current - (scrollYProgress.getPrevious() ?? 0);
 
-		if (scrollYProgress.get() < 0.05) {
+		if (scrollYProgress.get() < 0.0) {
 			setVisible(false);
 		} else {
 			if (direction < 0) {
