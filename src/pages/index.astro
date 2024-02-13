@@ -1,0 +1,16 @@
+---
+import Layout from '@/layout/layout.astro';
+import { FloatingNav } from '@/components/floating-navbar';
+import Hero from '../components/Hero.astro';
+import Projects from '../components/Projects.astro';
+---
+
+<Layout>
+	<div class='flex items-center flex-col gap-3'>
+		<FloatingNav client:idle />
+		<div class='section py-8 md:py-36 w-full mx-auto container lg:max-w-4xl md:max-w-2xl'>
+			<Hero />
+			<Projects />
+		</div>
+	</div>
+</Layout>

@@ -1,0 +1,52 @@
+---
+import me from '@/assets/me.jpg';
+import { IconEmail, IconGithub, IconLinkedin } from './icons';
+---
+
+<div class='max-w-xl'>
+	<div class='flex gap-4 mb-4'>
+		<img src={me.src} alt='Moises Barillas' class='rounded-full shadow-lg size-16' />
+		<div class='flex items-center'>
+			<span class='relative inline-flex overflow-hidden rounded-full p-[1px]'>
+				<span
+					class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#51E4B8_0%,#21554E_50%,#51E4B8_100%)]'
+				></span>
+				<div
+					class='inline-flex items-center justify-center w-full px-3 py-1 text-sm text-green-800 bg-green-100 rounded-full cursor-pointer dark:bg-gray-800 dark:text-white/80 backdrop-blur-3xl whitespace-nowrap'
+				>
+					<span class='text-xs font-bold'>Disponible para trabajar</span>
+				</div>
+			</span>
+		</div>
+	</div>
+
+	<h1 class='text-4xl font-bold tracking-tight text-indigo-500 sm:text-5xl'>Soy Moises Barillas</h1>
+
+	<p class='mt-6 text-xl text-gray-800'>
+		Estudiante de ultimo año de Ingeniería en Sistemas, apasionado por la tecnología y el desarrollo de software.
+	</p>
+
+	<div class='flex self-start gap-2 mt-6'>
+		<a
+			target='_blank'
+			href='mailto: moisesbarillas717@gmail.com'
+			class='px-4 py-2 inline-flex justify-center items-center gap-3 rounded-xl border border-neutral-600 text-neutral-700 bg-white hover:bg-gray-100 transition duration-200'
+		>
+			E-mail <IconEmail />
+		</a>
+		<a
+			target='_blank'
+			href='https://github.com/moises717'
+			class='px-4 py-2 inline-flex justify-center items-center gap-3 rounded-xl border border-neutral-600 text-neutral-700 bg-white hover:bg-gray-100 transition duration-200'
+		>
+			Github <IconGithub />
+		</a>
+		<a
+			target='_blank'
+			href='https://www.linkedin.com/in/moises-barillas/'
+			class='px-4 py-2 inline-flex justify-center items-center gap-3 rounded-xl border border-neutral-600 text-neutral-700 bg-white hover:bg-gray-100 transition duration-200'
+		>
+			Linkedin <IconLinkedin />
+		</a>
+	</div>
+</div>
