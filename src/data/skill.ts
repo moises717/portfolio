@@ -26,6 +26,10 @@ export const skills: Skill = {
 			name: 'Express',
 			icon: 'express-original.svg',
 		},
+		{
+			name: 'linux',
+			icon: 'linux-original.svg',
+		},
 	],
 	frontend: [
 		{
