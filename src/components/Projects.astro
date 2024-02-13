@@ -1,26 +1,13 @@
 ---
 import { skills } from '@/data/skill.ts';
-import SkillBadge from '@/components/SkillBadge.astro';
+import Section from '@/components/Section.astro';
+import SkillSection from '@/components/SkillSection.astro';
+
+const skillList = Object.entries(skills).map(([section, list]) => ({ section, list }));
+
+const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
 ---
 
-<div class='mt-9'>
-	<h2 class='text-2xl font-bold text-gray-800'>Habilildades</h2>
-	<>
-		<h3 class='text-md font-semibold text-gray-700 mt-3'>Frontend</h3>
-		<div class='flex gap-2 flex-wrap'>
-			{skills.frontend.map(skill => <SkillBadge {...skill} />)}
-		</div>
-		<h3 class='text-md font-semibold text-gray-700 mt-3'>Backend & Otros</h3>
-		<div class='flex gap-2 flex-wrap'>
-			{skills.backend.map(skill => <SkillBadge {...skill} />)}
-		</div>
-		<h3 class='text-md font-semibold text-gray-700 mt-3'>Bases de datos</h3>
-		<div class='flex gap-2 flex-wrap'>
-			{skills.databases.map(skill => <SkillBadge {...skill} />)}
-		</div>
-		<h3 class='text-md font-semibold text-gray-700 mt-3'>Learning</h3>
-		<div class='flex gap-2 flex-wrap'>
-			{skills.learning.map(skill => <SkillBadge {...skill} className='text-gray-400 animate-pulse border' />)}
-		</div>
-	</>
-</div>
+<Section title='Habilidades'>
+	{skillList.map(({ section, list }) => <SkillSection title={capitalize(section)} list={list} />)}
+</Section>

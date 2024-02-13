@@ -1,22 +1,16 @@
-interface Skill {
-	backend: {
-		name: string;
-		icon: string;
-	}[];
-	frontend: {
-		name: string;
-		icon: string;
-	}[];
-	learning: {
-		name: string;
-		icon: string;
-	}[];
-	databases: {
-		name: string;
-		icon: string;
-	}[];
+export type Skill = {
+	name: string;
+	icon: string;
+};
+
+interface SkillList {
+	backend: Skill[];
+	frontend: Skill[];
+	learning: Skill[];
+	databases: Skill[];
+	otros: Skill[];
 }
-export const skills: Skill = {
+export const skills: SkillList = {
 	backend: [
 		{
 			name: 'Node.js',
@@ -25,10 +19,6 @@ export const skills: Skill = {
 		{
 			name: 'Express',
 			icon: 'express-original.svg',
-		},
-		{
-			name: 'linux',
-			icon: 'linux-original.svg',
 		},
 	],
 	frontend: [
@@ -59,6 +49,10 @@ export const skills: Skill = {
 		{
 			name: 'Astro',
 			icon: 'astro-original.svg',
+		},
+		{
+			name: 'tailwindcss',
+			icon: 'tailwindcss-original.svg',
 		},
 	],
 	databases: [
@@ -95,6 +89,24 @@ export const skills: Skill = {
 		{
 			name: 'docker',
 			icon: 'docker-original.svg',
+		},
+	],
+	otros: [
+		{
+			name: 'linux',
+			icon: 'linux-original.svg',
+		},
+		{
+			name: 'electron',
+			icon: 'electron-original.svg',
+		},
+		{
+			name: 'tauri',
+			icon: 'tauri-original.svg',
+		},
+		{
+			name: 'vscode',
+			icon: 'vscode-original.svg',
 		},
 	],
 };
