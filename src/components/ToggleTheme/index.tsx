@@ -34,8 +34,8 @@ export const ToggleTheme = () => {
 			animate={controls}
 		>
 			{icon === 'sun' ? (
-				<motion.span layoutId='sun-icon' className='block w-6 h-6'>
-					<IconSun />
+				<motion.span layoutId='sun-icon' className='block w-6 h-6 '>
+					<IconSun className='hover:transform hover:scale-110' />
 				</motion.span>
 			) : (
 				<motion.span layoutId='moon-icon' className='block w-6 h-6'>
