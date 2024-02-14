@@ -7,7 +7,7 @@ import Skills from '@/components/Skills.astro';
 
 <Layout>
 	<div class='flex items-center flex-col gap-3'>
-		<FloatingNav client:idle />
+		<FloatingNav client:only />
 		<div class='section py-8 md:py-36 w-full mx-auto container lg:max-w-4xl md:max-w-2xl'>
 			<Hero />
 			<Skills />

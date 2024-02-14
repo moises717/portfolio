@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { IconMoon, IconSun } from '../icons';
 
+const persistTheme = localStorage.getItem('theme') || 'light';
+
 export const ToggleTheme = () => {
-	const [theme, setTheme] = useState('light');
+	const [theme, setTheme] = useState(persistTheme);
 	const [icon, setIcon] = useState(theme === 'light' ? 'sun' : 'moon');
 	const controls = useAnimation();
 
@@ -15,17 +17,26 @@ export const ToggleTheme = () => {
 		setIcon(newIcon);
 
 		if (newTheme === 'dark') {
+			localStorage.setItem('theme', 'dark');
 			document.documentElement.classList.add('dark');
 		} else {
+			localStorage.setItem('theme', 'light');
 			document.documentElement.classList.remove('dark');
 		}
 
-		// Realizar la animación
 		controls.start({
-			scale: [1, 1.2, 1], // Escala de 1 a 1.2 y luego a 1
-			transition: { duration: 0.2 }, // Duración de la animación en segundos
+			scale: [1, 1.2, 1],
+			transition: { duration: 0.2 },
 		});
 	};
+
+	useEffect(() => {
+		if (theme === 'dark') {
+			document.documentElement.classList.add(theme);
+		} else {
+			document.documentElement.classList.remove(theme);
+		}
+	}, [theme]);
 
 	return (
 		<motion.button
