@@ -8,6 +8,6 @@ const skillList = Object.entries(skills).map(([section, list]) => ({ section, li
 const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
 ---
 
-<Section title='Habilidades'>
+<Section title='Habilidades' id='skills'>
 	{skillList.map(({ section, list }) => <SkillSection title={capitalize(section)} list={list} />)}
 </Section>

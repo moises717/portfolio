@@ -19,8 +19,11 @@ import { Meteors } from '@/components/Meteors';
 	</head>
 
 	<body class='h-full'>
-		<main class='flex items-center flex-col py-4 px-4
-		dark:bg-gray-900 dark:text-white bg-gray-50 text-gray-900 w-full h-full overflow-hidden'>
+		<main
+			class='flex items-center flex-col py-4 px-4
+		dark:bg-gray-900 dark:text-white bg-gray-50 text-gray-900 w-full h-full overflow-hidden'
+			id='home'
+		>
 			<div class='w-full lg:max-w-4xl md:max-w-2xl relative min-h-screen'>
 				<slot />
 				<div class='circlePosition w-[150px] bg-blue-600 h-[150px] rounded-full absolute left-0 top-0 z-0 blur-[160px] md:top-36 md:right-56'></div>
