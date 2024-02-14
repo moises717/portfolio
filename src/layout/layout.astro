@@ -1,5 +1,6 @@
 ---
 import '@fontsource-variable/onest';
+import { Meteors } from '@/components/Meteors';
 ---
 
 <html lang='es'>
@@ -19,11 +20,12 @@ import '@fontsource-variable/onest';
 
 	<body class='h-full'>
 		<main class='flex items-center flex-col py-4 px-4
-		dark:bg-gray-900 dark:text-white bg-gray-50 text-gray-900 w-full h-full'>
-			<div class='w-full lg:max-w-4xl md:max-w-2xl relative'>
+		dark:bg-gray-900 dark:text-white bg-gray-50 text-gray-900 w-full h-full overflow-hidden'>
+			<div class='w-full lg:max-w-4xl md:max-w-2xl relative min-h-screen'>
 				<slot />
 				<div class='circlePosition w-[150px] bg-blue-600 h-[150px] rounded-full absolute left-0 top-0 z-0 blur-[160px] md:top-36 md:right-56'></div>
 				<div class='circlePosition w-[100px] bg-blue-600 h-[100px] rounded-full absolute right-0 bottom-16 z-0 blur-[100px]'></div>
+				<Meteors number={10} />
 			</div>
 		</main>
 
@@ -34,6 +36,7 @@ import '@fontsource-variable/onest';
 			html {
 				font-family: 'Onest Variable', system-ui, sans-serif;
 				scroll-behavior: smooth;
+				width: 100%;
 			}
 			h2 {
 				text-wrap: balance;
