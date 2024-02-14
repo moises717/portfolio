@@ -28,7 +28,7 @@ import { Meteors } from '@/components/Meteors';
 				<slot />
 				<div class='circlePosition w-[150px] bg-blue-600 h-[150px] rounded-full absolute left-0 top-0 z-0 blur-[160px] md:top-36 md:right-56'></div>
 				<div class='circlePosition w-[100px] bg-blue-600 h-[100px] rounded-full absolute right-0 bottom-16 z-0 blur-[100px]'></div>
-				<Meteors number={10} />
+				<Meteors client:only number={10} />
 			</div>
 		</main>
 
@@ -47,3 +47,4 @@ import { Meteors } from '@/components/Meteors';
 		</style>
 	</body>
 </html>
+@/components
