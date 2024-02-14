@@ -12,7 +12,12 @@ const iconPath = `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/`;
 const iconUrl = `${iconPath}${icon.split('-')[0]}/${icon}`;
 ---
 
-<div class={cn('flex items-center justify-center p-3 h-12 bg-gray-100 rounded-md mt-3 shadow-sm gap-3', className)}>
+<div
+	class={cn(
+		'flex items-center justify-center p-3 h-12 bg-gray-100 rounded-md mt-3 shadow-sm gap-3 dark:bg-gray-800 dark:text-white/80 dark:border-gray-600 dark:hover:text-white/80 dark:hover:border-gray-700',
+		className,
+	)}
+>
 	<img class='w-6 h-6' src={iconUrl} alt={icon} />
 	<span>{name}</span>
 </div>
