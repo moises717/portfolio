@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion';
 
 import { cn } from '@/utils/cn';
-import { IconHome, IconUser } from '../icons';
+import { IconBrainCog, IconBriefcase, IconHome } from '../icons';
 import { ToggleTheme } from '../ToggleTheme';
 
 export const FloatingNav = ({ className }: { className?: string }) => {
@@ -37,7 +37,7 @@ export const FloatingNav = ({ className }: { className?: string }) => {
 					duration: 0.2,
 				}}
 				className={cn(
-					'flex max-w-fit  fixed top-10 inset-x-0 mx-auto border border-transparent  rounded-full shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1) dark:bg-gray-950  bg-gray-200 items-center justify-center space-x-4 sm:space-x-8 sm:pr-8 sm:pl-12 sm:py-4 sm:top-12 sm:inset-x-12 sm:rounded-3xl sm:0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] sm:z-[5000]  0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000]  pr-2 pl-8 py-2',
+					'flex max-w-fit z-[500] fixed h-16 shadow-sm bottom-10 md:top-10 mx-auto border border-transparent rounded-full dark:bg-gray-950  bg-gray-200 items-center justify-center space-x-4 sm:space-x-8 sm:pr-8 sm:pl-12 sm:py-4 sm:inset-x-12 sm:rounded-3xl pr-2 pl-8 py-2',
 					className,
 				)}
 			>
@@ -59,9 +59,20 @@ export const FloatingNav = ({ className }: { className?: string }) => {
 					)}
 				>
 					<span className='block sm:hidden'>
-						<IconUser className='w-6 h-6' />
+						<IconBriefcase className='w-7 h-7' />
 					</span>
-					<span className='hidden sm:block text-sm'>About</span>
+					<span className='hidden sm:block text-sm'>Proyectos</span>
+				</a>
+				<a
+					href={'/'}
+					className={cn(
+						'relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500',
+					)}
+				>
+					<span className='block sm:hidden'>
+						<IconBrainCog className='w-6 h-6' />
+					</span>
+					<span className='hidden sm:block text-sm'>Habilidades</span>
 				</a>
 				<ToggleTheme />
 			</motion.div>

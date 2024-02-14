@@ -123,3 +123,44 @@ export function IconSystem(props: React.SVGProps<SVGSVGElement>) {
 		</svg>
 	);
 }
+export function IconBriefcase(props: React.SVGProps<SVGSVGElement>) {
+	return (
+		<svg height='21' viewBox='0 0 21 21' width='21' {...props}>
+			<path
+				d='m2.49999919 3.5h10.00000001c1.1045695 0 2 .8954305 2 2v5c0 1.1045695-.8954305 2-2 2h-10.00000001c-1.1045695 0-2-.8954305-2-2v-5c0-1.1045695.8954305-2 2-2zm4.00000081-3h2c1.1045695 0 2 .8954305 2 2v1h-6v-1c0-1.1045695.8954305-2 2-2z'
+				fill='none'
+				stroke='currentColor'
+				strokeLinecap='round'
+				strokeLinejoin='round'
+				transform='translate(3 4)'
+			/>
+		</svg>
+	);
+}
+export function IconBrainCog(props: React.SVGProps<SVGSVGElement>) {
+	return (
+		<svg
+			{...props}
+			width='21'
+			height='21'
+			viewBox='0 0 24 24'
+			fill='none'
+			stroke='currentColor'
+			strokeWidth='2'
+			strokeLinecap='round'
+			strokeLinejoin='round'
+			className='lucide lucide-brain-cog'
+		>
+			<circle cx='12' cy='12' r='3' />
+			<path d='M12 4.5a2.5 2.5 0 0 0-4.96-.46 2.5 2.5 0 0 0-1.98 3 2.5 2.5 0 0 0-1.32 4.24 3 3 0 0 0 .34 5.58 2.5 2.5 0 0 0 2.96 3.08A2.5 2.5 0 0 0 12 19.5a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 12 4.5' />
+			<path d='m15.7 10.4-.9.4' />
+			<path d='m9.2 13.2-.9.4' />
+			<path d='m13.6 15.7-.4-.9' />
+			<path d='m10.8 9.2-.4-.9' />
+			<path d='m15.7 13.5-.9-.4' />
+			<path d='m9.2 10.9-.9-.4' />
+			<path d='m10.5 15.7.4-.9' />
+			<path d='m13.1 9.2.4-.9' />
+		</svg>
+	);
+}
