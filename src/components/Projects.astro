@@ -1,8 +1,96 @@
 ---
 import Section from '@/components/Section.astro';
-import { TabsDemo } from './tabs/demo';
+
+const iconPath = `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/`;
+
+const TAGS = {
+	NEXT: {
+		name: 'Next.js',
+		class: 'bg-black text-white',
+		icon: iconPath + 'nextjs/nextjs-original.svg',
+	},
+	TAILWIND: {
+		name: 'Tailwind CSS',
+		class: 'bg-[#003159] text-white',
+		icon: iconPath + 'tailwindcss/tailwindcss-original.svg',
+	},
+	SUPABASE: {
+		name: 'supabase',
+		class: 'bg-[#003159] text-white',
+		icon: iconPath + 'supabase/supabase-original.svg',
+	},
+};
+const PROJECTS = [
+	{
+		title: 'EcoTourNica - Turismo ecológico en Nicaragua',
+		description:
+			'Plataforma de turismo ecológico en Nicaragua. Creada con Next.js, Tailwind CSS, Supabase. Se integro autenticación con google, busquedas semanticas, lugares cercanos tu ubicacion, recomendacion basada en tus gustos.',
+		link: 'https://eco-tour-nica.vercel.app/es',
+		github: '#',
+		image: '/projects/ecotournica.webp',
+		tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.SUPABASE],
+	},
+	{
+		title: 'Movie App - Buscador de películas simple',
+		description: 'Buscador de películas simple usando la API de The Movie Db. Creada con React, Vitejs, Sass.',
+		link: 'https://the-movie-app-b.vercel.app/',
+		image: '/projects/movie-app.webp',
+		tags: [TAGS.NEXT, TAGS.TAILWIND],
+	},
+];
 ---
 
 <Section title='Proyectos' id='projects'>
-	<TabsDemo client:only />
+	<div class='flex flex-col gap-y-16'>
+		{
+			PROJECTS.map(({ image, title, description, tags, link, github }) => (
+				<article class='flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0'>
+					<div class='w-full md:w-1/2'>
+						<div class='relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50'>
+							<img
+								alt='Recién llegado vs 5 años en Nueva Zelanda'
+								class='object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105'
+								loading='lazy'
+								src={image}
+							/>
+						</div>
+					</div>
+
+					<div class='w-full md:w-1/2 md:max-w-lg'>
+						<h3 class='text-2xl font-bold text-gray-800 dark:text-gray-100'>{title}</h3>
+						<div class='flex flex-wrap mt-2'>
+							<ul class='flex flex-row mb-2 gap-x-2'>
+								{tags.map(tag => (
+									<li>
+										<span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}>
+											<img src={tag.icon} class='size-4' />
+											{tag.name}
+										</span>
+									</li>
+								))}
+							</ul>
+
+							<div class='mt-2 text-gray-700 dark:text-gray-400'>{description}</div>
+							<footer class='flex items-end justify-start mt-4 gap-x-4'>
+								<a
+									href={github}
+									role='link'
+									class='inline-flex items-center justify-center gap-2 px-3 py-2 space-x-2 text-base text-white transition bg-gray-800 border border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black'
+								>
+									Github
+								</a>
+								<a
+									href={link}
+									role='link'
+									class='inline-flex items-center justify-center gap-2 px-3 py-2 space-x-2 text-base text-white transition bg-gray-800 border border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black'
+								>
+									Ver proyecto
+								</a>
+							</footer>
+						</div>
+					</div>
+				</article>
+			))
+		}
+	</div>
 </Section>

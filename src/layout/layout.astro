@@ -1,7 +1,6 @@
 ---
 import '@fontsource-variable/onest';
 import { Meteors } from '@/components/Meteors';
-import { MouseShadow } from '@/components/mouse-shadow';
 ---
 
 <html lang='es'>
@@ -29,7 +28,6 @@ import { MouseShadow } from '@/components/mouse-shadow';
 				<div class='circlePosition w-[150px] bg-blue-600 h-[150px] rounded-full absolute left-0 top-0 z-0 blur-[160px] md:top-36 md:right-56'></div>
 				<div class='circlePosition w-[100px] bg-blue-600 h-[100px] rounded-full absolute right-0 bottom-16 z-0 blur-[100px]'></div>
 				<Meteors client:only number={10} />
-				<MouseShadow client:only />
 			</div>
 		</main>
 
