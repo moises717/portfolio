@@ -26,7 +26,6 @@ const PROJECTS = [
 		description:
 			'Plataforma de turismo ecológico en Nicaragua. Creada con Next.js, Tailwind CSS, Supabase. Se integro autenticación con google, busquedas semanticas, lugares cercanos tu ubicacion, recomendacion basada en tus gustos.',
 		link: 'https://eco-tour-nica.vercel.app/es',
-		github: '#',
 		image: '/projects/ecotournica.webp',
 		tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.SUPABASE],
 	},
@@ -35,6 +34,7 @@ const PROJECTS = [
 		description: 'Buscador de películas simple usando la API de The Movie Db. Creada con React, Vitejs, Sass.',
 		link: 'https://the-movie-app-b.vercel.app/',
 		image: '/projects/movie-app.webp',
+		github: 'https://github.com/moises717/TheMovieApp',
 		tags: [TAGS.NEXT, TAGS.TAILWIND],
 	},
 ];
@@ -52,6 +52,8 @@ const PROJECTS = [
 								class='object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105'
 								loading='lazy'
 								src={image}
+								height='224'
+								width='100%'
 							/>
 						</div>
 					</div>
@@ -72,20 +74,24 @@ const PROJECTS = [
 
 							<div class='mt-2 text-gray-700 dark:text-gray-400'>{description}</div>
 							<footer class='flex items-end justify-start mt-4 gap-x-4'>
-								<a
-									href={github}
-									role='link'
-									class='px-4 py-2 inline-flex justify-center items-center gap-3 rounded-xl border border-neutral-600 text-neutral-700 bg-white hover:bg-gray-100 dark:bg-gray-800 dark:text-white/80 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:text-white/80 dark:hover:border-gray-700'
-								>
-									Github
-								</a>
-								<a
-									href={link}
-									role='link'
-									class='px-4 py-2 inline-flex justify-center items-center gap-3 rounded-xl border border-neutral-600 text-neutral-700 bg-white hover:bg-gray-100 dark:bg-gray-800 dark:text-white/80 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:text-white/80 dark:hover:border-gray-700'
-								>
-									Ver proyecto
-								</a>
+								{github && (
+									<a
+										href={github}
+										role='link'
+										class='px-4 py-2 inline-flex justify-center items-center gap-3 rounded-xl border border-neutral-600 text-neutral-700 bg-white hover:bg-gray-100 dark:bg-gray-800 dark:text-white/80 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:text-white/80 dark:hover:border-gray-700'
+									>
+										Github
+									</a>
+								)}
+								{link && (
+									<a
+										href={link}
+										role='link'
+										class='px-4 py-2 inline-flex justify-center items-center gap-3 rounded-xl border border-neutral-600 text-neutral-700 bg-white hover:bg-gray-100 dark:bg-gray-800 dark:text-white/80 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:text-white/80 dark:hover:border-gray-700'
+									>
+										Ver proyecto
+									</a>
+								)}
 							</footer>
 						</div>
 					</div>
