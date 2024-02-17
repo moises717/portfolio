@@ -46,6 +46,7 @@ export const FloatingNav = ({ className }: { className?: string }) => {
 					className={cn(
 						'relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500',
 					)}
+					aria-label='Ir al inicio'
 				>
 					<span className='block sm:hidden'>
 						<IconHome className='w-6 h-6' />
@@ -57,6 +58,7 @@ export const FloatingNav = ({ className }: { className?: string }) => {
 					className={cn(
 						'relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500',
 					)}
+					aria-label='Ir a proyectos'
 				>
 					<span className='block sm:hidden'>
 						<IconBriefcase className='w-7 h-7' />
@@ -68,6 +70,7 @@ export const FloatingNav = ({ className }: { className?: string }) => {
 					className={cn(
 						'relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500',
 					)}
+					aria-label='Ir a habilidades'
 				>
 					<span className='block sm:hidden'>
 						<IconBrainCog className='w-6 h-6' />

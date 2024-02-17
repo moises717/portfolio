@@ -43,6 +43,7 @@ export const ToggleTheme = () => {
 			className='text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full'
 			onClick={toggleTheme}
 			animate={controls}
+			aria-label='Cambiar tema'
 		>
 			{icon === 'sun' ? (
 				<motion.span layoutId='sun-icon' className='block w-6 h-6 '>
