@@ -3,9 +3,25 @@ import Section from './Section.astro';
 ---
 
 <Section>
-	<footer class='flex flex-col items-center justify-center w-full'>
+	<footer class='flex flex-col md:flex-row items-center w-full gap-3 md:gap-0'>
 		<span>
-			Inspired by <a href='https://porfolio.dev/' target='_blank' class='text-blue-500' rel='noopener noreferrer'>Porfolio.dev ❤️</a>
+			Made by <span class='text-blue-500'>Moises Barillas</span>, Inspired by <a
+				href='https://porfolio.dev/'
+				target='_blank'
+				class='text-blue-500'
+				rel='noopener noreferrer'>Porfolio.dev ❤️</a
+			>
 		</span>
+		<ul class='flex gap-4 md:ml-24'>
+			<li>
+				<a href='#' class='text-blue-500'>Inicio</a>
+			</li>
+			<li>
+				<a href='#projects' class='text-blue-500'>Proyectos</a>
+			</li>
+			<li>
+				<a href='#skills' class='text-blue-500'>Habilidades</a>
+			</li>
+		</ul>
 	</footer>
 </Section>
