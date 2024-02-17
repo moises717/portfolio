@@ -1,28 +1,25 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import { IconMoon, IconSun } from '../icons';
+import { IconMoon, IconSun, IconSystem } from '../icons';
 
 const persistTheme = localStorage.getItem('theme') || 'light';
+const THEMES = ['light', 'dark', 'system'];
 
 export const ToggleTheme = () => {
 	const [theme, setTheme] = useState(persistTheme);
-	const [icon, setIcon] = useState(theme === 'light' ? 'sun' : 'moon');
 	const controls = useAnimation();
 
 	const toggleTheme = () => {
-		const newTheme = theme === 'light' ? 'dark' : 'light';
-		const newIcon = theme === 'light' ? 'moon' : 'sun';
+		const index = THEMES.indexOf(theme);
 
-		setTheme(newTheme);
-		setIcon(newIcon);
+		const nextIndex = (index + 1) % THEMES.length;
+		const nextTheme = THEMES[nextIndex] as 'light' | 'dark' | 'system';
 
-		if (newTheme === 'dark') {
-			localStorage.setItem('theme', 'dark');
-			document.documentElement.classList.add('dark');
-		} else {
-			localStorage.setItem('theme', 'light');
-			document.documentElement.classList.remove('dark');
-		}
+		setTheme(nextTheme);
+		localStorage.setItem('theme', nextTheme);
+
+		document.documentElement.classList.remove('light', 'dark');
+		document.documentElement.classList.add(nextTheme);
 
 		controls.start({
 			scale: [1, 1.2, 1],
@@ -30,13 +27,23 @@ export const ToggleTheme = () => {
 		});
 	};
 
-	useEffect(() => {
-		if (theme === 'dark') {
-			document.documentElement.classList.add(theme);
-		} else {
-			document.documentElement.classList.remove(theme);
-		}
-	}, [theme]);
+	const TemeIcons = {
+		light: (
+			<motion.span layoutId='sun-icon' className='block w-6 h-6 '>
+				<IconSun className='hover:transform hover:scale-110' />
+			</motion.span>
+		),
+		dark: (
+			<motion.span layoutId='mon-icon' className='block w-6 h-6 '>
+				<IconMoon className='hover:transform hover:scale-110' />
+			</motion.span>
+		),
+		system: (
+			<motion.span layoutId='system-icon' className='block w-6 h-6 '>
+				<IconSystem className='hover:transform hover:scale-110' />
+			</motion.span>
+		),
+	} as { [key: string]: JSX.Element };
 
 	return (
 		<motion.button
@@ -45,15 +52,7 @@ export const ToggleTheme = () => {
 			animate={controls}
 			aria-label='Cambiar tema'
 		>
-			{icon === 'sun' ? (
-				<motion.span layoutId='sun-icon' className='block w-6 h-6 '>
-					<IconSun className='hover:transform hover:scale-110' />
-				</motion.span>
-			) : (
-				<motion.span layoutId='moon-icon' className='block w-6 h-6'>
-					<IconMoon />
-				</motion.span>
-			)}
+			{TemeIcons[theme]}
 		</motion.button>
 	);
 };
