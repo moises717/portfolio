@@ -1,6 +1,10 @@
 ---
 import '@fontsource-variable/onest';
 import { Meteors } from '@/components/Meteors';
+
+const { currentLocale } = Astro;
+
+console.log('🚀  currentLocale:', currentLocale);
 ---
 
 <html lang='es'>
@@ -15,6 +19,7 @@ import { Meteors } from '@/components/Meteors';
 		<meta name='theme-color' content='#ffffff' />
 		<meta name='viewport' content='width=device-width' />
 		<meta name='generator' content={Astro.generator} />
+
 		<meta
 			name='description'
 			content='Moisés Barillas: Desarrollador web, Nicaragua, especializado en Javascript, Node.js, HTML, CSS, React y Next.js. ¡Impulsa tu proyecto con mi experiencia y conocimientos!'

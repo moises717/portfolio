@@ -18,6 +18,11 @@ const socialLiks = [
 		Icon: IconLinkedin,
 	},
 ];
+
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class='max-w-xl'>
@@ -31,7 +36,7 @@ const socialLiks = [
 				<div
 					class='inline-flex items-center justify-center w-full px-3 py-1 text-sm text-green-800 bg-green-100 rounded-full cursor-pointer dark:bg-gray-800 dark:text-white/80 backdrop-blur-3xl whitespace-nowrap'
 				>
-					<span class='text-xs font-bold'>Disponible para trabajar</span>
+					<span class='text-xs font-bold'>{t('hero.title')}</span>
 				</div>
 			</span>
 		</div>
