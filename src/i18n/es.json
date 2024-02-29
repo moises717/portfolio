@@ -1,6 +1,10 @@
 {	
-	"HERO": {
-		"TITLE": "Disponible para trabajar"
+	"HEADER": {
+		"NAV": {
+			"HOME": "Inicio",
+			"PROJECTS": "Proyectos",
+			"SKILLS": "Habilidades"
+		}
 	}
 
 }

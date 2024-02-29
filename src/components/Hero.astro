@@ -1,9 +1,13 @@
 ---
 import { IconEmail, IconGithub, IconLinkedin } from './icons';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const socialLiks = [
 	{
-		name: 'Contactame',
+		name: t('hero.button1'),
 		href: 'mailto: moisesbarillas717@gmail.com',
 		Icon: IconEmail,
 	},
@@ -18,11 +22,6 @@ const socialLiks = [
 		Icon: IconLinkedin,
 	},
 ];
-
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
-
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
 ---
 
 <div class='max-w-xl'>
@@ -36,16 +35,18 @@ const t = useTranslations(lang);
 				<div
 					class='inline-flex items-center justify-center w-full px-3 py-1 text-sm text-green-800 bg-green-100 rounded-full cursor-pointer dark:bg-gray-800 dark:text-white/80 backdrop-blur-3xl whitespace-nowrap'
 				>
-					<span class='text-xs font-bold'>{t('hero.title')}</span>
+					<span class='text-xs font-bold'>{t('hero.info')}</span>
 				</div>
 			</span>
 		</div>
 	</div>
 
-	<h1 class='text-4xl font-bold tracking-tight text-indigo-500 sm:text-5xl'>Soy Moises Barillas</h1>
+	<h1 class='text-4xl font-bold tracking-tight text-indigo-500 sm:text-5xl'>
+		{t('hero.title')}
+	</h1>
 
 	<p class='mt-6 text-xl text-gray-800 dark:text-white'>
-		Estudiante de ultimo año de Ingeniería en Sistemas, apasionado por la tecnología y el desarrollo de software.
+		{t('hero.description')}
 	</p>
 
 	<div class='flex self-start gap-2 mt-6'>

@@ -5,7 +5,7 @@ import { cn } from '@/utils/cn';
 import { IconBrainCog, IconBriefcase, IconHome } from '../icons';
 import { ToggleTheme } from '../ToggleTheme';
 
-export const FloatingNav = ({ className }: { className?: string }) => {
+export const FloatingNav = ({ className, i18n }: { className?: string; i18n: any }) => {
 	const { scrollYProgress } = useScroll();
 	const [visible, setVisible] = useState(true);
 
@@ -51,7 +51,7 @@ export const FloatingNav = ({ className }: { className?: string }) => {
 					<span className='block sm:hidden'>
 						<IconHome className='w-6 h-6' />
 					</span>
-					<span className='hidden sm:block text-sm'>Inicio</span>
+					<span className='hidden sm:block text-sm'>{i18n.HEADER.NAV.HOME}</span>
 				</a>
 				<a
 					href={'#projects'}
@@ -63,7 +63,7 @@ export const FloatingNav = ({ className }: { className?: string }) => {
 					<span className='block sm:hidden'>
 						<IconBriefcase className='w-7 h-7' />
 					</span>
-					<span className='hidden sm:block text-sm'>Proyectos</span>
+					<span className='hidden sm:block text-sm'>{i18n.HEADER.NAV.PROJECTS}</span>
 				</a>
 				<a
 					href={'#skills'}
@@ -75,7 +75,7 @@ export const FloatingNav = ({ className }: { className?: string }) => {
 					<span className='block sm:hidden'>
 						<IconBrainCog className='w-6 h-6' />
 					</span>
-					<span className='hidden sm:block text-sm'>Habilidades</span>
+					<span className='hidden sm:block text-sm'>{i18n.HEADER.NAV.SKILLS}</span>
 				</a>
 				<ToggleTheme />
 			</motion.div>

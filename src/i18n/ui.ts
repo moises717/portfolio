@@ -1,8 +1,4 @@
 export const LANGUAGES: Record<string, { code: string; name: string }> = {
-	ca: {
-		code: 'ca',
-		name: 'Català',
-	},
 	en: {
 		code: 'en',
 		name: 'English',
@@ -18,10 +14,16 @@ export const showDefaultLang = false;
 
 export const ui = {
 	es: {
-		'hero.title': 'Disponible para trabajar.',
+		'hero.info': 'Disponible para trabajar.',
+		'hero.description': 'Estudiante de ultimo año de Ingeniería en Sistemas, apasionado por la tecnología y el desarrollo de software.',
+		'hero.title': 'Hola, Soy Moises Barillas',
+		'hero.button1': 'Contactarme',
 	},
 	en: {
-		'hero.title': 'Available for work.',
+		'hero.info': 'Available for work.',
+		'hero.description': 'Last year student of Systems Engineering, passionate about technology and software development.',
+		'hero.title': "Hello, I'm Moises Barillas",
+		'hero.button1': 'Contact Me',
 	},
 } as const;
 

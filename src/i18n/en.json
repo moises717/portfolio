@@ -1,6 +1,10 @@
 {	
-	"HERO": {
-		"TITLE": "Open to work"
+	"HEADER": {
+		"NAV": {
+			"HOME": "Home",
+			"PROJECTS": "Projects",
+			"SKILLS": "Skills"
+		}
 	}
 
 }
