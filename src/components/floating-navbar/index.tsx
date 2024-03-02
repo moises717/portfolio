@@ -4,7 +4,6 @@ import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-
 import { cn } from '@/utils/cn';
 import { IconBrainCog, IconBriefcase, IconHome } from '../icons';
 import { ToggleTheme } from '../ToggleTheme';
-import { LangPicker } from '../LangPicker';
 
 export const FloatingNav = ({ className, i18n }: { className?: string; i18n: any }) => {
 	const { scrollYProgress } = useScroll();
@@ -79,7 +78,6 @@ export const FloatingNav = ({ className, i18n }: { className?: string; i18n: any
 					<span className='hidden sm:block text-sm'>{i18n.HEADER.NAV.SKILLS}</span>
 				</a>
 				<ToggleTheme />
-				<LangPicker />
 			</motion.div>
 		</AnimatePresence>
 	);

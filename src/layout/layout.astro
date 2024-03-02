@@ -1,10 +1,7 @@
 ---
 import '@fontsource-variable/onest';
 import { Meteors } from '@/components/Meteors';
-
-const { currentLocale } = Astro;
-
-console.log('🚀  currentLocale:', currentLocale);
+import { ViewTransitions } from 'astro:transitions';
 ---
 
 <html lang='es'>
@@ -28,6 +25,7 @@ console.log('🚀  currentLocale:', currentLocale);
 		<meta name='keywords' content='Desarrollador web, Nicaragua, Javascript, Node.js, HTML, CSS, React, Next.js' />
 		<meta name='google-site-verification' content='wDYm2OfVXuMdWi6rYTfvQ38_JO9_L1hzPPgz7p9fyUA' />
 		<title>Moises Barillas | Desarrolldor web | Nicaragua - Javascript - Node - Html - Css - React - Nextjs</title>
+		<ViewTransitions />
 	</head>
 
 	<body class='h-full'>
@@ -84,6 +82,7 @@ console.log('🚀  currentLocale:', currentLocale);
 			};
 
 			updateTheme();
+			document.addEventListener('astro:after-swap', updateTheme);
 		</script>
 	</body>
 </html>

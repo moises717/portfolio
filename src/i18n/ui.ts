@@ -1,11 +1,16 @@
-export const LANGUAGES: Record<string, { code: string; name: string }> = {
+import UnitedStatesFlag from '@/components/flags/UnitedStates.astro';
+import Nicaragua from '@/components/flags/Nicaragua.astro';
+
+export const LANGUAGES: Record<string, { code: string; name: string; flag: typeof UnitedStatesFlag }> = {
 	en: {
 		code: 'en',
 		name: 'English',
+		flag: UnitedStatesFlag,
 	},
 	es: {
 		code: 'es',
 		name: 'Español',
+		flag: Nicaragua,
 	},
 };
 
