@@ -9,7 +9,7 @@ interface Props {
 const { title, list } = Astro.props;
 ---
 
-<h3 class='text-md font-semibold text-gray-700 dark:text-gray-300'>{title}</h3>
+<h3 class='text-md font-semibold text-gray-700 dark:text-gray-300 mt-3'>{title}</h3>
 <div class='flex gap-2 flex-wrap'>
 	{list.map(skill => <SkillBadge {...skill} />)}
 </div>
