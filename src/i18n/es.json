@@ -1,10 +1,18 @@
-{	
+{
+	"SEO": {
+		"TITLE": "Moises Barillas | Desarrolldor web | Nicaragua - Javascript - Node - Html - Css - React - Nextjs",
+		"DESCRIPTION": "Moisés Barillas: Desarrollador web, Nicaragua, especializado en Javascript, Node.js, HTML, CSS, React y Next.js. ¡Impulsa tu proyecto con mi experiencia y conocimientos!"
+	},	
 	"HEADER": {
 		"NAV": {
 			"HOME": "Inicio",
 			"PROJECTS": "Proyectos",
 			"SKILLS": "Habilidades"
 		}
+	},
+	"ABOUT": {
+		"TEXT1": "Saludos, mi nombre es <strong>Moisés Barillas</strong>. En el año 2019, mi incursión en el mundo del desarrollo web comenzó mediante la exploración de guías y tutoriales en línea, practicando el desarrollo de sitios web con PHP y MySQL. Esta experiencia inicial despertó en mí un profundo interés por el desarrollo web.",
+		"TEXT2": "Desde entonces, he dedicado esfuerzos constantes a perfeccionar mis habilidades, especialmente en el ámbito de JavaScript. He tenido el desarrollado proyectos, tanto personales como para clientes, gestionándose de manera autónoma con el compromiso de ofrecer soluciones efectivas y de calidad."
 	}
 
 }

@@ -1,5 +1,9 @@
 ---
 import Section from './Section.astro';
+import { getI18N } from '@/i18n/index';
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <Section>
@@ -9,13 +13,13 @@ import Section from './Section.astro';
 		</span>
 		<ul class='flex gap-4 md:ml-24'>
 			<li>
-				<a href='#home' class='text-blue-600' aria-label='Inicio'>Inicio</a>
+				<a href='#home' class='text-blue-600' aria-label='Inicio'>{i18n.HEADER.NAV.HOME}</a>
 			</li>
 			<li>
-				<a href='#projects' class='text-blue-600'>Proyectos</a>
+				<a href='#projects' class='text-blue-600'>{i18n.HEADER.NAV.PROJECTS}</a>
 			</li>
 			<li>
-				<a href='#skills' class='text-blue-600'>Habilidades</a>
+				<a href='#skills' class='text-blue-600'>{i18n.HEADER.NAV.SKILLS}</a>
 			</li>
 		</ul>
 	</footer>

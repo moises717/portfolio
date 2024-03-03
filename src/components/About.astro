@@ -1,20 +1,19 @@
 ---
 import Section from './Section.astro';
+
+import { getI18N } from '@/i18n/index';
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <Section title='Acerca de mi' id='about'>
 	<article class='flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row'>
 		<div class='text-pretty order-2 font-normal [&>p]:mb-4 [&>p>strong]:text-blue-600'>
-			<p>
-				Saludos, mi nombre es <strong>Moisés Barillas</strong>. En el año 2019, mi incursión en el mundo del desarrollo web comenzó mediante la
-				exploración de guías y tutoriales en línea, practicando el desarrollo de sitios web con PHP y MySQL. Esta experiencia inicial despertó en mí
-				un profundo interés por el desarrollo web.
-			</p>
+			<p set:html={i18n.ABOUT.TEXT1} />
 
 			<p>
-				Desde entonces, he dedicado esfuerzos constantes a perfeccionar mis habilidades, especialmente en el ámbito de JavaScript. He tenido el
-				desarrollado proyectos, tanto personales como para clientes, gestionándolos de manera autónoma con el compromiso de ofrecer soluciones
-				efectivas y de calidad.
+				{i18n.ABOUT.TEXT2}
 			</p>
 		</div>
 	</article>
