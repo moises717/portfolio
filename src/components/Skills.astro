@@ -2,12 +2,16 @@
 import { skills } from '@/data/skill.ts';
 import Section from '@/components/Section.astro';
 import SkillSection from '@/components/SkillSection.astro';
+import { getI18N } from '@/i18n/index';
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 
 const skillList = Object.entries(skills).map(([section, list]) => ({ section, list }));
 
 const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
 ---
 
-<Section title='Habilidades' id='skills'>
+<Section title={i18n.SKILLS.TITLE} id='skills'>
 	{skillList.map(({ section, list }) => <SkillSection title={capitalize(section)} list={list} />)}
 </Section>

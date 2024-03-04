@@ -7,7 +7,7 @@ const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 ---
 
-<Section title='Acerca de mi' id='about'>
+<Section title={i18n.ABOUT.TITLE} id='about'>
 	<article class='flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row'>
 		<div class='text-pretty order-2 font-normal [&>p]:mb-4 [&>p>strong]:text-blue-600'>
 			<p set:html={i18n.ABOUT.TEXT1} />

@@ -11,8 +11,28 @@
 		}
 	},
 	"ABOUT": {
+		"TITLE": "Sobre mí",
 		"TEXT1": "Saludos, mi nombre es <strong>Moisés Barillas</strong>. En el año 2019, mi incursión en el mundo del desarrollo web comenzó mediante la exploración de guías y tutoriales en línea, practicando el desarrollo de sitios web con PHP y MySQL. Esta experiencia inicial despertó en mí un profundo interés por el desarrollo web.",
 		"TEXT2": "Desde entonces, he dedicado esfuerzos constantes a perfeccionar mis habilidades, especialmente en el ámbito de JavaScript. He tenido el desarrollado proyectos, tanto personales como para clientes, gestionándose de manera autónoma con el compromiso de ofrecer soluciones efectivas y de calidad."
+	},
+	"SKILLS": {
+		"TITLE": "Habilidades",
+		"frontend": "Frontend",
+		"backend": "Backend",
+		"learning": "Aprendiendo",
+		"databases": "Bases de datos",
+		"otros": "Otros"
+	},
+	"PROJECTS": {
+		"TITLE": "Proyectos",
+		"ECOTOUR": {
+			"TITLE": "EcoTourNica - Turismo ecológico en Nicaragua",
+			"DESCRIPTION": "Plataforma de turismo ecológico en Nicaragua. Creada con Next.js, Tailwind CSS, Supabase. Se integro autenticación con google, busquedas semanticas, lugares cercanos tu ubicacion, recomendacion basada en tus gustos."
+		},
+		"MOVIEAPP": {
+			"TITLE": "Movie App - Buscador de películas simple",
+			"DESCRIPTION": "Buscador de películas simple usando la API de The Movie Db. Creada con React, Vitejs, Sass."
+		}
 	}
 
 }

@@ -11,8 +11,28 @@
 		}
 	},
 	"ABOUT": {
+		"TITLE": "About Me",
 		"TEXT1": "Greetings, my name is <strong>Moisés Barillas</strong>. In 2019, my journey into the world of web development began through exploring online guides and tutorials, practicing website development with PHP and MySQL. This initial experience sparked a deep interest in web development within me.",
 		"TEXT2": "Since then, I have dedicated consistent efforts to refining my skills, especially in the realm of JavaScript. I have developed projects, both personal and for clients, managing them autonomously with a commitment to delivering effective and quality solutions."
+	},
+	"SKILLS": {
+		"TITLE": "Skills",
+		"frontend": "Frontend",
+		"backend": "Backend",
+		"learning": "Learning",
+		"databases": "Databases",
+		"otros": "Others"
+	},
+	"PROJECTS": {
+		"TITLE": "Projects",
+		"ECOTOUR": {
+			"TITLE": "EcoTourNica - Ecotourism in Nicaragua",
+			"DESCRIPTION": "Ecotourism platform in Nicaragua. Created with Next.js, Tailwind CSS, Supabase. Integrated authentication with Google, semantic searches, nearby locations to your location, recommendation based on your preferences."
+		},
+		"MOVIEAPP": {
+			"TITLE": "Movie App - Simple movie searcher",
+			"DESCRIPTION": "Simple movie search using The Movie Db API. Created with React, Vite.js, Sass."
+		}
 	}
 
 }

@@ -1,15 +1,20 @@
 ---
 import { type Skill } from '../data/skill';
 import SkillBadge from './SkillBadge.astro';
+import { getI18N } from '@/i18n/index';
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 
 interface Props {
 	title: string;
 	list: Skill[];
 }
 const { title, list } = Astro.props;
+const title18n = i18n.SKILLS[title.toLowerCase() as keyof typeof i18n.SKILLS];
 ---
 
-<h3 class='text-md font-semibold text-gray-700 dark:text-gray-300 mt-3'>{title}</h3>
+<h3 class='text-md font-semibold text-gray-700 dark:text-gray-300 mt-3'>{title18n}</h3>
 <div class='flex gap-2 flex-wrap'>
 	{list.map(skill => <SkillBadge {...skill} />)}
 </div>
