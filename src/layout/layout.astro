@@ -7,6 +7,9 @@ import { getI18N } from '@/i18n/index';
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+console.log(canonicalURL.href);
 ---
 
 <html lang='es'>
@@ -26,7 +29,7 @@ const i18n = getI18N({ currentLocale });
 		<meta name='author' content='Moisés Barillas' />
 		<meta name='keywords' content='Desarrollador web, Nicaragua, Javascript, Node.js, HTML, CSS, React, Next.js' />
 		<meta name='google-site-verification' content='wDYm2OfVXuMdWi6rYTfvQ38_JO9_L1hzPPgz7p9fyUA' />
-		<link rel='canonical' href={`https://www.moisesbarillas.com/${currentLocale}`} />
+		<link rel='canonical' href={`${canonicalURL.href}`} />
 		<title>{i18n.SEO.TITLE}</title>
 		<ViewTransitions />
 	</head>
