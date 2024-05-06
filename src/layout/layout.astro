@@ -2,16 +2,17 @@
 import '@fontsource-variable/onest';
 import { Meteors } from '@/components/Meteors';
 import { ViewTransitions } from 'astro:transitions';
-
+import { getLangFromUrl } from '@/i18n/utils';
 import { getI18N } from '@/i18n/index';
 
 const { currentLocale } = Astro;
 
 const i18n = getI18N({ currentLocale });
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const lang = getLangFromUrl(Astro.url);
 ---
 
-<html lang='es'>
+<html lang={lang}>
 	<head>
 		<meta charset='utf-8' />
 		<link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
