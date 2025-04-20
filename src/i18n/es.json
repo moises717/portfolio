@@ -26,8 +26,8 @@
 	"PROJECTS": {
 		"TITLE": "Proyectos",
 		"ECOTOUR": {
-			"TITLE": "EcoTourNica - Turismo ecológico en Nicaragua",
-			"DESCRIPTION": "Plataforma de turismo ecológico en Nicaragua. Creada con Next.js, Tailwind CSS, Supabase. Se integro autenticación con google, busquedas semanticas, lugares cercanos tu ubicacion, recomendacion basada en tus gustos."
+			"TITLE": "NicaExplora - Turismo ecológico en Nicaragua",
+			"DESCRIPTION": "Plataforma de turismo ecológico en Nicaragua. Creada con Astro.js, Tailwind CSS, Supabase. Se integro autenticación con google, busquedas semanticas, lugares cercanos tu ubicacion, recomendacion basada en tus gustos."
 		},
 		"MOVIEAPP": {
 			"TITLE": "Movie App - Buscador de películas simple",

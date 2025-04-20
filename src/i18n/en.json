@@ -26,8 +26,8 @@
 	"PROJECTS": {
 		"TITLE": "Projects",
 		"ECOTOUR": {
-			"TITLE": "EcoTourNica - Ecotourism in Nicaragua",
-			"DESCRIPTION": "Ecotourism platform in Nicaragua. Created with Next.js, Tailwind CSS, Supabase. Integrated authentication with Google, semantic searches, nearby locations to your location, recommendation based on your preferences."
+			"TITLE": "NicaExplora - Ecotourism in Nicaragua",
+			"DESCRIPTION": "Ecotourism platform in Nicaragua. Created with Astro.js, Tailwind CSS, Supabase. Integrated authentication with Google, semantic searches, nearby locations to your location, recommendation based on your preferences."
 		},
 		"MOVIEAPP": {
 			"TITLE": "Movie App - Simple movie searcher",
