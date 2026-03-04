@@ -2,7 +2,7 @@
 	"SEO": {
 		"TITLE": "Moises Barillas | Desarrolldor web | Nicaragua - Javascript - Node - Html - Css - React - Nextjs",
 		"DESCRIPTION": "Moisés Barillas: Desarrollador web, Nicaragua, especializado en Javascript, Node.js, HTML, CSS, React y Next.js. ¡Impulsa tu proyecto con mi experiencia y conocimientos!"
-	},	
+	},
 	"HEADER": {
 		"NAV": {
 			"HOME": "Inicio",
@@ -32,7 +32,10 @@
 		"MOVIEAPP": {
 			"TITLE": "Movie App - Buscador de películas simple",
 			"DESCRIPTION": "Buscador de películas simple usando la API de The Movie Db. Creada con React, Vitejs, Sass."
+		},
+		"ESCPOS": {
+			"TITLE": "ESC/POS Viewer Pro - Visualizador ESC/POS",
+			"DESCRIPTION": "ESC/POS Viewer Pro: herramienta para previsualizar y analizar tickets de impresora ESC/POS y sus comandos. Construido con Rust Lang, ayuda a depurar la impresión en impresoras térmicas mostrando una vista previa visual del ticket y los comandos ESC/POS."
 		}
 	}
-
 }

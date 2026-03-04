@@ -1,4 +1,4 @@
-{	
+{
 	"SEO": {
 		"TITLE": "Moises Barillas | Web Developer | Nicaragua - Javascript - Node - Html - Css - React - Next.js",
 		"DESCRIPTION": "Moses Barillas: Web Developer from Nicaragua, specialized in Javascript, Node.js, HTML, CSS, React, and Next.js. Boost your project with my experience and expertise!"
@@ -32,7 +32,10 @@
 		"MOVIEAPP": {
 			"TITLE": "Movie App - Simple movie searcher",
 			"DESCRIPTION": "Simple movie search using The Movie Db API. Created with React, Vite.js, Sass."
+		},
+		"ESCPOS": {
+			"TITLE": "ESC/POS Viewer Pro - ESC/POS ticket inspector",
+			"DESCRIPTION": "ESC/POS Viewer Pro: a tool to preview and inspect ESC/POS printer tickets and commands. Built with Rust Lang, it helps debug thermal receipt printing by rendering ESC/POS commands into a visual ticket preview."
 		}
 	}
-
 }
