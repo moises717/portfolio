@@ -1,6 +1,9 @@
 ---
 import Section from '@/components/Section.astro';
 import TechIcon from '@/components/TechIcon.astro';
+import { Image } from 'astro:assets';
+import sistematicaLogo from '@/assets/sistematica_io_logo.jpg';
+import lafiseLogo from '@/assets/lafise_logo.jpg';
 import { getI18N } from '@/i18n';
 
 const { currentLocale } = Astro;
@@ -51,26 +54,17 @@ const jobs: Job[] = i18n.EXPERIENCE.JOBS;
 							<!-- Harmonious Header: Logo + Info Column -->
 							<div class='flex items-start gap-3 sm:gap-4'>
 								<!-- Company Logo -->
-								{isSistematica ? (
-									<div class='size-10 sm:size-11 rounded-xl bg-black border border-neutral-800/80 shadow-[0_1px_2px_rgba(0,0,0,0.04)] flex items-center justify-center shrink-0 text-white select-none'>
-										<svg class='size-5 sm:size-6' viewBox='0 0 28 28' fill='none' aria-hidden='true'>
-											<rect x='2' y='2' width='24' height='24' rx='4' fill='black' />
-											<path
-												d='M7 7h14v5h-8.5v2H21v7H7v-5h8.5v-2H7V7z'
-												fill='white'
-											/>
-										</svg>
-									</div>
-								) : (
-									<div class='size-10 sm:size-11 rounded-xl bg-[#005a36] border border-[#007044] shadow-[0_1px_2px_rgba(0,0,0,0.04)] flex items-center justify-center shrink-0 text-white select-none'>
-										<svg class='size-5 sm:size-6' viewBox='0 0 28 28' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'>
-											<rect x='3' y='3' width='22' height='22' rx='3' />
-											<path d='M7 7h14v14H7z' />
-											<path d='M11 11h6v6h-6z' fill='currentColor' />
-											<path d='M3 14h4M21 14h4M14 3v4M14 21v4' />
-										</svg>
-									</div>
-								)}
+								<div class='size-10 sm:size-11 rounded-xl overflow-hidden shrink-0 border border-neutral-200/80 dark:border-neutral-800/80 shadow-[0_1px_2px_rgba(0,0,0,0.04)] select-none bg-neutral-900 flex items-center justify-center'>
+									<Image
+										src={isSistematica ? sistematicaLogo : lafiseLogo}
+										alt={isSistematica ? 'Logo de Sistemática' : 'Logo de Grupo LAFISE'}
+										width={48}
+										height={48}
+										loading='eager'
+										decoding='async'
+										class='size-full object-cover object-center'
+									/>
+								</div>
 
 								<!-- Role, Company & Metadata Column -->
 								<div class='flex-1 min-w-0'>
