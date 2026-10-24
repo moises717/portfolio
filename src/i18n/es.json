@@ -56,11 +56,12 @@
 	},
 	"SKILLS": {
 		"TITLE": "Habilidades",
-		"frontend": "Frontend",
-		"backend": "Backend",
-		"learning": "Aprendiendo",
-		"databases": "Bases de datos",
-		"otros": "Otros"
+		"backend": "Backend & Arquitectura",
+		"frontend": "Frontend & Web",
+		"cloud": "Cloud & DevOps",
+		"databases": "Bases de Datos",
+		"learning": "En Aprendizaje",
+		"otros": "Automatización & Herramientas"
 	},
 	"PROJECTS": {
 		"TITLE": "Proyectos",

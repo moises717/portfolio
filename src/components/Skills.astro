@@ -8,10 +8,10 @@ const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 
 const skillList = Object.entries(skills).map(([section, list]) => ({ section, list }));
-
-const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
 ---
 
 <Section title={i18n.SKILLS.TITLE} id='skills'>
-	{skillList.map(({ section, list }) => <SkillSection title={capitalize(section)} list={list} />)}
+	<div class='grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5'>
+		{skillList.map(({ section, list }) => <SkillSection section={section} list={list} />)}
+	</div>
 </Section>

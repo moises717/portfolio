@@ -6,107 +6,139 @@ export type Skill = {
 interface SkillList {
 	backend: Skill[];
 	frontend: Skill[];
-	learning: Skill[];
+	cloud: Skill[];
 	databases: Skill[];
+	learning: Skill[];
 	otros: Skill[];
 }
+
 export const skills: SkillList = {
 	backend: [
 		{
+			name: '.NET',
+			icon: 'dotnetcore/dotnetcore-original.svg',
+		},
+		{
+			name: 'ASP.NET Core',
+			icon: 'dotnetcore/dotnetcore-original.svg',
+		},
+		{
+			name: 'C#',
+			icon: 'csharp/csharp-original.svg',
+		},
+		{
+			name: 'Microservicios',
+			icon: 'microservices',
+		},
+		{
 			name: 'Node.js',
-			icon: 'nodejs-original.svg',
+			icon: 'nodejs/nodejs-original.svg',
 		},
 		{
 			name: 'Express',
-			icon: 'express-original.svg',
+			icon: 'express/express-original.svg',
 		},
 	],
 	frontend: [
 		{
-			name: 'HTML5',
-			icon: 'html5-original.svg',
-		},
-		{
-			name: 'CSS3',
-			icon: 'css3-original.svg',
-		},
-		{
-			name: 'JavaScript',
-			icon: 'javascript-original.svg',
-		},
-		{
-			name: 'TypeScript',
-			icon: 'typescript-original.svg',
-		},
-		{
 			name: 'React',
-			icon: 'react-original.svg',
+			icon: 'react/react-original.svg',
 		},
 		{
 			name: 'Next.js',
-			icon: 'nextjs-original.svg',
+			icon: 'nextjs/nextjs-original.svg',
 		},
 		{
 			name: 'Astro',
-			icon: 'astro-original.svg',
+			icon: 'astro/astro-original.svg',
 		},
 		{
-			name: 'tailwindcss',
-			icon: 'tailwindcss-original.svg',
+			name: 'TypeScript',
+			icon: 'typescript/typescript-original.svg',
+		},
+		{
+			name: 'JavaScript',
+			icon: 'javascript/javascript-original.svg',
+		},
+		{
+			name: 'Tailwind CSS',
+			icon: 'tailwindcss/tailwindcss-original.svg',
+		},
+		{
+			name: 'HTML5',
+			icon: 'html5/html5-original.svg',
+		},
+		{
+			name: 'CSS3',
+			icon: 'css3/css3-original.svg',
+		},
+	],
+	cloud: [
+		{
+			name: 'Microsoft Azure',
+			icon: 'azure/azure-original.svg',
+		},
+		{
+			name: 'Docker',
+			icon: 'docker/docker-original.svg',
+		},
+		{
+			name: 'Linux',
+			icon: 'linux/linux-original.svg',
 		},
 	],
 	databases: [
 		{
-			name: 'MongoDB',
-			icon: 'mongodb-original.svg',
+			name: 'AWS DynamoDB',
+			icon: 'dynamodb/dynamodb-original.svg',
+		},
+		{
+			name: 'SQL Server',
+			icon: 'microsoftsqlserver/microsoftsqlserver-original.svg',
 		},
 		{
 			name: 'PostgreSQL',
-			icon: 'postgresql-original.svg',
+			icon: 'postgresql/postgresql-original.svg',
 		},
 		{
 			name: 'MySQL',
-			icon: 'mysql-original.svg',
+			icon: 'mysql/mysql-original.svg',
+		},
+		{
+			name: 'MongoDB',
+			icon: 'mongodb/mongodb-original.svg',
+		},
+		{
+			name: 'Supabase',
+			icon: 'supabase/supabase-original.svg',
 		},
 		{
 			name: 'SQLite',
-			icon: 'sqlite-original.svg',
-		},
-		{
-			name: 'realm',
-			icon: 'realm-original.svg',
-		},
-		{
-			name: 'SQLServer',
-			icon: 'microsoftsqlserver-original.svg',
+			icon: 'sqlite/sqlite-original.svg',
 		},
 	],
 	learning: [
 		{
-			name: 'rust',
-			icon: 'rust-original.svg',
-		},
-		{
-			name: 'docker',
-			icon: 'docker-original.svg',
+			name: 'Rust',
+			icon: 'rust/rust-original.svg',
 		},
 	],
 	otros: [
 		{
-			name: 'linux',
-			icon: 'linux-original.svg',
+			name: 'Power Automate',
+			icon: 'powerautomate',
 		},
 		{
-			name: 'electron',
-			icon: 'electron-original.svg',
+			name: 'Apps Script',
+			icon: 'googleappsscript',
 		},
 		{
-			name: 'tauri',
-			icon: 'tauri-original.svg',
+			name: 'Git',
+			icon: 'git/git-original.svg',
 		},
 		{
-			name: 'vscode',
-			icon: 'vscode-original.svg',
+			name: 'VS Code',
+			icon: 'vscode/vscode-original.svg',
 		},
 	],
 };
