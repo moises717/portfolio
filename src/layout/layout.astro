@@ -80,6 +80,10 @@ const lang = getLangFromUrl(Astro.url);
 						'@type': 'Organization',
 						name: 'Sistemática',
 					},
+					alumniOf: {
+						'@type': 'Organization',
+						name: 'Grupo LAFISE',
+					},
 					description: i18n.SEO.DESCRIPTION,
 					nationality: {
 						'@type': 'Country',
@@ -91,6 +95,14 @@ const lang = getLangFromUrl(Astro.url);
 						'mailto:moisesbarillas717@gmail.com',
 					],
 					knowsAbout: [
+						'.NET',
+						'ASP.NET Core',
+						'C#',
+						'Microservicios',
+						'Microsoft Azure',
+						'AWS DynamoDB',
+						'SQL Server',
+						'Docker',
 						'JavaScript',
 						'TypeScript',
 						'React',
@@ -100,6 +112,15 @@ const lang = getLangFromUrl(Astro.url);
 						'Tailwind CSS',
 						'Supabase',
 						'Rust',
+						'Google Apps Script',
+						'Microsoft Power Automate',
+					],
+					hasOccupation: [
+						{
+							'@type': 'Occupation',
+							name: lang === 'es' ? 'Analista Programador' : 'Programmer Analyst',
+							skills: '.NET, ASP.NET Core, C#, Microservicios, Microsoft Azure, AWS DynamoDB, SQL Server, Docker',
+						},
 					],
 				},
 			})}

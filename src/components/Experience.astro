@@ -21,98 +21,121 @@ const jobs: Job[] = i18n.EXPERIENCE.JOBS;
 ---
 
 <Section title={i18n.EXPERIENCE.TITLE} id='experience'>
-	<div class='relative pl-6 md:pl-8 ml-3 md:ml-4 border-l-2 border-neutral-200 dark:border-neutral-800 space-y-10'>
+	<!-- Semantic Timeline List -->
+	<ol
+		class='relative ml-3 sm:ml-4 pl-6 sm:pl-8 border-l-2 border-neutral-200/80 dark:border-neutral-800/80 space-y-8 sm:space-y-10'
+		aria-label={i18n.EXPERIENCE.TITLE}
+	>
 		{
 			jobs.map((job, index) => {
 				const isCurrent = Boolean(job.BADGE);
 				const isSistematica = index === 0;
+				const dateIso = isSistematica ? '2026-10' : '2024-07/2026-10';
 
 				return (
-					<div class='relative group'>
-						<!-- Timeline Node Indicator -->
-						<div class='absolute -left-[31px] md:-left-[39px] top-1.5 flex items-center justify-center'>
+					<li class='relative group list-none' itemscope itemtype='https://schema.org/Role'>
+						<!-- Mathematically Centered Timeline Node -->
+						<div class='absolute -left-6 sm:-left-8 top-1.5 sm:top-2 flex items-center justify-center -translate-x-1/2 select-none pointer-events-none'>
 							{isCurrent ? (
-								<span class='relative flex h-4 w-4 items-center justify-center'>
+								<span class='relative flex size-4 items-center justify-center'>
 									<span class='animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75' />
-									<span class='relative inline-flex rounded-full h-3 w-3 bg-emerald-500 ring-4 ring-white dark:ring-gray-900' />
+									<span class='relative inline-flex rounded-full size-3 bg-emerald-500 ring-4 ring-white dark:ring-gray-900 shadow-2xs' />
 								</span>
 							) : (
-								<span class='h-3 w-3 rounded-full bg-neutral-400 dark:bg-neutral-600 ring-4 ring-white dark:ring-gray-900 group-hover:bg-indigo-500 transition-colors' />
+								<span class='size-3 rounded-full bg-neutral-400 dark:bg-neutral-600 ring-4 ring-white dark:ring-gray-900 group-hover:bg-indigo-500 transition-colors shadow-2xs' />
 							)}
 						</div>
 
-						<!-- Job Card -->
-						<article class='flex flex-col gap-3.5 rounded-2xl p-5 md:p-6 bg-white/60 dark:bg-neutral-900/40 border border-neutral-200/60 dark:border-neutral-800/60 backdrop-blur-xs shadow-[0_1px_3px_0_rgba(0,0,0,0.02)] dark:shadow-[0_1px_3px_0_rgba(0,0,0,0.2)] transition-all duration-300 hover:shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] dark:hover:shadow-[0_4px_20px_-4px_rgba(0,0,0,0.35)] hover:border-neutral-300/80 dark:hover:border-neutral-700/80 hover:-translate-y-0.5'>
-							<!-- Header: Logo + Role / Company + Badge -->
-							<div class='flex flex-col sm:flex-row sm:items-start justify-between gap-3'>
-								<div class='flex items-start gap-3.5'>
-									<!-- Company Logo -->
-									{isSistematica ? (
-										<div class='size-11 rounded-xl bg-black border border-neutral-800/80 shadow-[0_1px_2px_rgba(0,0,0,0.04)] flex items-center justify-center shrink-0 text-white select-none'>
-											<svg class='size-6' viewBox='0 0 28 28' fill='none' aria-hidden='true'>
-												<rect x='2' y='2' width='24' height='24' rx='4' fill='black' />
-												<path
-													d='M7 7h14v5h-8.5v2H21v7H7v-5h8.5v-2H7V7z'
-													fill='white'
-												/>
-											</svg>
-										</div>
-									) : (
-										<div class='size-11 rounded-xl bg-[#005a36] border border-[#007044] shadow-[0_1px_2px_rgba(0,0,0,0.04)] flex items-center justify-center shrink-0 text-white select-none'>
-											<svg class='size-6' viewBox='0 0 28 28' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'>
-												<rect x='3' y='3' width='22' height='22' rx='3' />
-												<path d='M7 7h14v14H7z' />
-												<path d='M11 11h6v6h-6z' fill='currentColor' />
-												<path d='M3 14h4M21 14h4M14 3v4M14 21v4' />
-											</svg>
-										</div>
-									)}
+						<!-- Job Card with Subtle Minimalist Shadow & Glass Effect -->
+						<article class='flex flex-col gap-3 rounded-2xl p-4 sm:p-5 md:p-6 bg-white/60 dark:bg-neutral-900/40 border border-neutral-200/60 dark:border-neutral-800/60 backdrop-blur-xs shadow-[0_1px_3px_0_rgba(0,0,0,0.02)] dark:shadow-[0_1px_3px_0_rgba(0,0,0,0.2)] transition-all duration-300 hover:shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] dark:hover:shadow-[0_4px_20px_-4px_rgba(0,0,0,0.35)] hover:border-neutral-300/80 dark:hover:border-neutral-700/80 hover:-translate-y-0.5'>
+							<!-- Harmonious Header: Logo + Info Column -->
+							<div class='flex items-start gap-3 sm:gap-4'>
+								<!-- Company Logo -->
+								{isSistematica ? (
+									<div class='size-10 sm:size-11 rounded-xl bg-black border border-neutral-800/80 shadow-[0_1px_2px_rgba(0,0,0,0.04)] flex items-center justify-center shrink-0 text-white select-none'>
+										<svg class='size-5 sm:size-6' viewBox='0 0 28 28' fill='none' aria-hidden='true'>
+											<rect x='2' y='2' width='24' height='24' rx='4' fill='black' />
+											<path
+												d='M7 7h14v5h-8.5v2H21v7H7v-5h8.5v-2H7V7z'
+												fill='white'
+											/>
+										</svg>
+									</div>
+								) : (
+									<div class='size-10 sm:size-11 rounded-xl bg-[#005a36] border border-[#007044] shadow-[0_1px_2px_rgba(0,0,0,0.04)] flex items-center justify-center shrink-0 text-white select-none'>
+										<svg class='size-5 sm:size-6' viewBox='0 0 28 28' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'>
+											<rect x='3' y='3' width='22' height='22' rx='3' />
+											<path d='M7 7h14v14H7z' />
+											<path d='M11 11h6v6h-6z' fill='currentColor' />
+											<path d='M3 14h4M21 14h4M14 3v4M14 21v4' />
+										</svg>
+									</div>
+								)}
 
-									<div>
-										<h3 class='text-lg md:text-xl font-bold text-gray-900 dark:text-white leading-snug'>
-											{job.ROLE}
-										</h3>
-										<p class='text-sm font-semibold text-indigo-600 dark:text-indigo-400 flex items-center gap-1.5 flex-wrap'>
-											<span>{job.COMPANY}</span>
-											<span class='text-neutral-400 dark:text-neutral-600'>·</span>
-											<span class='text-neutral-500 dark:text-neutral-400 font-normal text-xs'>{job.TYPE}</span>
-										</p>
+								<!-- Role, Company & Metadata Column -->
+								<div class='flex-1 min-w-0'>
+									<div class='flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4'>
+										<div>
+											<h3
+												class='text-base sm:text-lg md:text-xl font-bold text-gray-900 dark:text-white leading-snug tracking-tight text-balance'
+												itemprop='roleName'
+											>
+												{job.ROLE}
+											</h3>
+											<p
+												class='text-xs sm:text-sm font-semibold text-indigo-600 dark:text-indigo-400 mt-0.5'
+												itemprop='worksFor'
+												itemscope
+												itemtype='https://schema.org/Organization'
+											>
+												<span itemprop='name'>{job.COMPANY}</span>
+												<span class='text-neutral-400 dark:text-neutral-600 font-normal'> · </span>
+												<span class='text-neutral-500 dark:text-neutral-400 font-normal text-xs'>{job.TYPE}</span>
+											</p>
+										</div>
+
+										<!-- Period & Actualidad Badge -->
+										<div class='flex items-center sm:flex-col sm:items-end gap-2 sm:gap-1 mt-1 sm:mt-0 shrink-0'>
+											{isCurrent && (
+												<span class='inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] sm:text-xs font-semibold bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20'>
+													<span class='size-1.5 rounded-full bg-emerald-500 animate-pulse' />
+													{job.BADGE}
+												</span>
+											)}
+											<time
+												class='text-[11px] sm:text-xs font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap'
+												datetime={dateIso}
+												itemprop='startDate'
+											>
+												{job.PERIOD}
+											</time>
+										</div>
+									</div>
+
+									<!-- Location & Modality -->
+									<div class='flex items-center gap-1.5 text-xs text-neutral-500 dark:text-neutral-400 mt-1.5'>
+										<svg class='size-3.5 shrink-0 text-neutral-400 dark:text-neutral-500' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'>
+											<path d='M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z' />
+											<circle cx='12' cy='10' r='3' />
+										</svg>
+										<span>{job.LOCATION}</span>
 									</div>
 								</div>
-
-								<!-- Period & Actualidad Badge -->
-								<div class='flex sm:flex-col sm:items-end gap-2 sm:gap-1 pl-14 sm:pl-0'>
-									{isCurrent && (
-										<span class='inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950/70 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-800 shadow-2xs'>
-											<span class='size-1.5 rounded-full bg-emerald-500 animate-pulse' />
-											{job.BADGE}
-										</span>
-									)}
-									<span class='text-xs font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap'>
-										{job.PERIOD}
-									</span>
-								</div>
-							</div>
-
-							<!-- Location & Modality -->
-							<div class='flex items-center gap-1.5 text-xs text-neutral-500 dark:text-neutral-400 pl-0 sm:pl-14'>
-								<svg class='size-3.5 shrink-0 text-neutral-400 dark:text-neutral-500' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'>
-									<path d='M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z' />
-									<circle cx='12' cy='10' r='3' />
-								</svg>
-								<span>{job.LOCATION}</span>
 							</div>
 
 							<!-- Description -->
-							<p class='text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed text-pretty mt-1'>
+							<p
+								class='text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed text-pretty mt-1 sm:mt-1.5'
+								itemprop='description'
+							>
 								{job.DESCRIPTION}
 							</p>
 
-							<!-- Skills tags with Official Icons -->
+							<!-- Skills tags with Official Brand Icons -->
 							{job.SKILLS && job.SKILLS.length > 0 && (
-								<div class='flex flex-wrap gap-2 mt-1 pt-3 border-t border-neutral-100 dark:border-neutral-800/70'>
+								<div class='flex flex-wrap gap-1.5 sm:gap-2 mt-1 pt-3 border-t border-neutral-100 dark:border-neutral-800/60'>
 									{job.SKILLS.map(skill => (
-										<span class='inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-lg bg-neutral-100/70 dark:bg-neutral-800/40 text-neutral-700 dark:text-neutral-300 border border-neutral-200/50 dark:border-neutral-800/60 shadow-[0_1px_2px_rgba(0,0,0,0.02)] transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800/70 hover:border-neutral-300 dark:hover:border-neutral-700'>
+										<span class='inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-lg bg-neutral-100/70 dark:bg-neutral-800/40 text-neutral-700 dark:text-neutral-300 border border-neutral-200/50 dark:border-neutral-800/60 shadow-[0_1px_2px_rgba(0,0,0,0.02)] transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800/70 hover:border-neutral-300 dark:hover:border-neutral-700 select-none whitespace-nowrap'>
 											<TechIcon name={skill} class='size-3.5 shrink-0' />
 											<span>{skill}</span>
 										</span>
@@ -120,9 +143,9 @@ const jobs: Job[] = i18n.EXPERIENCE.JOBS;
 								</div>
 							)}
 						</article>
-					</div>
+					</li>
 				);
 			})
 		}
-	</div>
+	</ol>
 </Section>
