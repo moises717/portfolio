@@ -8,15 +8,59 @@ interface Props {
 const { name, icon, class: className = 'size-3.5 shrink-0' } = Astro.props;
 const key = name.toLowerCase().trim();
 
-// Devicon fallback URL if icon prop is provided
-const deviconUrl = icon && icon.includes('/')
+// Specific boolean flags for icons
+const isDotNet = key.includes('.net') || key.includes('asp');
+const isCSharp = key.includes('c#');
+const isMicroservices = key.includes('microserv');
+const isAzure = key.includes('azure');
+const isDynamoDB = key.includes('dynamo') || (key.includes('aws') && !key.includes('script'));
+const isSQLServer = key.includes('sql server') || key.includes('sqlserver');
+const isDocker = key.includes('docker');
+const isPowerAutomate = key.includes('power automate');
+const isAppsScript = key.includes('apps script');
+const isReact = key.includes('react');
+const isTypeScript = key.includes('typescript');
+const isJavaScript = key.includes('javascript') && !key.includes('type');
+const isAstro = key.includes('astro');
+const isNext = key.includes('next');
+const isTailwind = key.includes('tailwind');
+const isNode = key.includes('node');
+const isSupabase = key.includes('supabase');
+const isGit = key.includes('git') && !key.includes('script');
+const isITSupport = key.includes('soporte') || key.includes('support');
+const isAutomation = (key.includes('automatiz') || key.includes('automation')) && !isPowerAutomate;
+
+const hasCustomSvg =
+	isDotNet ||
+	isCSharp ||
+	isMicroservices ||
+	isAzure ||
+	isDynamoDB ||
+	isSQLServer ||
+	isDocker ||
+	isPowerAutomate ||
+	isAppsScript ||
+	isReact ||
+	isTypeScript ||
+	isJavaScript ||
+	isAstro ||
+	isNext ||
+	isTailwind ||
+	isNode ||
+	isSupabase ||
+	isGit ||
+	isITSupport ||
+	isAutomation;
+
+// Devicon fallback URL ONLY when no custom inline SVG exists
+const deviconUrl = !hasCustomSvg && icon && icon.includes('/')
 	? `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${icon}`
 	: null;
 ---
 
 {
 	/* .NET / ASP.NET */
-	(key.includes('.net') || key.includes('asp')) && (
+	isDotNet && (
 		<svg class={className} viewBox='0 0 24 24' fill='none' aria-hidden='true'>
 			<rect width='24' height='24' rx='5' fill='#512BD4' />
 			<path
@@ -29,7 +73,7 @@ const deviconUrl = icon && icon.includes('/')
 
 {
 	/* C# */
-	key.includes('c#') && (
+	isCSharp && (
 		<svg class={className} viewBox='0 0 128 128' aria-hidden='true'>
 			<path
 				fill='#9B4F96'
@@ -49,7 +93,7 @@ const deviconUrl = icon && icon.includes('/')
 
 {
 	/* Microservicios / Microservices */
-	key.includes('microserv') && (
+	isMicroservices && (
 		<svg
 			class={className}
 			viewBox='0 0 24 24'
@@ -72,7 +116,7 @@ const deviconUrl = icon && icon.includes('/')
 
 {
 	/* Microsoft Azure */
-	key.includes('azure') && (
+	isAzure && (
 		<svg class={className} viewBox='0 0 128 128' aria-hidden='true'>
 			<defs>
 				<linearGradient id='azure-g-a' x1='60.919' y1='9.602' x2='18.667' y2='134.423' gradientUnits='userSpaceOnUse'>
@@ -104,7 +148,7 @@ const deviconUrl = icon && icon.includes('/')
 
 {
 	/* AWS DynamoDB */
-	(key.includes('dynamo') || (key.includes('aws') && !key.includes('script'))) && (
+	isDynamoDB && (
 		<svg class={className} viewBox='0 0 128 128' aria-hidden='true'>
 			<defs>
 				<linearGradient id='dyn-g' x1='0%' y1='100%' x2='100%' y2='0%'>
@@ -123,7 +167,7 @@ const deviconUrl = icon && icon.includes('/')
 
 {
 	/* Microsoft SQL Server */
-	(key.includes('sql server') || key.includes('sqlserver')) && (
+	isSQLServer && (
 		<svg class={className} viewBox='0 0 24 24' fill='none' aria-hidden='true'>
 			<rect width='24' height='24' rx='5' fill='#CC292B' />
 			<path
@@ -138,7 +182,7 @@ const deviconUrl = icon && icon.includes('/')
 
 {
 	/* Docker */
-	key.includes('docker') && (
+	isDocker && (
 		<svg class={className} viewBox='0 0 24 24' fill='#2496ED' aria-hidden='true'>
 			<path d='M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.186.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.186.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.186.186.186m5.893 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.186-.186h-2.118a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.928 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186H2.208a.186.186 0 00-.186.185v1.888c0 .102.083.185.186.185m21.758-1.07a8.472 8.472 0 00-2.48-2.61l-.647-.417-.457.618a5.27 5.27 0 01-2.986 1.838v-.002H.733a.734.734 0 00-.733.734c0 3.793 2.052 7.158 5.27 9.008 1.48.85 3.14 1.34 4.887 1.42 6.545.295 12.13-4.04 13.782-10.589h.027z' />
 		</svg>
@@ -147,7 +191,7 @@ const deviconUrl = icon && icon.includes('/')
 
 {
 	/* Microsoft Power Automate */
-	key.includes('power automate') && (
+	isPowerAutomate && (
 		<svg class={className} viewBox='0 0 24 24' fill='#0066FF' aria-hidden='true'>
 			<path d='m20.079 7.235 3.666 4.097c.34.38.34.956 0 1.336l-7.63 8.528c-.19.213-.462.334-.748.334H7.289l12.79-14.295ZM6.789 21.53H1.005c-.867 0-1.326-1.025-.748-1.671L15.748 2.545c.139.057.265.145.367.259l3.631 4.058a.478.478 0 0 0-.039.039L6.916 21.197a.497.497 0 0 0-.127.333Zm8.356-19.06-8.192 9.155L.257 4.141c-.578-.646-.119-1.671.748-1.671h14.14Z' />
 		</svg>
@@ -156,7 +200,7 @@ const deviconUrl = icon && icon.includes('/')
 
 {
 	/* Google Apps Script */
-	key.includes('apps script') && (
+	isAppsScript && (
 		<svg class={className} viewBox='0 0 24 24' fill='#4285F4' aria-hidden='true'>
 			<path d='M12.363 2.54a3.136 3.136 0 0 0-.376.022 2.864 2.864 0 0 0-1.589.828c-.562.58-.82 1.115-.773 1.943-.01.264.193 1.023.272 1.274 1.115 3.546 2.09 6.75 3.26 10.279.08.246.168.486.267.72.02.047.035.046.048-.004.077-.297.174-.612.29-.945.894-2.576 1.772-5.14 2.633-7.696a.345.345 0 0 0 .004-.217 163.054 163.054 0 0 0-1.49-4.572 2.603 2.603 0 0 0-.704-.933c-.55-.46-1.166-.694-1.842-.7Zm9.078.117a2.734 2.734 0 0 0-2.878 1.828l-4.576 13.289a2.734 2.734 0 0 0 1.695 3.475l.12.04a2.734 2.734 0 0 0 3.475-1.694L23.85 6.307a2.734 2.734 0 0 0-1.695-3.476c-.233-.1-.506-.124-.716-.174ZM12.375 3.96a1.396 1.396 0 1 1 0 2.791 1.395 1.395 0 0 1 0-2.79zm8.809.07a1.402 1.402 0 1 1 0 2.803 1.402 1.402 0 0 1 0-2.803zM5.419 7.605a2.853 2.853 0 0 0-.468.052 2.683 2.683 0 0 0-1.337.627 2.62 2.62 0 0 0-.924 1.833 3.808 3.808 0 0 0 0 .648 2.52 2.52 0 0 0 .673 1.52c.221.238.465.454.732.648 3.043 2.21 6.08 4.43 9.108 6.664a.78.78 0 0 0 .158.089c.03-.043.032-.098.007-.167a17.409 17.409 0 0 0-.317-1.066 532.752 532.752 0 0 1-2.02-6.251 41.91 41.91 0 0 0-.497-1.477c-.967-.849-2.078-1.6-3.023-2.302A3.848 3.848 0 0 0 6.153 7.7a2.388 2.388 0 0 0-.734-.094Zm.02 1.424a1.398 1.398 0 1 1 0 2.796 1.398 1.398 0 0 1 0-2.796zm-2.458 6.792c-.733-.006-1.375.202-1.927.622a2.72 2.72 0 0 0-.95 1.45 2.78 2.78 0 0 0-.09 1.04 2.74 2.74 0 0 0 .695 1.583c.664.578 1.26.85 2 .945 1.42-.005 2.84-.012 4.262-.02h.418c2.277-.003 4.513-.002 6.706.003.148.005.28.003.392-.01.06-.005.091-.031.092-.077a10.656 10.656 0 0 0-.834-.653 488.746 488.746 0 0 1-6.57-4.815.236.236 0 0 0-.14-.047c-1.34-.003-2.691-.01-4.054-.02zm-.19 1.418a1.402 1.402 0 1 1 0 2.803 1.402 1.402 0 0 1 0-2.803zm13.874.002a1.4 1.4 0 1 1 0 2.8 1.4 1.4 0 0 1 0-2.8z' />
 		</svg>
@@ -165,7 +209,7 @@ const deviconUrl = icon && icon.includes('/')
 
 {
 	/* React */
-	key.includes('react') && (
+	isReact && (
 		<svg class={className} viewBox='0 0 128 128' aria-hidden='true'>
 			<g fill='#61DAFB'>
 				<circle cx='64' cy='64' r='11.4' />
@@ -179,7 +223,7 @@ const deviconUrl = icon && icon.includes('/')
 
 {
 	/* TypeScript */
-	key.includes('typescript') && (
+	isTypeScript && (
 		<svg class={className} viewBox='0 0 128 128' aria-hidden='true'>
 			<rect width='128' height='128' rx='16' fill='#3178C6' />
 			<path fill='#fff' d='M22.67 47h99.67v7H76.7v67H68V54H22.67v-7zm74.8 33.7c3.9-3.4 9.1-5.1 15.6-5.1 5.3 0 9.8 1.2 13.5 3.5 3.8 2.3 6.6 5.6 8.5 9.8 1.9 4.2 2.9 9.1 2.9 14.7 0 5.8-1 10.9-3.1 15.2-2.1 4.3-5.2 7.7-9.3 10-4.1 2.4-9.1 3.6-15 3.6-6.1 0-11.3-1.3-15.6-3.8-4.3-2.5-7.5-6.1-9.6-10.7l7.2-4.1c1.6 3.6 4 6.3 7.3 8.2 3.3 1.9 7.2 2.8 11.6 2.8 4.3 0 7.9-.8 10.7-2.5 2.8-1.7 4.9-4.1 6.3-7.2 1.4-3.1 2.1-6.7 2.1-10.9 0-4.3-.7-7.9-2.1-11-1.4-3-3.5-5.4-6.3-7.1-2.8-1.7-6.3-2.5-10.5-2.5-4.5 0-8.4 1-11.7 3-3.3 2-5.7 4.9-7.1 8.7l-7.2-4.1c2-5.2 5.3-9.4 9.7-12.6z' />
@@ -189,7 +233,7 @@ const deviconUrl = icon && icon.includes('/')
 
 {
 	/* JavaScript */
-	key.includes('javascript') && (
+	isJavaScript && (
 		<svg class={className} viewBox='0 0 128 128' aria-hidden='true'>
 			<rect width='128' height='128' rx='16' fill='#F7DF1E' />
 			<path d='M67.3 98.4c1.5 2.6 3.6 4.6 6.3 6.1 2.7 1.4 5.9 2.2 9.7 2.2 4.1 0 7.3-.8 9.6-2.5 2.3-1.6 3.4-3.9 3.4-6.7 0-2.3-.8-4.1-2.5-5.5-1.7-1.4-4.5-2.6-8.5-3.6l-5.6-1.4c-6.1-1.5-10.5-3.6-13.4-6.4-2.8-2.8-4.2-6.6-4.2-11.4 0-3.9 1.1-7.3 3.3-10.2 2.2-2.9 5.3-5.2 9.2-6.7 3.9-1.6 8.5-2.4 13.8-2.4 6.4 0 11.6 1.3 15.6 3.8 4 2.6 6.9 6.2 8.7 10.9l-11.7 6.4c-1.1-2.3-2.6-4.1-4.6-5.3-2-1.2-4.6-1.8-7.9-1.8-3.1 0-5.5.6-7.2 1.9-1.7 1.3-2.5 3-2.5 5.1 0 1.9.7 3.5 2.2 4.7 1.5 1.2 4.1 2.2 7.7 3.1l5.5 1.4c6.7 1.7 11.6 4.1 14.7 7.2 3.1 3.1 4.7 7.2 4.7 12.3 0 4.3-1.2 8-3.6 11.2-2.4 3.2-5.8 5.6-10.2 7.4-4.4 1.7-9.6 2.6-15.7 2.6-7.8 0-14.2-1.7-19.1-5.1-4.9-3.4-8.3-8.2-10.1-14.4l12.4-5.5zM22.5 98.4V42.9h14.8v56.2c0 4.8 1.1 8.2 3.3 10.3 2.2 2.1 5.4 3.1 9.6 3.1 2.8 0 5.2-.4 7.2-1.2v12.2c-3.5 1.1-7.8 1.7-12.8 1.7-8.9 0-15.3-2.4-19.1-7.3-3.8-4.8-5.7-11.7-5.7-20.7z' fill='#000' />
@@ -199,7 +243,7 @@ const deviconUrl = icon && icon.includes('/')
 
 {
 	/* Astro */
-	key.includes('astro') && (
+	isAstro && (
 		<svg class={className} viewBox='0 0 24 24' fill='#FF5D01' aria-hidden='true'>
 			<path d='M8.358 20.162c-1.15-1.428-1.47-3.085-1.25-4.673l3.414-5.918c.31-.537 1.077-.537 1.387 0l3.414 5.918c.22 1.588-.1 3.245-1.25 4.673-.61.76-1.43 1.32-2.38 1.62-.25.08-.52.12-.79.12-.27 0-.54-.04-.79-.12-.95-.3-1.77-.86-2.38-1.62h.035z' />
 			<path d='m12 0 7.82 17.58c.27.61.1 1.32-.42 1.74-.52.42-1.25.43-1.78.02l-5.62-4.32-5.62 4.32c-.53.41-1.26.4-1.78-.02-.52-.42-.69-1.13-.42-1.74L12 0z' fill='#BC52EE' />
@@ -209,7 +253,7 @@ const deviconUrl = icon && icon.includes('/')
 
 {
 	/* Next.js */
-	key.includes('next') && (
+	isNext && (
 		<svg class={className} viewBox='0 0 128 128' aria-hidden='true'>
 			<circle cx='64' cy='64' r='64' fill='currentColor' />
 			<path d='M106.3 111.4L44.8 32H32v64h10.8V45.6l54.8 70.3c2.9-1.4 5.8-3 8.7-4.5z' fill='#fff' />
@@ -220,7 +264,7 @@ const deviconUrl = icon && icon.includes('/')
 
 {
 	/* Tailwind CSS */
-	key.includes('tailwind') && (
+	isTailwind && (
 		<svg class={className} viewBox='0 0 128 128' aria-hidden='true'>
 			<path d='M64 25.6c-17.1 0-27.7 8.5-32 25.6 6.4-8.5 13.9-11.7 22.4-9.6 4.9 1.2 8.3 4.7 12.2 8.6 6.3 6.3 13.6 13.8 29.4 13.8 17.1 0 27.7-8.5 32-25.6-6.4 8.5-13.9 11.7-22.4 9.6-4.9-1.2-8.3-4.7-12.2-8.6-6.3-6.4-13.6-13.8-29.4-13.8zm-32 38.4c-17.1 0-27.7 8.5-32 25.6 6.4-8.5 13.9-11.7 22.4-9.6 4.9 1.2 8.3 4.7 12.2 8.6 6.3 6.3 13.6 13.8 29.4 13.8 17.1 0 27.7-8.5 32-25.6-6.4 8.5-13.9 11.7-22.4 9.6-4.9-1.2-8.3-4.7-12.2-8.6-6.3-6.4-13.6-13.8-29.4-13.8z' fill='#38BDF8' />
 		</svg>
@@ -229,7 +273,7 @@ const deviconUrl = icon && icon.includes('/')
 
 {
 	/* Node.js */
-	key.includes('node') && (
+	isNode && (
 		<svg class={className} viewBox='0 0 128 128' aria-hidden='true'>
 			<path d='M64 6.7L10.7 37.5v61.6L64 129.9l53.3-30.8V37.5L64 6.7z' fill='#539E43' />
 			<path d='M64 16.7l44.6 25.7v51.5L64 119.6 19.4 93.9V42.4L64 16.7z' fill='#333' />
@@ -240,7 +284,7 @@ const deviconUrl = icon && icon.includes('/')
 
 {
 	/* Supabase */
-	key.includes('supabase') && (
+	isSupabase && (
 		<svg class={className} viewBox='0 0 128 128' aria-hidden='true'>
 			<path d='M68.5 4.3c-2.4-3.5-7.7-2.6-8.9 1.5L34.1 82.5c-1.5 4.9 2.4 9.8 7.5 9.4l41.6-3.2-30.8 35.8c-2.8 3.3 1.3 8 5.4 6.2l49.5-22.3c4.7-2.1 6.4-7.8 3.5-12.1L68.5 4.3z' fill='#3ECF8E' />
 		</svg>
@@ -249,7 +293,7 @@ const deviconUrl = icon && icon.includes('/')
 
 {
 	/* Git */
-	key.includes('git') && !key.includes('script') && (
+	isGit && (
 		<svg class={className} viewBox='0 0 128 128' aria-hidden='true'>
 			<path fill='#F05032' d='M124.7 58.4L69.6 3.3c-4.4-4.4-11.4-4.4-15.8 0L3.3 53.8c-4.4 4.4-4.4 11.4 0 15.8l50.5 50.5c4.4 4.4 11.4 4.4 15.8 0l55.1-55.1c4.4-4.4 4.4-11.4 0-6.6z' />
 			<path fill='#fff' d='M70.9 59.9c-.8-1.5-1.9-2.7-3.3-3.6V39.4c1.8-1 3-3 3-5.2 0-3.3-2.7-6-6-6s-6 2.7-6 6c0 2.2 1.2 4.1 3 5.2v17c-1.4.9-2.5 2.1-3.3 3.6-1.5.8-2.6 2.2-3.1 3.9l-11.5 6.9c-1.6-.9-3.5-1.3-5.5-1-4.4.6-7.8 4.4-7.6 8.8.2 4.4 3.9 7.9 8.3 7.9 1.3 0 2.5-.3 3.6-.8l11.2 6.7c-.1.6-.1 1.1-.1 1.7 0 4.4 3.6 8 8 8s8-3.6 8-8c0-3.6-2.4-6.6-5.7-7.6V67.8c1.6-.8 2.8-2.2 3.4-3.9l11.4-6.8c1.8 1.1 4 1.5 6.1.9 4.3-.9 7.1-5 6.2-9.3-.9-4.3-5-7.1-9.3-6.2-3.1.6-5.4 2.8-6.1 5.7l-11.1 6.7z' />
@@ -258,37 +302,56 @@ const deviconUrl = icon && icon.includes('/')
 }
 
 {
-	/* Fallback using Devicon CDN or Generic SVG */
-	deviconUrl ? (
-		<img
-			src={deviconUrl}
+	/* IT Support / Soporte TI */
+	isITSupport && (
+		<svg
 			class={className}
-			alt={name}
-			loading='lazy'
-			decoding='async'
+			viewBox='0 0 24 24'
+			fill='none'
+			stroke='#10b981'
+			stroke-width='2'
+			stroke-linecap='round'
+			stroke-linejoin='round'
 			aria-hidden='true'
-		/>
-	) : (
-		!key.includes('.net') &&
-		!key.includes('asp') &&
-		!key.includes('c#') &&
-		!key.includes('microserv') &&
-		!key.includes('azure') &&
-		!key.includes('dynamo') &&
-		!key.includes('aws') &&
-		!key.includes('sql') &&
-		!key.includes('docker') &&
-		!key.includes('power automate') &&
-		!key.includes('apps script') &&
-		!key.includes('react') &&
-		!key.includes('typescript') &&
-		!key.includes('javascript') &&
-		!key.includes('astro') &&
-		!key.includes('next') &&
-		!key.includes('tailwind') &&
-		!key.includes('node') &&
-		!key.includes('supabase') &&
-		!key.includes('git') && (
+		>
+			<rect width='20' height='14' x='2' y='3' rx='2' />
+			<line x1='8' x2='16' y1='21' y2='21' />
+			<line x1='12' x2='12' y1='17' y2='21' />
+		</svg>
+	)
+}
+
+{
+	/* Automation */
+	isAutomation && (
+		<svg
+			class={className}
+			viewBox='0 0 24 24'
+			fill='none'
+			stroke='#8b5cf6'
+			stroke-width='2'
+			stroke-linecap='round'
+			stroke-linejoin='round'
+			aria-hidden='true'
+		>
+			<path d='M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83' />
+		</svg>
+	)
+}
+
+{
+	/* Fallback: ONLY when no custom SVG was rendered */
+	!hasCustomSvg && (
+		deviconUrl ? (
+			<img
+				src={deviconUrl}
+				class={className}
+				alt={name}
+				loading='lazy'
+				decoding='async'
+				aria-hidden='true'
+			/>
+		) : (
 			<svg
 				class={className}
 				viewBox='0 0 24 24'
