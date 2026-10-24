@@ -1,5 +1,6 @@
 ---
 import Section from '@/components/Section.astro';
+import TechIcon from '@/components/TechIcon.astro';
 import { getI18N } from '@/i18n';
 
 const { currentLocale } = Astro;
@@ -41,13 +42,13 @@ const jobs: Job[] = i18n.EXPERIENCE.JOBS;
 						</div>
 
 						<!-- Job Card -->
-						<article class='flex flex-col gap-3.5 rounded-2xl p-5 md:p-6 bg-white/70 dark:bg-gray-800/40 border border-neutral-200/80 dark:border-neutral-800/80 backdrop-blur-xs shadow-xs transition-all duration-300 hover:shadow-md hover:border-indigo-400/50 dark:hover:border-indigo-500/40 hover:-translate-y-0.5'>
+						<article class='flex flex-col gap-3.5 rounded-2xl p-5 md:p-6 bg-white/60 dark:bg-neutral-900/40 border border-neutral-200/60 dark:border-neutral-800/60 backdrop-blur-xs shadow-[0_1px_3px_0_rgba(0,0,0,0.02)] dark:shadow-[0_1px_3px_0_rgba(0,0,0,0.2)] transition-all duration-300 hover:shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] dark:hover:shadow-[0_4px_20px_-4px_rgba(0,0,0,0.35)] hover:border-neutral-300/80 dark:hover:border-neutral-700/80 hover:-translate-y-0.5'>
 							<!-- Header: Logo + Role / Company + Badge -->
 							<div class='flex flex-col sm:flex-row sm:items-start justify-between gap-3'>
 								<div class='flex items-start gap-3.5'>
 									<!-- Company Logo -->
 									{isSistematica ? (
-										<div class='size-11 rounded-xl bg-black border border-neutral-800 shadow-xs flex items-center justify-center shrink-0 text-white select-none'>
+										<div class='size-11 rounded-xl bg-black border border-neutral-800/80 shadow-[0_1px_2px_rgba(0,0,0,0.04)] flex items-center justify-center shrink-0 text-white select-none'>
 											<svg class='size-6' viewBox='0 0 28 28' fill='none' aria-hidden='true'>
 												<rect x='2' y='2' width='24' height='24' rx='4' fill='black' />
 												<path
@@ -57,7 +58,7 @@ const jobs: Job[] = i18n.EXPERIENCE.JOBS;
 											</svg>
 										</div>
 									) : (
-										<div class='size-11 rounded-xl bg-[#005a36] border border-[#007044] shadow-xs flex items-center justify-center shrink-0 text-white select-none'>
+										<div class='size-11 rounded-xl bg-[#005a36] border border-[#007044] shadow-[0_1px_2px_rgba(0,0,0,0.04)] flex items-center justify-center shrink-0 text-white select-none'>
 											<svg class='size-6' viewBox='0 0 28 28' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'>
 												<rect x='3' y='3' width='22' height='22' rx='3' />
 												<path d='M7 7h14v14H7z' />
@@ -107,12 +108,13 @@ const jobs: Job[] = i18n.EXPERIENCE.JOBS;
 								{job.DESCRIPTION}
 							</p>
 
-							<!-- Skills tags -->
+							<!-- Skills tags with Official Icons -->
 							{job.SKILLS && job.SKILLS.length > 0 && (
 								<div class='flex flex-wrap gap-2 mt-1 pt-3 border-t border-neutral-100 dark:border-neutral-800/70'>
 									{job.SKILLS.map(skill => (
-										<span class='inline-flex items-center text-xs font-medium px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800/80 text-neutral-700 dark:text-neutral-300 border border-neutral-200/60 dark:border-neutral-700/60 transition-colors hover:border-indigo-400 dark:hover:border-indigo-500'>
-											{skill}
+										<span class='inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-lg bg-neutral-100/70 dark:bg-neutral-800/40 text-neutral-700 dark:text-neutral-300 border border-neutral-200/50 dark:border-neutral-800/60 shadow-[0_1px_2px_rgba(0,0,0,0.02)] transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800/70 hover:border-neutral-300 dark:hover:border-neutral-700'>
+											<TechIcon name={skill} class='size-3.5 shrink-0' />
+											<span>{skill}</span>
 										</span>
 									))}
 								</div>

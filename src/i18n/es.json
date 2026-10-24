@@ -16,13 +16,22 @@
 		"JOBS": [
 			{
 				"ROLE": "Analista Programador",
-				"COMPANY": "Sistemática",
+				"COMPANY": "Sistemática Internacional",
 				"TYPE": "Jornada completa",
 				"PERIOD": "oct. de 2026 - actualidad",
 				"LOCATION": "Managua, Nicaragua · Presencial",
 				"BADGE": "Actualidad",
-				"DESCRIPTION": "Análisis, desarrollo y mantenimiento de software empresarial. Diseño de soluciones técnicas escalables, optimización de flujos de trabajo e integración de sistemas tecnológicos para potenciar la operatividad del negocio.",
-				"SKILLS": ["JavaScript", "TypeScript", "SQL", "Análisis de Sistemas", "Desarrollo Web"]
+				"DESCRIPTION": "Desarrollo y diseño de soluciones backend escalables bajo arquitectura de microservicios utilizando .NET, ASP.NET Core y C#. Implementación de servicios en la nube con Microsoft Azure y almacenamiento NoSQL con AWS DynamoDB y bases de datos relacionales, optimizando la resiliencia y el rendimiento de los sistemas empresariales.",
+				"SKILLS": [
+					"ASP.NET Core",
+					".NET",
+					"C#",
+					"Microservicios",
+					"Microsoft Azure",
+					"AWS DynamoDB",
+					"SQL Server",
+					"Docker"
+				]
 			},
 			{
 				"ROLE": "Técnico de soporte de TI",
@@ -31,7 +40,12 @@
 				"PERIOD": "jul. de 2024 - oct. de 2026 · 2 años 4 meses",
 				"LOCATION": "Managua, Nicaragua · Presencial",
 				"DESCRIPTION": "Soporte técnico a infraestructura y usuarios a nivel corporativo. Automatización de procesos administrativos y flujos de trabajo internos para elevar la eficiencia operativa de la institución.",
-				"SKILLS": ["Google Apps Script", "Microsoft Power Automate", "Soporte TI", "Automatización de Procesos"]
+				"SKILLS": [
+					"Google Apps Script",
+					"Microsoft Power Automate",
+					"Soporte TI",
+					"Automatización de Procesos"
+				]
 			}
 		]
 	},

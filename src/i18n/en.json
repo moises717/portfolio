@@ -16,13 +16,22 @@
 		"JOBS": [
 			{
 				"ROLE": "Programmer Analyst",
-				"COMPANY": "Sistemática",
+				"COMPANY": "Sistemática Internacional",
 				"TYPE": "Full-time",
 				"PERIOD": "Oct 2026 - Present",
 				"LOCATION": "Managua, Nicaragua · On-site",
 				"BADGE": "Present",
-				"DESCRIPTION": "Analysis, development, and maintenance of enterprise software. Design of scalable technical solutions, optimization of workflows, and integration of technology systems to drive business operations.",
-				"SKILLS": ["JavaScript", "TypeScript", "SQL", "Systems Analysis", "Web Development"]
+				"DESCRIPTION": "Development and architectural design of scalable backend solutions based on microservices using .NET, ASP.NET Core, and C#. Implementation of cloud services on Microsoft Azure and NoSQL storage with AWS DynamoDB alongside relational databases, optimizing enterprise system resilience and performance.",
+				"SKILLS": [
+					"ASP.NET Core",
+					".NET",
+					"C#",
+					"Microservices",
+					"Microsoft Azure",
+					"AWS DynamoDB",
+					"SQL Server",
+					"Docker"
+				]
 			},
 			{
 				"ROLE": "IT Support Technician",
@@ -31,7 +40,12 @@
 				"PERIOD": "Jul 2024 - Oct 2026 · 2 yrs 4 mos",
 				"LOCATION": "Managua, Nicaragua · On-site",
 				"DESCRIPTION": "Corporate IT infrastructure and technical user support. Automation of administrative procedures and internal workflows to increase organizational efficiency and service reliability.",
-				"SKILLS": ["Google Apps Script", "Microsoft Power Automate", "IT Support", "Process Automation"]
+				"SKILLS": [
+					"Google Apps Script",
+					"Microsoft Power Automate",
+					"IT Support",
+					"Process Automation"
+				]
 			}
 		]
 	},
