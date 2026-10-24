@@ -21,7 +21,7 @@
 				"PERIOD": "Oct 2026 - Present",
 				"LOCATION": "Managua, Nicaragua · On-site",
 				"BADGE": "Present",
-				"DESCRIPTION": "Development and architectural design of scalable backend solutions based on microservices using .NET, ASP.NET Core, and C#. Implementation of cloud services on Microsoft Azure and NoSQL storage with AWS DynamoDB alongside relational databases, optimizing enterprise system resilience and performance.",
+				"DESCRIPTION": "Development and architectural design of scalable backend solutions based on microservices using .NET, ASP.NET Core, and C#. Implementation of cloud services on Microsoft Azure, NoSQL storage with AWS DynamoDB, and integration of AI tools and coding agents to maximize developer productivity and software quality.",
 				"SKILLS": [
 					"ASP.NET Core",
 					".NET",
@@ -29,7 +29,7 @@
 					"Microservices",
 					"Microsoft Azure",
 					"AWS DynamoDB",
-					"SQL Server",
+					"Coding Agents",
 					"Docker"
 				]
 			},
@@ -52,10 +52,11 @@
 	"ABOUT": {
 		"TITLE": "About Me",
 		"TEXT1": "Greetings, my name is <strong>Moisés Barillas</strong>. In 2019, my journey into the world of web development began through exploring online guides and tutorials, practicing website development with PHP and MySQL. This initial experience sparked a deep interest in web development within me.",
-		"TEXT2": "Since then, I have dedicated consistent efforts to refining my skills, especially in the realm of JavaScript. I have developed projects, both personal and for clients, managing them autonomously with a commitment to delivering effective and quality solutions."
+		"TEXT2": "Since then, I have consistently refined my skills in software architecture, .NET backend development, and cloud solutions. Today, I augment my engineering workflow with <strong>Artificial Intelligence and autonomous coding agents</strong>, enabling me to build more complex architectures, automate repetitive workflows, and deliver software solutions with greater speed, precision, and technical excellence."
 	},
 	"SKILLS": {
 		"TITLE": "Skills",
+		"ai": "AI & Coding Agents",
 		"backend": "Backend & Architecture",
 		"frontend": "Frontend & Web",
 		"cloud": "Cloud & DevOps",

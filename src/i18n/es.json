@@ -21,7 +21,7 @@
 				"PERIOD": "oct. de 2026 - actualidad",
 				"LOCATION": "Managua, Nicaragua · Presencial",
 				"BADGE": "Actualidad",
-				"DESCRIPTION": "Desarrollo y diseño de soluciones backend escalables bajo arquitectura de microservicios utilizando .NET, ASP.NET Core y C#. Implementación de servicios en la nube con Microsoft Azure y almacenamiento NoSQL con AWS DynamoDB y bases de datos relacionales, optimizando la resiliencia y el rendimiento de los sistemas empresariales.",
+				"DESCRIPTION": "Desarrollo y diseño de soluciones backend escalables bajo arquitectura de microservicios utilizando .NET, ASP.NET Core y C#. Implementación de servicios en la nube con Microsoft Azure, almacenamiento NoSQL con AWS DynamoDB e integración de herramientas de IA y agentes de código para potenciar la productividad y calidad de software.",
 				"SKILLS": [
 					"ASP.NET Core",
 					".NET",
@@ -29,7 +29,7 @@
 					"Microservicios",
 					"Microsoft Azure",
 					"AWS DynamoDB",
-					"SQL Server",
+					"Agentes de Código",
 					"Docker"
 				]
 			},
@@ -52,10 +52,11 @@
 	"ABOUT": {
 		"TITLE": "Sobre mí",
 		"TEXT1": "Saludos, mi nombre es <strong>Moisés Barillas</strong>. En el año 2019, mi incursión en el mundo del desarrollo web comenzó mediante la exploración de guías y tutoriales en línea, practicando el desarrollo de sitios web con PHP y MySQL. Esta experiencia inicial despertó en mí un profundo interés por el desarrollo web.",
-		"TEXT2": "Desde entonces, he dedicado esfuerzos constantes a perfeccionar mis habilidades, especialmente en el ámbito de JavaScript. He tenido el desarrollado proyectos, tanto personales como para clientes, gestionándose de manera autónoma con el compromiso de ofrecer soluciones efectivas y de calidad."
+		"TEXT2": "Desde entonces, he perfeccionado constantemente mis competencias en arquitectura de software, backend con .NET y soluciones cloud. Actualmente, potencio mi ciclo de desarrollo integrando <strong>Inteligencia Artificial y agentes de código autónomos</strong>, permitiéndome diseñar arquitecturas más complejas, automatizar tareas repetitivas y entregar soluciones con mayor velocidad, precisión y excelencia técnica."
 	},
 	"SKILLS": {
 		"TITLE": "Habilidades",
+		"ai": "IA & Agentes de Código",
 		"backend": "Backend & Arquitectura",
 		"frontend": "Frontend & Web",
 		"cloud": "Cloud & DevOps",

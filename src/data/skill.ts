@@ -4,6 +4,7 @@ export type Skill = {
 };
 
 interface SkillList {
+	ai: Skill[];
 	backend: Skill[];
 	frontend: Skill[];
 	cloud: Skill[];
@@ -13,6 +14,24 @@ interface SkillList {
 }
 
 export const skills: SkillList = {
+	ai: [
+		{
+			name: 'Agentes de Código',
+			icon: 'ai-agents',
+		},
+		{
+			name: 'Semantic Kernel (.NET)',
+			icon: 'dotnetcore/dotnetcore-original.svg',
+		},
+		{
+			name: 'LLMs & APIs de IA',
+			icon: 'llm',
+		},
+		{
+			name: 'Cursor & Copilot',
+			icon: 'vscode/vscode-original.svg',
+		},
+	],
 	backend: [
 		{
 			name: '.NET',
