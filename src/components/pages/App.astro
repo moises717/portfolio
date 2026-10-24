@@ -15,7 +15,7 @@ const i18n = getI18N({ currentLocale });
 
 <Layout>
 	<div class='flex items-center flex-col gap-3'>
-		<FloatingNav client:only i18n={i18n} />
+		<FloatingNav client:only="react" i18n={i18n} />
 		<LangPicker />
 		<div class='section py-8 md:py-36 w-full mx-auto container lg:max-w-4xl md:max-w-2xl'>
 			<Hero />
