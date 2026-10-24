@@ -1,5 +1,7 @@
 ---
 import { IconEmail, IconGithub, IconLinkedin } from './icons';
+import { Image } from 'astro:assets';
+import mePhoto from '@/assets/me.jpg';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
@@ -25,8 +27,20 @@ const socialLiks = [
 ---
 
 <div class='max-w-xl'>
-	<div class='flex gap-4 mb-4'>
-		<img src='/me.jpg' alt='Moises Barillas' class='rounded-full shadow-lg size-16 object-cover' height={64} width={64} loading='eager' fetchpriority='high' decoding='async' />
+	<div class='flex items-center gap-4 sm:gap-5 mb-5'>
+		<div class='relative shrink-0'>
+			<Image
+				src={mePhoto}
+				alt='Moises Barillas'
+				width={192}
+				height={192}
+				quality={95}
+				loading='eager'
+				fetchpriority='high'
+				decoding='async'
+				class='rounded-full shadow-md size-20 sm:size-24 object-cover object-[center_20%] ring-2 ring-neutral-200/80 dark:ring-neutral-800/80 select-none'
+			/>
+		</div>
 		<div class='flex items-center'>
 			<span class='relative inline-flex overflow-hidden rounded-full p-[1px]'>
 				<span
