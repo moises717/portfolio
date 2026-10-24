@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion';
 
 import { cn } from '@/utils/cn';
-import { IconBrainCog, IconBriefcase, IconHome } from '../icons';
+import { IconBrainCog, IconBriefcase, IconCode, IconHome } from '../icons';
 import { ToggleTheme } from '../ToggleTheme';
 
 export const FloatingNav = ({ className, i18n }: { className?: string; i18n: any }) => {
@@ -37,7 +37,7 @@ export const FloatingNav = ({ className, i18n }: { className?: string; i18n: any
 					duration: 0.2,
 				}}
 				className={cn(
-					'flex max-w-fit z-[500] fixed h-16 shadow-sm bottom-10 md:top-10 mx-auto border border-transparent rounded-full dark:bg-gray-950 gap-3 sm:gap-0 bg-gray-200 items-center justify-center space-x-4 sm:space-x-8 sm:pr-8 sm:pl-12 sm:py-4 sm:inset-x-12 sm:rounded-3xl pr-2 pl-8 py-2',
+					'flex max-w-fit z-[500] fixed h-16 shadow-sm bottom-10 md:top-10 mx-auto border border-transparent rounded-full dark:bg-gray-950 gap-3 sm:gap-0 bg-gray-200 items-center justify-center space-x-3 sm:space-x-6 sm:pr-8 sm:pl-10 sm:py-4 sm:inset-x-12 sm:rounded-3xl pr-2 pl-6 py-2',
 					className,
 				)}
 			>
@@ -49,9 +49,21 @@ export const FloatingNav = ({ className, i18n }: { className?: string; i18n: any
 					aria-label='Ir al inicio'
 				>
 					<span className='block sm:hidden'>
-						<IconHome className='w-6 h-6' />
+						<IconHome className='w-5 h-5' />
 					</span>
 					<span className='hidden sm:block text-sm'>{i18n.HEADER.NAV.HOME}</span>
+				</a>
+				<a
+					href={'#experience'}
+					className={cn(
+						'relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500',
+					)}
+					aria-label='Ir a experiencia'
+				>
+					<span className='block sm:hidden'>
+						<IconBriefcase className='w-5 h-5' />
+					</span>
+					<span className='hidden sm:block text-sm'>{i18n.HEADER.NAV.EXPERIENCE}</span>
 				</a>
 				<a
 					href={'#projects'}
@@ -61,7 +73,7 @@ export const FloatingNav = ({ className, i18n }: { className?: string; i18n: any
 					aria-label='Ir a proyectos'
 				>
 					<span className='block sm:hidden'>
-						<IconBriefcase className='w-7 h-7' />
+						<IconCode className='w-5 h-5' />
 					</span>
 					<span className='hidden sm:block text-sm'>{i18n.HEADER.NAV.PROJECTS}</span>
 				</a>

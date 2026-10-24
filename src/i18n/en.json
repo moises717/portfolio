@@ -1,14 +1,39 @@
 {
 	"SEO": {
-		"TITLE": "Moises Barillas | Web Developer | Nicaragua - Javascript - Node - Html - Css - React - Next.js",
-		"DESCRIPTION": "Moses Barillas: Web Developer from Nicaragua, specialized in Javascript, Node.js, HTML, CSS, React, and Next.js. Boost your project with my experience and expertise!"
+		"TITLE": "Moisés Barillas | Web Developer | Nicaragua - JavaScript - Node - HTML - CSS - React - Next.js",
+		"DESCRIPTION": "Moisés Barillas: Web Developer from Nicaragua, specialized in JavaScript, Node.js, HTML, CSS, React, and Next.js. Boost your project with my experience and expertise!"
 	},
 	"HEADER": {
 		"NAV": {
 			"HOME": "Home",
+			"EXPERIENCE": "Experience",
 			"PROJECTS": "Projects",
 			"SKILLS": "Skills"
 		}
+	},
+	"EXPERIENCE": {
+		"TITLE": "Work Experience",
+		"JOBS": [
+			{
+				"ROLE": "Programmer Analyst",
+				"COMPANY": "Sistemática",
+				"TYPE": "Full-time",
+				"PERIOD": "Oct 2026 - Present",
+				"LOCATION": "Managua, Nicaragua · On-site",
+				"BADGE": "Present",
+				"DESCRIPTION": "Analysis, development, and maintenance of enterprise software. Design of scalable technical solutions, optimization of workflows, and integration of technology systems to drive business operations.",
+				"SKILLS": ["JavaScript", "TypeScript", "SQL", "Systems Analysis", "Web Development"]
+			},
+			{
+				"ROLE": "IT Support Technician",
+				"COMPANY": "Grupo LAFISE",
+				"TYPE": "Full-time",
+				"PERIOD": "Jul 2024 - Oct 2026 · 2 yrs 4 mos",
+				"LOCATION": "Managua, Nicaragua · On-site",
+				"DESCRIPTION": "Corporate IT infrastructure and technical user support. Automation of administrative procedures and internal workflows to increase organizational efficiency and service reliability.",
+				"SKILLS": ["Google Apps Script", "Microsoft Power Automate", "IT Support", "Process Automation"]
+			}
+		]
 	},
 	"ABOUT": {
 		"TITLE": "About Me",

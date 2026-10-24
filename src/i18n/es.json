@@ -6,9 +6,34 @@
 	"HEADER": {
 		"NAV": {
 			"HOME": "Inicio",
+			"EXPERIENCE": "Experiencia",
 			"PROJECTS": "Proyectos",
 			"SKILLS": "Habilidades"
 		}
+	},
+	"EXPERIENCE": {
+		"TITLE": "Experiencia Laboral",
+		"JOBS": [
+			{
+				"ROLE": "Analista Programador",
+				"COMPANY": "Sistemática",
+				"TYPE": "Jornada completa",
+				"PERIOD": "oct. de 2026 - actualidad",
+				"LOCATION": "Managua, Nicaragua · Presencial",
+				"BADGE": "Actualidad",
+				"DESCRIPTION": "Análisis, desarrollo y mantenimiento de software empresarial. Diseño de soluciones técnicas escalables, optimización de flujos de trabajo e integración de sistemas tecnológicos para potenciar la operatividad del negocio.",
+				"SKILLS": ["JavaScript", "TypeScript", "SQL", "Análisis de Sistemas", "Desarrollo Web"]
+			},
+			{
+				"ROLE": "Técnico de soporte de TI",
+				"COMPANY": "Grupo LAFISE",
+				"TYPE": "Jornada completa",
+				"PERIOD": "jul. de 2024 - oct. de 2026 · 2 años 4 meses",
+				"LOCATION": "Managua, Nicaragua · Presencial",
+				"DESCRIPTION": "Soporte técnico a infraestructura y usuarios a nivel corporativo. Automatización de procesos administrativos y flujos de trabajo internos para elevar la eficiencia operativa de la institución.",
+				"SKILLS": ["Google Apps Script", "Microsoft Power Automate", "Soporte TI", "Automatización de Procesos"]
+			}
+		]
 	},
 	"ABOUT": {
 		"TITLE": "Sobre mí",

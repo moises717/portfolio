@@ -11,9 +11,12 @@ const i18n = getI18N({ currentLocale });
 		<span>
 			Inspired by <a href='https://porfolio.dev/' target='_blank' class='text-blue-600' rel='noopener noreferrer'>Porfolio.dev ❤️</a>
 		</span>
-		<ul class='flex gap-4 md:ml-24'>
+		<ul class='flex gap-4 md:ml-24 flex-wrap justify-center'>
 			<li>
 				<a href='#home' class='text-blue-600' aria-label='Inicio'>{i18n.HEADER.NAV.HOME}</a>
+			</li>
+			<li>
+				<a href='#experience' class='text-blue-600'>{i18n.HEADER.NAV.EXPERIENCE}</a>
 			</li>
 			<li>
 				<a href='#projects' class='text-blue-600'>{i18n.HEADER.NAV.PROJECTS}</a>
