@@ -59,9 +59,10 @@ const socialLiks = [
 		{t('hero.title')}
 	</h1>
 
-	<p class='mt-6 text-xl text-gray-800 dark:text-white'>
-		{t('hero.description')}
-	</p>
+	<p
+		class='mt-5 text-lg sm:text-xl text-neutral-700 dark:text-neutral-300 leading-relaxed text-pretty [&>strong]:text-gray-900 [&>strong]:dark:text-white [&>strong]:font-semibold'
+		set:html={t('hero.description')}
+	/>
 
 	<div class='flex self-start gap-2 mt-6'>
 		{
