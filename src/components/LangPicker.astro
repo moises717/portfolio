@@ -14,7 +14,7 @@ const otherLocales = Object.values(LANGUAGES).filter(locale => locale.code !== l
 
 <div class='relative inline-block text-left self-end'>
 	<div class='group text-neutral-600 rounded-md text-xs font-semibold bg-gray-200 hover:bg-gray-300 dark:bg-gray-950 dark:text-white transition-all'>
-		<button type='button' class='inline-flex justify-start items-center w-full gap-x-2 px-3 py-2' aria-expanded='true' aria-haspopup='true'>
+		<button type='button' class='inline-flex justify-start items-center w-full gap-x-2 px-3 py-2' aria-label='Seleccionar idioma' aria-expanded='false' aria-haspopup='true'>
 			<currentLocaleData.flag />
 			{currentLocaleData.name}
 			<ChevronIcon />

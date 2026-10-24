@@ -9,7 +9,12 @@ import { getI18N } from '@/i18n/index';
 const { currentLocale } = Astro;
 
 const i18n = getI18N({ currentLocale });
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const siteUrl = Astro.site ?? new URL('https://moisesbarillas.com');
+const canonicalURL = new URL(Astro.url.pathname, siteUrl);
+const canonicalHref = canonicalURL.href;
+const esHref = new URL('/', siteUrl).href;
+const enHref = new URL('/en/', siteUrl).href;
+const socialImageURL = new URL('/img.jpg', siteUrl).href;
 const lang = getLangFromUrl(Astro.url);
 ---
 
@@ -23,18 +28,79 @@ const lang = getLangFromUrl(Astro.url);
 		<link rel='mask-icon' href='/safari-pinned-tab.svg' color='#5bbad5' />
 		<meta name='msapplication-TileColor' content='#da532c' />
 		<meta name='theme-color' content='#ffffff' />
-		<meta name='viewport' content='width=device-width' />
+		<meta name='viewport' content='width=device-width, initial-scale=1' />
 		<meta name='generator' content={Astro.generator} />
 
+		<title>{i18n.SEO.TITLE}</title>
 		<meta name='description' content={i18n.SEO.DESCRIPTION} />
 		<meta name='author' content='Moisés Barillas' />
-		<meta name='keywords' content='Desarrollador web, Nicaragua, Javascript, Node.js, HTML, CSS, React, Next.js' />
+		<meta name='keywords' content='Desarrollador web, Nicaragua, JavaScript, Node.js, HTML, CSS, React, Next.js, Astro, Frontend' />
+		<meta name='robots' content='index, follow' />
 		<meta name='google-site-verification' content='wDYm2OfVXuMdWi6rYTfvQ38_JO9_L1hzPPgz7p9fyUA' />
-		<link rel='canonical' href={canonicalURL} />
-		<link rel='alternate' hreflang='es' href={canonicalURL.host} />
-		<link rel='alternate' hreflang='en ' href={`${canonicalURL.host}/en`} />
 
-		<title>{i18n.SEO.TITLE}</title>
+		<!-- Canonical & Hreflang multilingüe -->
+		<link rel='canonical' href={canonicalHref} />
+		<link rel='alternate' hreflang='es' href={esHref} />
+		<link rel='alternate' hreflang='en' href={enHref} />
+		<link rel='alternate' hreflang='x-default' href={esHref} />
+
+		<!-- Open Graph / Redes Sociales -->
+		<meta property='og:type' content='website' />
+		<meta property='og:site_name' content='Moisés Barillas Portfolio' />
+		<meta property='og:title' content={i18n.SEO.TITLE} />
+		<meta property='og:description' content={i18n.SEO.DESCRIPTION} />
+		<meta property='og:url' content={canonicalHref} />
+		<meta property='og:image' content={socialImageURL} />
+		<meta property='og:locale' content={lang === 'es' ? 'es_NI' : 'en_US'} />
+		<meta property='og:locale:alternate' content={lang === 'es' ? 'en_US' : 'es_NI'} />
+
+		<!-- Twitter Cards -->
+		<meta name='twitter:card' content='summary_large_image' />
+		<meta name='twitter:title' content={i18n.SEO.TITLE} />
+		<meta name='twitter:description' content={i18n.SEO.DESCRIPTION} />
+		<meta name='twitter:image' content={socialImageURL} />
+
+		<!-- Datos Estructurados Schema.org (JSON-LD) -->
+		<script
+			type='application/ld+json'
+			is:inline
+			set:html={JSON.stringify({
+				'@context': 'https://schema.org',
+				'@type': 'ProfilePage',
+				dateCreated: '2024-01-01T00:00:00Z',
+				dateModified: new Date().toISOString(),
+				mainEntity: {
+					'@type': 'Person',
+					name: 'Moisés Barillas',
+					alternateName: 'moises717',
+					url: 'https://moisesbarillas.com',
+					image: socialImageURL,
+					jobTitle: lang === 'es' ? 'Desarrollador Web' : 'Web Developer',
+					description: i18n.SEO.DESCRIPTION,
+					nationality: {
+						'@type': 'Country',
+						name: 'Nicaragua',
+					},
+					sameAs: [
+						'https://github.com/moises717',
+						'https://www.linkedin.com/in/moises-barillas/',
+						'mailto:moisesbarillas717@gmail.com',
+					],
+					knowsAbout: [
+						'JavaScript',
+						'TypeScript',
+						'React',
+						'Next.js',
+						'Astro',
+						'Node.js',
+						'Tailwind CSS',
+						'Supabase',
+						'Rust',
+					],
+				},
+			})}
+		/>
+
 		<ClientRouter />
 	</head>
 
